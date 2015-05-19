@@ -24,43 +24,53 @@
 						<TextBlock Text="{Binding Serial}" FontSize="{StaticResource TextStyleLargeFontSize}" FontFamily="Segoe WP Light" FontWeight="Light" HorizontalAlignment="Center"/>
 					</StackPanel>
 				</Grid>
-				<Grid Grid.Column="1" Margin="15,0,0,0">
+				<Grid Grid.Column="1">
 					<Grid.RowDefinitions>
 						<RowDefinition/>
 						<RowDefinition/>
 						<RowDefinition/>
 					</Grid.RowDefinitions>
-					<Grid Grid.Row="0" Margin="0,5,0,2.5">
-						<StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-							<Image Source="Assets/Resources/date_icon.png" Stretch="Fill" VerticalAlignment="Center" Width="{StaticResource FlyoutThemeMinHeight}"/>
+					<Grid Grid.Row="0" >
+						<StackPanel Margin="15, 5, 0, 2.5" Orientation="Horizontal" VerticalAlignment="Center">
+							<Image Source="Assets/Resources/date_icon.png" Stretch="Fill" VerticalAlignment="Center" Width="{StaticResource ListViewItemReorderHintThemeOffset}"/>
 							<TextBlock Text="{Binding Path=Date, Mode=OneWay, Converter={StaticResource ConverteDate}, ConverterParameter=\{0:D\}}" FontSize="{StaticResource TextStyleLargeFontSize}" VerticalAlignment="Center" Margin="10,0,0,0" />
 						</StackPanel>
 					</Grid>
-					<Grid Grid.Row="1" Margin="0,2.5">
-						<StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-							<Image Source="Assets/Resources/Sehri.png" Stretch="Fill" VerticalAlignment="Center" Width="{StaticResource FlyoutThemeMinHeight}" />
+					<Grid Grid.Row="1" Background="#3FE6F0A8">
+						<StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="15,2.5,0,2.5">
+							<Image Source="Assets/Resources/Sehri.png" Stretch="Fill" VerticalAlignment="Center" Width="{StaticResource ListViewItemReorderHintThemeOffset}" />
+							<TextBlock Text="Sahri " FontSize="{StaticResource TextStyleLargeFontSize}" VerticalAlignment="Center" Margin="10,0,0,0" />
 							<TextBlock Text="{Binding Path=Sahri, Mode=OneWay, Converter={StaticResource ConverteTime}, ConverterParameter=\{0: h:mm tt\}}" FontSize="{StaticResource TextStyleLargeFontSize}" VerticalAlignment="Center" Margin="10,0,0,0" />
-							<!--<TextBlock Text="{Binding Sahri}"/>-->
+
 						</StackPanel>
 					</Grid>
-					<Grid Grid.Row="2" Margin="0,2.5,0,5">
-						<StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-							<Image Source="Assets/Resources/Iftar.png" Stretch="Fill" VerticalAlignment="Center" Width="{StaticResource FlyoutThemeMinHeight}"/>
-							<TextBlock Text="{Binding Path=Isha, Mode=OneWay, Converter={StaticResource ConverteTime}, ConverterParameter=\{0: h:mm tt\}}" FontSize="{StaticResource TextStyleLargeFontSize}" VerticalAlignment="Center" Margin="10,0,0,0" />
+					<Grid Grid.Row="2">
+						<StackPanel Margin="15,2.5,0,5" Orientation="Horizontal" VerticalAlignment="Center">
+							<Image Source="Assets/Resources/Iftar.png" Stretch="Fill" VerticalAlignment="Center" Width="{StaticResource ListViewItemReorderHintThemeOffset}"/>
+							<TextBlock Text="Ifter " FontSize="{StaticResource TextStyleLargeFontSize}" VerticalAlignment="Center" Margin="10,0,0,0" />
+							<TextBlock Text="{Binding Path=Iftar, Mode=OneWay, Converter={StaticResource ConverteTime}, ConverterParameter=\{0: h:mm tt\}}" FontSize="{StaticResource TextStyleLargeFontSize}" VerticalAlignment="Center" Margin="10,0,0,0" />
 						</StackPanel>
 					</Grid>
 				</Grid>
 			</Grid>
 		</DataTemplate>
 	</Page.Resources>
+	<Page.Background>
+		<ImageBrush Stretch="Fill" ImageSource="Assets/Resources/BG.jpg"/>
+	</Page.Background>
 
 
 	<Grid>
-		<Grid.Background>
-			<ImageBrush Stretch="Fill" ImageSource="Assets/Resources/BG.jpg"/>
-		</Grid.Background>
 		<Grid Margin="0, 10, 0, 10">
-			<ListBox Background="{x:Null}" ItemTemplate="{StaticResource ItemListTemplate01}" ItemsSource="{Binding LoadData}"/>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="1*"/>
+				<RowDefinition Height="10*"/>
+			</Grid.RowDefinitions>
+			<TextBlock Text="Sahri Iftar Time" Foreground="#FF531111" FontSize="{StaticResource TextStyleExtraExtraLargeFontSize}" FontFamily="Segoe UI Light" FontWeight="Light" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,0,0,15"/>
+			<Grid  Grid.Row="1">
+				<ListBox Background="{x:Null}" ItemTemplate="{StaticResource ItemListTemplate01}" ItemsSource="{Binding LoadData}"/>
+			</Grid>
+
 		</Grid>
 	</Grid>
 </Page>
