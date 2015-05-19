@@ -23,7 +23,7 @@ namespace Ramadan2015.ViewModel
 
 		async void LoadingData()
 		{
-			LoadData = new ObservableCollection<RozaModel2>();
+			LoadData = new ObservableCollection<RozaModel>();
 			try
 			{
 				StorageFolder SFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
@@ -33,7 +33,7 @@ namespace Ramadan2015.ViewModel
 				foreach (RozaModel i in data)
 				{
 					var datestring = string.Format("{0:D}", (DateTime)i.Date);
-					LoadData.Add(new RozaModel2() { Serial=i.Serial, Date=i.Date, DateText=datestring.ToString()});
+					LoadData.Add(i);
 				}
 			}
 			catch (Exception ex)
@@ -54,8 +54,8 @@ namespace Ramadan2015.ViewModel
 
 
 		public const string LoadDataPropertyName = "LoadData";
-		private ObservableCollection<RozaModel2> _Roza = null;
-		public ObservableCollection<RozaModel2> LoadData
+		private ObservableCollection<RozaModel> _Roza = null;
+		public ObservableCollection<RozaModel> LoadData
 		{
 			get
 			{
