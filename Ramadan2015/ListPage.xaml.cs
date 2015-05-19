@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Ramadan2015.Model;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
@@ -19,9 +20,7 @@ using Windows.UI.Xaml.Navigation;
 
 namespace Ramadan2015
 {
-	/// <summary>
-	/// An empty page that can be used on its own or navigated to within a Frame.
-	/// </summary>
+	
 	public sealed partial class ListPage : Page
 	{
 		public ListPage()
@@ -29,15 +28,26 @@ namespace Ramadan2015
 			this.InitializeComponent();
 		}
 
-		/// <summary>
-		/// Invoked when this page is about to be displayed in a Frame.
-		/// </summary>
-		/// <param name="e">Event data that describes how this page was reached.
-		/// This parameter is typically used to configure the page.</param>
+		
 		protected override void OnNavigatedTo(NavigationEventArgs e)
 		{
 		}
+
+		private void MainList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+		{
+			RozaModel selected =(RozaModel)MainList.SelectedValue;
+			Frame.Navigate(typeof(DetailPage), selected);
+		}
 	}
+
+
+
+
+
+
+
+
+
 
 	public sealed class DateFormatConverter : IValueConverter
     {
