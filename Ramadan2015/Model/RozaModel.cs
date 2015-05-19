@@ -10,11 +10,11 @@ namespace Ramadan2015.Model
 	{
 		public int Serial { get; set; }
 		public DateTime Date { get; set; }
-		public TimeSpan Sahri { get; set; }
-		public TimeSpan Fazr { get; set; }
-		public TimeSpan Johr { get; set; }
-		public TimeSpan Asr { get; set; }
-		public TimeSpan Iftar { get; set; }
-		public TimeSpan Isha { get; set; }
+		public DateTime Sahri { get; set; }
+		public DateTime Fazr { get; set; }
+		public DateTime Johr { get; set; }
+		public DateTime Asr { get; set; }
+		public DateTime Iftar { get; set; }
+		public DateTime Isha { get; set; }
 	}
 }

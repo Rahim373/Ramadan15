@@ -39,14 +39,14 @@
 					<Grid Grid.Row="1" Margin="0,2.5">
 						<StackPanel Orientation="Horizontal" VerticalAlignment="Center">
 							<Image Source="Assets/Resources/Sehri.png" Stretch="Fill" VerticalAlignment="Center" Width="{StaticResource FlyoutThemeMinHeight}" />
-							<TextBlock Text="{Binding Path=Sahri, Mode=OneWay, Converter={StaticResource ConverteTime}, ConverterParameter=\{0:t\}}" FontSize="{StaticResource TextStyleLargeFontSize}" VerticalAlignment="Center" Margin="10,0,0,0" />
+							<TextBlock Text="{Binding Path=Sahri, Mode=OneWay, Converter={StaticResource ConverteTime}, ConverterParameter=\{0: h:mm tt\}}" FontSize="{StaticResource TextStyleLargeFontSize}" VerticalAlignment="Center" Margin="10,0,0,0" />
 							<!--<TextBlock Text="{Binding Sahri}"/>-->
 						</StackPanel>
 					</Grid>
 					<Grid Grid.Row="2" Margin="0,2.5,0,5">
 						<StackPanel Orientation="Horizontal" VerticalAlignment="Center">
 							<Image Source="Assets/Resources/Iftar.png" Stretch="Fill" VerticalAlignment="Center" Width="{StaticResource FlyoutThemeMinHeight}"/>
-							<TextBlock Text="{Binding Path=Isha, Mode=OneWay, Converter={StaticResource ConverteTime}, ConverterParameter=\{0:t\}}" FontSize="{StaticResource TextStyleLargeFontSize}" VerticalAlignment="Center" Margin="10,0,0,0" />
+							<TextBlock Text="{Binding Path=Isha, Mode=OneWay, Converter={StaticResource ConverteTime}, ConverterParameter=\{0: h:mm tt\}}" FontSize="{StaticResource TextStyleLargeFontSize}" VerticalAlignment="Center" Margin="10,0,0,0" />
 						</StackPanel>
 					</Grid>
 				</Grid>

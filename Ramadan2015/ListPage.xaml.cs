@@ -69,9 +69,9 @@ namespace Ramadan2015
 			string formatString = parameter as string;
 			if (!string.IsNullOrEmpty(formatString))
 			{
-				return string.Format("{0:t}", value);
+				return string.Format("{0: h:mm tt}", value);
 			}
-			value = string.Format("{0:t}", value);
+			value = string.Format("{0: h:mm tt}", value);
 			return value.ToString();
 		}
 

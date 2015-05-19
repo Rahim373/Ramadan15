@@ -32,7 +32,6 @@ namespace Ramadan2015.ViewModel
 				var data = JsonConvert.DeserializeObject<List<RozaModel>>(Content);
 				foreach (RozaModel i in data)
 				{
-					var datestring = string.Format("{0:D}", (DateTime)i.Date);
 					LoadData.Add(i);
 				}
 			}
