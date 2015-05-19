@@ -44,10 +44,15 @@ namespace Ramadan2015
 		void timer_Tick(object sender, object e)
 		{
 			var tti = roza.Iftar- DateTime.Now;
-			var tts = roza.Sahri - DateTime.Now;
-
-			timetosehrir.Text = tts.ToString();
-			timetoifter.Text = string.Format("{h:m:s}", tti);
+			var tts = DateTime.Now - DateTime.Now.AddMinutes(25);
+			var line = tts.Hours.ToString() + " Hours " + tts.Minutes.ToString() + " Minutes " + tts.Seconds.ToString();
+			if (tts.Minutes <= 0) {
+				line = "Already time over";
+			}
+			
+			timetosehrir.Text = line;
+			line = tti.Hours.ToString() + " Hours " + tti.Minutes.ToString() + " Minutes ";
+			timetoifter.Text = line;
 		}
 
 		void HardwareButtons_BackPressed(object sender, BackPressedEventArgs e)
