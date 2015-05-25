@@ -91,14 +91,42 @@
 						<RowDefinition/>
 					</Grid.RowDefinitions>
 					<Grid x:Name="_btn1" Grid.Row="0">
-						<Button BorderThickness="0"  Background="#FF8B8B8B" Padding="0" HorizontalContentAlignment="Stretch">
-							<Grid>
+						<Button x:Name="_calender" BorderThickness="0"  Background="White" Padding="0" HorizontalContentAlignment="Stretch" Width="{Binding ActualWidth, ElementName=_btn1}" Height="{Binding ActualHeight, ElementName=_btn1}">
+							<Grid HorizontalAlignment="Center" VerticalAlignment="Center">
 								<StackPanel>
-									<Image Source="Assets/Resources/Iftar.png" Height="50"/>
-									<TextBlock Text="Sehri Ifter Time" Foreground="White" FontSize="{StaticResource TextStyleLargeFontSize}"/>
+									<Image Source="Assets/Resources/date_icon.png" Height="70"/>
+									<TextBlock Text="SEHRI IFTER TIME" FontSize="{StaticResource TextStyleLargeFontSize}" Foreground="Black" Margin="0,15,0,0" HorizontalAlignment="Center"/>
 								</StackPanel>
 							</Grid>
 						</Button>
+					</Grid>
+
+					<Grid Grid.Row="1">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition/>
+							<ColumnDefinition/>
+						</Grid.ColumnDefinitions>
+						<Grid x:Name="_btn2" Grid.Column="0" Margin="0 0 10 0">
+							<Button x:Name="_doa" BorderThickness="0"  Background="White" Padding="0" HorizontalContentAlignment="Stretch" Width="{Binding ActualWidth, ElementName=_btn2}" Height="{Binding ActualHeight, ElementName=_btn1}">
+								<Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+									<StackPanel>
+										<Image Source="Assets/Resources/Book.png" Height="70"/>
+										<TextBlock Text="IMPORTANT DOAH" FontSize="{StaticResource TextStyleLargeFontSize}" Foreground="Black" Margin="0,15,0,0" HorizontalAlignment="Center"/>
+									</StackPanel>
+								</Grid>
+							</Button>
+						</Grid>
+						<Grid x:Name="_btn3" Grid.Column="1" Margin="10 0 0 0">
+							<Button x:Name="_others" BorderThickness="0"  Background="White" Padding="0" HorizontalContentAlignment="Stretch" Width="{Binding ActualWidth, ElementName=_btn2}" Height="{Binding ActualHeight, ElementName=_btn1}">
+								<Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+									<StackPanel>
+										<Image Source="Assets/Resources/Rules.png" Height="70"/>
+										<TextBlock Text="RULES" FontSize="{StaticResource TextStyleLargeFontSize}" Foreground="Black" Margin="0,15,0,0" HorizontalAlignment="Center"/>
+									</StackPanel>
+								</Grid>
+							</Button>
+						</Grid>
+						
 					</Grid>
 
 				</Grid>

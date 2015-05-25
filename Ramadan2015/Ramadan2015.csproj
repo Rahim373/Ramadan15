@@ -105,8 +105,11 @@
   <ItemGroup>
     <Content Include="Assets\Logo.scale-240.png" />
     <Content Include="Assets\Resources\BG.jpg" />
+    <Content Include="Assets\Resources\Book.png" />
     <Content Include="Assets\Resources\date_icon.png" />
+    <Content Include="Assets\Resources\Food.png" />
     <Content Include="Assets\Resources\Iftar.png" />
+    <Content Include="Assets\Resources\Rules.png" />
     <Content Include="Assets\Resources\Sehri.png" />
     <Content Include="Assets\Resources\Splash.jpg" />
     <Content Include="Assets\SmallLogo.scale-240.png" />
