@@ -33,11 +33,11 @@ namespace Ramadan2015
 		{
 		}
 
-		private void MainList_SelectionChanged(object sender, SelectionChangedEventArgs e)
-		{
-			RozaModel selected =(RozaModel)MainList.SelectedValue;
-			Frame.Navigate(typeof(DetailPage), selected);
-		}
+		//private void MainList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+		//{
+		//	RozaModel selected =(RozaModel)MainList.SelectedValue;
+		//	Frame.Navigate(typeof(DetailPage), selected);
+		//}
 	}
 
 

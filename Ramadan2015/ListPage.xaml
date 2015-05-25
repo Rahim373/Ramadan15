@@ -10,67 +10,100 @@
 	<Page.Resources>
 		<local:DateFormatConverter x:Key="ConverteDate"/>
 		<local:TimeFormatConverter x:Key="ConverteTime"/>
+	</Page.Resources>
+	<Page.BottomAppBar>
+		<CommandBar>
+			<AppBarButton Icon="Flag" Label="About"/>
+		</CommandBar>
+	</Page.BottomAppBar>
 
-		<DataTemplate x:Key="ItemListTemplate01">
-			<Grid Background="#2C000000" Width="{StaticResource ContentDialogContentLandscapeWidth}">
-				<Grid.ColumnDefinitions>
-					<ColumnDefinition/>
-					<ColumnDefinition Width="3*"/>
-				</Grid.ColumnDefinitions>
-				<Grid Background="#34000000">
-					<StackPanel VerticalAlignment="Center">
-						<TextBlock Text="DAY" FontSize="{StaticResource TextStyleLargeFontSize}" FontFamily="Segoe WP Light" FontWeight="Light" HorizontalAlignment="Center"/>
-						<Rectangle Height="1" Margin="15,2" Stroke="#CA000000" StrokeThickness="0.5"/>
-						<TextBlock Text="{Binding Serial}" FontSize="{StaticResource TextStyleLargeFontSize}" FontFamily="Segoe WP Light" FontWeight="Light" HorizontalAlignment="Center"/>
-					</StackPanel>
-				</Grid>
-				<Grid Grid.Column="1">
+	<!--Main Grid-->
+	<Grid >
+		<Grid.Background>
+			<ImageBrush Stretch="Fill" ImageSource="Assets/Resources/BG.jpg"/>
+		</Grid.Background>
+		<Grid Margin="15">
+
+			<Grid.RowDefinitions>
+				<RowDefinition/>
+				<RowDefinition Height="6*"/>
+			</Grid.RowDefinitions>
+			<!--Heading Grid-->
+			<Grid x:Name="_headingGrid" Grid.Row="0">
+				<StackPanel>
+					<TextBlock Text="Ramadan" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" FontSize="{StaticResource TextStyleExtraExtraLargeFontSize}"/>
+					<TextBlock Text="2015" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" FontSize="{StaticResource TextStyleExtraExtraLargeFontSize}"/>
+				</StackPanel>
+			</Grid>
+			<!--Content Grid-->
+			<Grid x:Name="_contentGrid" Grid.Row="1">
+				<Grid.RowDefinitions>
+					<RowDefinition/>
+					<RowDefinition Height="2*"/>
+				</Grid.RowDefinitions>
+
+				<!--For Time-->
+				<Grid Margin="0 10" Background="#4C000000">
 					<Grid.RowDefinitions>
 						<RowDefinition/>
 						<RowDefinition/>
+					</Grid.RowDefinitions>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="1.5*"/>
+						<ColumnDefinition/>
+					</Grid.ColumnDefinitions>
+
+					<Grid HorizontalAlignment="Left" Margin="10">
+						<StackPanel>
+							<TextBlock Text="Today" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" FontSize="{StaticResource TextStyleMediumFontSize}"/>
+							<TextBlock x:Name="Date" Text="26th May, 2015" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" FontSize="{StaticResource TextStyleExtraLargeFontSize}"/>
+						</StackPanel>
+					</Grid>
+
+					<Grid HorizontalAlignment="Left" Margin="10" Grid.Column="0" Grid.Row="1">
+						<StackPanel>
+							<TextBlock Text="Day" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" FontSize="{StaticResource TextStyleMediumFontSize}"/>
+							<TextBlock x:Name="Day" Text="1st Ramadan"  FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" FontSize="{StaticResource TextStyleExtraLargeFontSize}"/>
+						</StackPanel>
+					</Grid>
+
+					<Grid HorizontalAlignment="Right" Margin="10" Grid.Column="1" Grid.Row="0">
+						<StackPanel>
+							<TextBlock Text="Today's Sahri" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" FontSize="{StaticResource TextStyleMediumFontSize}"/>
+							<TextBlock x:Name="Sehri" Text="3:40 AM"  FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" FontSize="{StaticResource TextStyleExtraLargeFontSize}"/>
+						</StackPanel>
+					</Grid>
+
+					<Grid HorizontalAlignment="Right" Margin="10" Grid.Column="1" Grid.Row="1">
+						<StackPanel>
+							<TextBlock Text="Today's Sahri" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" FontSize="{StaticResource TextStyleMediumFontSize}"/>
+							<TextBlock x:Name="Iftar" Text="6:40 PM"  FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" FontSize="{StaticResource TextStyleExtraLargeFontSize}"/>
+						</StackPanel>
+					</Grid>
+
+
+				</Grid>
+
+				<!--For Buttons-->
+				<Grid Grid.Row="1">
+					<Grid.RowDefinitions>
+						<RowDefinition/>
 						<RowDefinition/>
 					</Grid.RowDefinitions>
-					<Grid Grid.Row="0" >
-						<StackPanel Margin="15, 5, 0, 2.5" Orientation="Horizontal" VerticalAlignment="Center">
-							<Image Source="Assets/Resources/date_icon.png" Stretch="Fill" VerticalAlignment="Center" Width="{StaticResource ListViewItemReorderHintThemeOffset}"/>
-							<TextBlock Text="{Binding Path=Date, Mode=OneWay, Converter={StaticResource ConverteDate}, ConverterParameter=\{0:D\}}" FontSize="{StaticResource TextStyleLargeFontSize}" VerticalAlignment="Center" Margin="10,0,0,0" />
-						</StackPanel>
+					<Grid x:Name="_btn1" Grid.Row="0">
+						<Button BorderThickness="0"  Background="#FF8B8B8B" Padding="0" HorizontalContentAlignment="Stretch">
+							<Grid>
+								<StackPanel>
+									<Image Source="Assets/Resources/Iftar.png" Height="50"/>
+									<TextBlock Text="Sehri Ifter Time" Foreground="White" FontSize="{StaticResource TextStyleLargeFontSize}"/>
+								</StackPanel>
+							</Grid>
+						</Button>
 					</Grid>
-					<Grid Grid.Row="1" Background="#3FE6F0A8">
-						<StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="15,2.5,0,2.5">
-							<Image Source="Assets/Resources/Sehri.png" Stretch="Fill" VerticalAlignment="Center" Width="{StaticResource ListViewItemReorderHintThemeOffset}" />
-							<TextBlock Text="Sahri " FontSize="{StaticResource TextStyleLargeFontSize}" VerticalAlignment="Center" Margin="10,0,0,0" />
-							<TextBlock Text="{Binding Path=Sahri, Mode=OneWay, Converter={StaticResource ConverteTime}, ConverterParameter=\{0: h:mm tt\}}" FontSize="{StaticResource TextStyleLargeFontSize}" VerticalAlignment="Center" Margin="10,0,0,0" />
 
-						</StackPanel>
-					</Grid>
-					<Grid Grid.Row="2">
-						<StackPanel Margin="15,2.5,0,5" Orientation="Horizontal" VerticalAlignment="Center">
-							<Image Source="Assets/Resources/Iftar.png" Stretch="Fill" VerticalAlignment="Center" Width="{StaticResource ListViewItemReorderHintThemeOffset}"/>
-							<TextBlock Text="Ifter " FontSize="{StaticResource TextStyleLargeFontSize}" VerticalAlignment="Center" Margin="10,0,0,0" />
-							<TextBlock Text="{Binding Path=Iftar, Mode=OneWay, Converter={StaticResource ConverteTime}, ConverterParameter=\{0: h:mm tt\}}" FontSize="{StaticResource TextStyleLargeFontSize}" VerticalAlignment="Center" Margin="10,0,0,0" />
-						</StackPanel>
-					</Grid>
 				</Grid>
-			</Grid>
-		</DataTemplate>
-	</Page.Resources>
-	<Page.Background>
-		<ImageBrush Stretch="Fill" ImageSource="Assets/Resources/BG.jpg"/>
-	</Page.Background>
 
-
-	<Grid>
-		<Grid Margin="0, 10, 0, 10">
-			<Grid.RowDefinitions>
-				<RowDefinition Height="1*"/>
-				<RowDefinition Height="10*"/>
-			</Grid.RowDefinitions>
-			<TextBlock Text="Sahri Iftar Time" Foreground="#FF531111" FontSize="{StaticResource TextStyleExtraExtraLargeFontSize}" FontFamily="Segoe UI Light" FontWeight="Light" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,0,0,15"/>
-			<Grid  Grid.Row="1">
-				<ListBox x:Name="MainList" Background="{x:Null}" ItemTemplate="{StaticResource ItemListTemplate01}" ItemsSource="{Binding LoadData}" BorderThickness="0,1" SelectionChanged="MainList_SelectionChanged"/>
-			</Grid>
-
+			</Grid >
 		</Grid>
 	</Grid>
 </Page>

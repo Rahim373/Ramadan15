@@ -16,6 +16,6 @@
 			<RowDefinition Height="4*"/>
 			<RowDefinition/>
 		</Grid.RowDefinitions>
-		<ProgressRing IsActive="True" Grid.Row="4" Background="{x:Null}" Foreground="White" />
+		<ProgressRing IsActive="True" Grid.Row="1" Background="{x:Null}"  Foreground="#FF42A0E2" />
 	</Grid>
 </Page>
