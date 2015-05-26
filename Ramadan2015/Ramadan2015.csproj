@@ -156,6 +156,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\Font\Barkentina 1.otf" />
+    <Content Include="Assets\Font\Ceria Lebaran.otf" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
