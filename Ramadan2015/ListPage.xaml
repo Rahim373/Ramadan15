@@ -16,10 +16,7 @@
 		<Binding Path="Main" Source="{StaticResource Locator}"/>
 	</Page.DataContext>
 	<Page.BottomAppBar>
-		<CommandBar Foreground="Black">
-			<CommandBar.Background>
-				<ImageBrush Stretch="UniformToFill" ImageSource="Assets/Resources/btnBg.png"/>
-			</CommandBar.Background>
+		<CommandBar Foreground="Black" Background="White">
 			<AppBarButton Icon="Flag" Label="About"/>
 			<AppBarButton Icon="Comment" Label="Credit"/>
 		</CommandBar>
