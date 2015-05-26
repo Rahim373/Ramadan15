@@ -106,10 +106,11 @@
     <Content Include="Assets\Logo.scale-240.png" />
     <Content Include="Assets\Resources\BG.jpg" />
     <Content Include="Assets\Resources\Book.png" />
-    <Content Include="Assets\Resources\date_icon.png" />
+    <Content Include="Assets\Resources\btnBg.png" />
     <Content Include="Assets\Resources\Food.png" />
     <Content Include="Assets\Resources\Rules.png" />
     <Content Include="Assets\Resources\Splash.jpg" />
+    <Content Include="Assets\Resources\time-calender.png" />
     <Content Include="Assets\SmallLogo.scale-240.png" />
     <Content Include="Assets\SplashScreen.scale-240.png" />
     <Content Include="Assets\Square71x71Logo.scale-240.png" />
@@ -144,9 +145,6 @@
     <Reference Include="GalaSoft.MvvmLight.Platform">
       <HintPath>..\packages\MvvmLightLibs.5.1.1.0\lib\wpa81\GalaSoft.MvvmLight.Platform.dll</HintPath>
     </Reference>
-    <Reference Include="GoogleAds">
-      <HintPath>C:\Users\Abdur Rahim\Downloads\googlemobileadssdkwindowsphone8\GoogleMobileAdsSdkWindowsPhone8-6.5.13\lib\windowsphone8\GoogleAds.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.Practices.ServiceLocation">
       <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
     </Reference>
@@ -156,7 +154,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\Font\Barkentina 1.otf" />
-    <Content Include="Assets\Font\Ceria Lebaran.otf" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

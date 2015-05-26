@@ -16,14 +16,18 @@
 		<Binding Path="Main" Source="{StaticResource Locator}"/>
 	</Page.DataContext>
 	<Page.BottomAppBar>
-		<CommandBar Background="White" Foreground="Black">
+		<CommandBar Foreground="Black">
+			<CommandBar.Background>
+				<ImageBrush Stretch="UniformToFill" ImageSource="Assets/Resources/btnBg.png"/>
+			</CommandBar.Background>
 			<AppBarButton Icon="Flag" Label="About"/>
+			<AppBarButton Icon="Comment" Label="Credit"/>
 		</CommandBar>
 	</Page.BottomAppBar>
 	<!--Main Grid-->
 	<Grid >
 		<Grid.Background>
-			<ImageBrush Stretch="Fill" ImageSource="Assets/Resources/BG.jpg"/>
+			<ImageBrush ImageSource="Assets/Resources/BG.jpg" Stretch="Fill"/>
 		</Grid.Background>
 		<Grid Margin="10">
 
@@ -42,11 +46,11 @@
 			<Grid x:Name="_contentGrid" Grid.Row="1">
 				<Grid.RowDefinitions>
 					<RowDefinition/>
-					<RowDefinition Height="2*"/>
+					<RowDefinition Height="2.3*"/>
 				</Grid.RowDefinitions>
 
 				<!--For Time-->
-				<Grid Margin="0 10 0 0" Background="#4C000000">
+				<Grid Margin="0 5 0 0" Background="#4C000000">
 					<Grid.RowDefinitions>
 						<RowDefinition Height="1.10*"/>
 						<RowDefinition/>
@@ -92,10 +96,13 @@
 						<RowDefinition/>
 					</Grid.RowDefinitions>
 					<Grid x:Name="_btn1" Grid.Row="0">
-						<Button x:Name="_calender" BorderThickness="0"  Background="#F2FFFFFF" Padding="0" HorizontalContentAlignment="Stretch" Width="{Binding ActualWidth, ElementName=_btn1}" Height="{Binding ActualHeight, ElementName=_btn1}">
+						<Button x:Name="_calender" BorderThickness="0" Padding="0" HorizontalContentAlignment="Stretch" Width="{Binding ActualWidth, ElementName=_btn1}" Height="{Binding ActualHeight, ElementName=_btn1}">
+							<Button.Background>
+								<ImageBrush Stretch="UniformToFill" ImageSource="Assets/Resources/btnBg.png"/>
+							</Button.Background>
 							<Grid HorizontalAlignment="Center" VerticalAlignment="Center">
 								<StackPanel>
-									<Image Source="Assets/Resources/date_icon.png" Height="80"/>
+									<Image Height="80" RenderTransformOrigin="0.5,0.5" Source="Assets/Resources/time-calender.png"/>
 									<TextBlock Text="SEHRI IFTER TIME" FontSize="{StaticResource TextStyleMediumFontSize}" Foreground="Black" Margin="0,15,0,0" HorizontalAlignment="Center" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test"/>
 								</StackPanel>
 							</Grid>
@@ -108,7 +115,10 @@
 							<ColumnDefinition/>
 						</Grid.ColumnDefinitions>
 						<Grid x:Name="_btn2" Grid.Column="0" Margin="0 0 10 0">
-							<Button x:Name="_doa" BorderThickness="0"  Background="#F2FFFFFF" Padding="0" HorizontalContentAlignment="Stretch" Width="{Binding ActualWidth, ElementName=_btn2}" Height="{Binding ActualHeight, ElementName=_btn1}">
+							<Button x:Name="_doa" BorderThickness="0" Padding="0" HorizontalContentAlignment="Stretch" Width="{Binding ActualWidth, ElementName=_btn2}" Height="{Binding ActualHeight, ElementName=_btn1}">
+								<Button.Background>
+									<ImageBrush Stretch="UniformToFill" ImageSource="Assets/Resources/btnBg.png"/>
+								</Button.Background>
 								<Grid HorizontalAlignment="Center" VerticalAlignment="Center">
 									<StackPanel>
 										<Image Source="Assets/Resources/Book.png" Height="70"/>
@@ -118,7 +128,10 @@
 							</Button>
 						</Grid>
 						<Grid x:Name="_btn3" Grid.Column="1" Margin="10 0 0 0">
-							<Button x:Name="_others" BorderThickness="0"  Background="#F2FFFFFF" Padding="0" HorizontalContentAlignment="Stretch" Width="{Binding ActualWidth, ElementName=_btn2}" Height="{Binding ActualHeight, ElementName=_btn1}">
+							<Button x:Name="_others" BorderThickness="0" Padding="0" HorizontalContentAlignment="Stretch" Width="{Binding ActualWidth, ElementName=_btn2}" Height="{Binding ActualHeight, ElementName=_btn1}">
+								<Button.Background>
+									<ImageBrush Stretch="UniformToFill" ImageSource="Assets/Resources/btnBg.png"/>
+								</Button.Background>
 								<Grid HorizontalAlignment="Center" VerticalAlignment="Center">
 									<StackPanel>
 										<Image Source="Assets/Resources/Rules.png" Height="70"/>
