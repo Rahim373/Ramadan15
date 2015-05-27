@@ -22,9 +22,9 @@ using Windows.UI.Popups;
 
 namespace Ramadan2015
 {
-	public sealed partial class MainPage : Page
+	public sealed partial class SplashPage : Page
 	{
-		public MainPage()
+		public SplashPage()
 		{
 			this.InitializeComponent();
 			this.NavigationCacheMode = NavigationCacheMode.Required;
@@ -52,7 +52,7 @@ namespace Ramadan2015
 				var success = true;
 				if (success)
 				{
-					Frame.Navigate(typeof(ListPage));
+					Frame.Navigate(typeof(HomePage));
 				}
 			}
 			catch (Exception exception)
@@ -70,7 +70,7 @@ namespace Ramadan2015
 				var success = true;
 				if (success)
 				{
-					Frame.Navigate(typeof(ListPage));
+					Frame.Navigate(typeof(HomePage));
 				}
 			}
 			catch (Exception ex)

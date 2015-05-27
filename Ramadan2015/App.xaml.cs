@@ -5,9 +5,11 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
+using Windows.Data.Xml.Dom;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.Storage;
+using Windows.UI.Notifications;
 using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -37,11 +39,29 @@ namespace Ramadan2015
         {
             this.InitializeComponent();
             this.Suspending += this.OnSuspending;
-			
+			LoadTile();
 
         }
 
-		
+		private void LoadTile()
+		{
+			XmlDocument tileXml = TileUpdateManager.GetTemplateContent(TileTemplateType.TileWide310x150PeekImage05);
+
+			XmlNodeList tileTextAttributes = tileXml.GetElementsByTagName("text");
+			tileTextAttributes[0].InnerText = "Ifter 6.35 PM";
+			tileTextAttributes[1].InnerText = "Sahri 4.08 AM";
+
+			XmlNodeList tileImageAttributes = tileXml.GetElementsByTagName("image");
+			((XmlElement)tileImageAttributes[0]).SetAttribute("src", "ms-appx:///Assets/WideLogo.scale-240.png");
+			((XmlElement)tileImageAttributes[0]).SetAttribute("alt", "red graphic");
+			((XmlElement)tileImageAttributes[1]).SetAttribute("src", "ms-appx:///Assets/WideLogo.scale-240.png");
+			((XmlElement)tileImageAttributes[1]).SetAttribute("alt", "red graphic");
+
+
+			TileNotification tileNotification = new TileNotification(tileXml);
+			tileNotification.ExpirationTime = null;
+			TileUpdateManager.CreateTileUpdaterForApplication().Update(tileNotification);
+		}
 
         /// <summary>
         /// Invoked when the application is launched normally by the end user.  Other entry points
@@ -97,7 +117,7 @@ namespace Ramadan2015
                 // When the navigation stack isn't restored navigate to the first page,
                 // configuring the new page by passing required information as a navigation
                 // parameter
-                if (!rootFrame.Navigate(typeof(MainPage), e.Arguments))
+                if (!rootFrame.Navigate(typeof(SplashPage), e.Arguments))
                 {
                     throw new Exception("Failed to create initial page");
                 }

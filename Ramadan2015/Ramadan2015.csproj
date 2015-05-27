@@ -83,14 +83,11 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Converters\DateFormatConverter.cs" />
-    <Compile Include="DetailPage.xaml.cs">
-      <DependentUpon>DetailPage.xaml</DependentUpon>
+    <Compile Include="HomePage.xaml.cs">
+      <DependentUpon>HomePage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ListPage.xaml.cs">
-      <DependentUpon>ListPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="MainPage.xaml.cs">
-      <DependentUpon>MainPage.xaml</DependentUpon>
+    <Compile Include="SplashPage.xaml.cs">
+      <DependentUpon>SplashPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Model\RozaModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -109,6 +106,7 @@
     <Content Include="Assets\Resources\btnBg.png" />
     <Content Include="Assets\Resources\Food.png" />
     <Content Include="Assets\Resources\Rules.png" />
+    <Content Include="Assets\Resources\setting.png" />
     <Content Include="Assets\Resources\Splash.jpg" />
     <Content Include="Assets\Resources\time-calender.png" />
     <Content Include="Assets\SmallLogo.scale-240.png" />
@@ -122,15 +120,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="DetailPage.xaml">
+    <Page Include="HomePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ListPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="MainPage.xaml">
+    <Page Include="SplashPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

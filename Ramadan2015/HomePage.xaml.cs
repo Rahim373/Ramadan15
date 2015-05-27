@@ -21,9 +21,9 @@ using Windows.UI.Xaml.Navigation;
 namespace Ramadan2015
 {
 	
-	public sealed partial class ListPage : Page
+	public sealed partial class HomePage : Page
 	{
-		public ListPage()
+		public HomePage()
 		{
 			this.InitializeComponent();
 		}
