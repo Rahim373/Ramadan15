@@ -23,7 +23,7 @@ namespace Ramadan2015.ViewModel
 
 		async void LoadingData()
 		{
-			LoadData = new ObservableCollection<RozaModel>();
+			LoadData = new ObservableCollection<RozaViewModel>();
 			try
 			{
 				StorageFolder SFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
@@ -32,7 +32,20 @@ namespace Ramadan2015.ViewModel
 				var data = JsonConvert.DeserializeObject<List<RozaModel>>(Content);
 				foreach (RozaModel i in data)
 				{
-					LoadData.Add(i);
+					string c;
+					if (i.Serial <= 10 && i.Serial > 0) c = "#990000";
+					else if (i.Serial < 20 && i.Serial > 10) c = "#CC6600";
+					else c = "#33CC99";
+					LoadData.Add(new RozaViewModel() {
+						Serial = (int)i.Serial,
+						Date = (DateTime)i.Date,
+						Fazr = (DateTime)i.Fazr,
+						Johr = (DateTime)i.Johr,
+						Asr = (DateTime)i.Asr,
+						Iftar = (DateTime)i.Iftar,
+						Isha = (DateTime)i.Isha,
+						Colour = c					
+					});
 				}
 			}
 			catch (Exception ex)
@@ -53,8 +66,8 @@ namespace Ramadan2015.ViewModel
 
 
 		public const string LoadDataPropertyName = "LoadData";
-		private ObservableCollection<RozaModel> _Roza = null;
-		public ObservableCollection<RozaModel> LoadData
+		private ObservableCollection<RozaViewModel> _Roza = null;
+		public ObservableCollection<RozaViewModel> LoadData
 		{
 			get
 			{

@@ -15,6 +15,8 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using System.ComponentModel;
+using Windows.Phone.UI.Input;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkID=390556
 
@@ -26,18 +28,43 @@ namespace Ramadan2015
 		public HomePage()
 		{
 			this.InitializeComponent();
+			this.Loaded += HomePage_Loaded;
+			HardwareButtons.BackPressed += HardwareButtons_BackPressed;
+		}
+
+		void HomePage_Loaded(object sender, RoutedEventArgs e)
+		{
+			//for clear all pagestack
+			Frame rootFrame = Window.Current.Content as Frame;
+			rootFrame.BackStack.Clear();
+
+			Date.Text = string.Format("{0:MMMM d, yyyy}", DateTime.Today);
+		}
+
+
+
+		private void _calender_Tapped(object sender, TappedRoutedEventArgs e)
+		{
+			Frame.Navigate(typeof(Calender));
+		}
+
+		protected override void OnNavigatedTo(NavigationEventArgs e)
+		{
+
 		}
 
 		
-		protected override void OnNavigatedTo(NavigationEventArgs e)
-		{
-		}
 
-		//private void MainList_SelectionChanged(object sender, SelectionChangedEventArgs e)
-		//{
-		//	RozaModel selected =(RozaModel)MainList.SelectedValue;
-		//	Frame.Navigate(typeof(DetailPage), selected);
-		//}
+		void HardwareButtons_BackPressed(object sender, BackPressedEventArgs e)
+        {
+            Frame rootFrame = Window.Current.Content as Frame;
+            if(rootFrame != null && rootFrame.CanGoBack)
+            {
+                rootFrame.GoBack();
+                e.Handled = true;
+            }
+
+        }
 	}
 
 

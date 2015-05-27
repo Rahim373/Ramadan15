@@ -61,7 +61,7 @@
 					<Grid HorizontalAlignment="Left" Margin="10" VerticalAlignment="Top">
 						<StackPanel VerticalAlignment="Top" HorizontalAlignment="Left">
 							<TextBlock Text="Today" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" FontSize="{StaticResource TextStyleMediumFontSize}"/>
-							<TextBlock x:Name="Date" Text="26th May, 2015" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" FontSize="{StaticResource TextStyleLargeFontSize}"/>
+							<TextBlock x:Name="Date" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" FontSize="{StaticResource TextStyleLargeFontSize}"/>
 						</StackPanel>
 					</Grid>
 
@@ -99,7 +99,7 @@
 					</Grid.ColumnDefinitions>
 
 					<Grid x:Name="_btn1" Grid.Column="0" Grid.Row="0" Margin="0 10 5 5">
-						<Button x:Name="_calender" BorderThickness="0" Padding="0" HorizontalContentAlignment="Stretch" Width="{Binding ActualWidth, ElementName=_btn1, Mode=OneWay}" Height="{Binding ActualWidth, ElementName=_btn1, Mode=OneWay}">
+						<Button x:Name="_calender" BorderThickness="0" Padding="0" HorizontalContentAlignment="Stretch" Width="{Binding ActualWidth, ElementName=_btn1, Mode=OneWay}" Height="{Binding ActualWidth, ElementName=_btn1, Mode=OneWay}" Tapped="_calender_Tapped">
 							<Button.Background>
 								<ImageBrush ImageSource="ms-appx:/Assets/Resources/btnBg.png" Stretch="UniformToFill"/>
 							</Button.Background>

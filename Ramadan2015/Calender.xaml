@@ -1,0 +1,81 @@
+﻿<Page
+    x:Class="Ramadan2015.Calender"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Ramadan2015"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+	DataContext="{Binding Main, Source={StaticResource Locator}}">
+	<Page.Resources>
+		<local:DateFormatConverter x:Key="ConverteDate"/>
+		<local:TimeFormatConverter x:Key="ConverteTime"/>
+
+		<DataTemplate x:Key="ItemListTemplate01">
+			<Grid Width="{StaticResource ContentDialogContentLandscapeWidth}" Height="150">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition/>
+					<ColumnDefinition Width="3*"/>
+				</Grid.ColumnDefinitions>
+				<Grid Background="{Binding Colour}">
+					<StackPanel VerticalAlignment="Center">
+						<TextBlock Text="Ramadan" FontSize="{StaticResource TextStyleLargeFontSize}" FontFamily="Segoe WP Light" FontWeight="Light" HorizontalAlignment="Center" Foreground="White"/>
+						<Rectangle Height="1" Margin="15,2" Stroke="#CAFFFFFF" StrokeThickness="0.5"/>
+						<TextBlock Text="{Binding Serial}" FontSize="{StaticResource TextStyleLargeFontSize}" FontFamily="Segoe WP Light" FontWeight="Light" HorizontalAlignment="Center" Foreground="White"/>
+					</StackPanel>
+				</Grid>
+				<Grid Grid.Column="1" Background="#59000000">
+					<Grid.RowDefinitions>
+						<RowDefinition/>
+						<RowDefinition/>
+						<RowDefinition/>
+					</Grid.RowDefinitions>
+					<Grid Grid.Row="0" Background="#0C000000" >
+						<StackPanel Margin="15, 5, 0, 2.5" Orientation="Horizontal" VerticalAlignment="Center">
+							<Image Source="Assets/Resources/date_icon.png" Stretch="Fill" VerticalAlignment="Center"/>
+							<TextBlock Text="{Binding Path=Date, Mode=OneWay, Converter={StaticResource ConverteDate}, ConverterParameter=\{0:D\}}" FontSize="{StaticResource TextStyleLargeFontSize}" VerticalAlignment="Center" Margin="10,0,0,0" Foreground="White" />
+						</StackPanel>
+					</Grid>
+					<Grid Grid.Row="1" Background="#19000000">
+						<StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="15,2.5,0,2.5">
+							<Image Source="Assets/Resources/sahri_icon.png" Stretch="Fill" VerticalAlignment="Center" />
+							<TextBlock Text="Sahri " FontSize="{StaticResource TextStyleLargeFontSize}" VerticalAlignment="Center" Margin="10,0,0,0" Foreground="White" />
+							<TextBlock Text="{Binding Path=Sahri, Mode=OneWay, Converter={StaticResource ConverteTime}, ConverterParameter=\{0: h:mm tt\}}" FontSize="{StaticResource TextStyleLargeFontSize}" VerticalAlignment="Center" Margin="10,0,0,0" Foreground="White" />
+
+						</StackPanel>
+					</Grid>
+					<Grid Grid.Row="2" Background="#0C000000">
+						<StackPanel Margin="15,2.5,0,5" Orientation="Horizontal" VerticalAlignment="Center">
+							<Image Source="Assets/Resources/ifter_icon.png" Stretch="Fill" VerticalAlignment="Center"/>
+							<TextBlock Text="Ifter " FontSize="{StaticResource TextStyleLargeFontSize}" VerticalAlignment="Center" Margin="10,0,0,0" Foreground="White" />
+							<TextBlock Text="{Binding Path=Iftar, Mode=OneWay, Converter={StaticResource ConverteTime}, ConverterParameter=\{0: h:mm tt\}}" FontSize="{StaticResource TextStyleLargeFontSize}" VerticalAlignment="Center" Margin="10,0,0,0" Foreground="White" />
+						</StackPanel>
+					</Grid>
+				</Grid>
+			</Grid>
+		</DataTemplate>
+	</Page.Resources>
+	<Page.Background>
+		<ImageBrush ImageSource="Assets/Resources/BG.jpg" Stretch="UniformToFill"/>
+	</Page.Background>
+
+	<Grid>
+		<Grid Margin="10">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="1*"/>
+				<RowDefinition Height="11*"/>
+			</Grid.RowDefinitions>
+			<Grid x:Name="_headingGrid" Margin="0 0 0 25" Grid.Row="0">
+				<StackPanel>
+					<TextBlock Text="Sahri Ifter Calender" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" FontSize="{StaticResource TextStyleExtraLargeFontSize}" Foreground="White"/>
+				</StackPanel>
+			</Grid>
+
+			<Grid  Grid.Row="1">
+				<ListBox x:Name="MainList" Background="{x:Null}" ItemTemplate="{StaticResource ItemListTemplate01}" ItemsSource="{Binding LoadData}"/>
+			</Grid>
+
+		</Grid>
+
+	</Grid>
+</Page>

@@ -82,10 +82,14 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Calender.xaml.cs">
+      <DependentUpon>Calender.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Converters\DateFormatConverter.cs" />
     <Compile Include="HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Model\RozaViewModel.cs" />
     <Compile Include="SplashPage.xaml.cs">
       <DependentUpon>SplashPage.xaml</DependentUpon>
     </Compile>
@@ -104,8 +108,11 @@
     <Content Include="Assets\Resources\BG.jpg" />
     <Content Include="Assets\Resources\Book.png" />
     <Content Include="Assets\Resources\btnBg.png" />
+    <Content Include="Assets\Resources\date_icon.png" />
     <Content Include="Assets\Resources\Food.png" />
+    <Content Include="Assets\Resources\ifter_icon.png" />
     <Content Include="Assets\Resources\Rules.png" />
+    <Content Include="Assets\Resources\sahri_icon.png" />
     <Content Include="Assets\Resources\setting.png" />
     <Content Include="Assets\Resources\Splash.jpg" />
     <Content Include="Assets\Resources\time-calender.png" />
@@ -120,6 +127,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Calender.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="HomePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

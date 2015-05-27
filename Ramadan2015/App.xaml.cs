@@ -8,6 +8,7 @@ using Windows.ApplicationModel.Activation;
 using Windows.Data.Xml.Dom;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Phone.UI.Input;
 using Windows.Storage;
 using Windows.UI.Notifications;
 using Windows.UI.Popups;
@@ -40,8 +41,24 @@ namespace Ramadan2015
             this.InitializeComponent();
             this.Suspending += this.OnSuspending;
 			LoadTile();
+			HardwareButtons.BackPressed += HardwareButtons_BackPressed;
 
         }
+
+		void HardwareButtons_BackPressed(object sender, BackPressedEventArgs e)
+		{
+			Frame frame = Window.Current.Content as Frame;
+
+			if (frame == null)
+			{
+				return;
+			}
+			if (frame.CanGoBack)
+			{
+				frame.GoBack();
+				e.Handled = true;
+			}
+		}
 
 		private void LoadTile()
 		{
