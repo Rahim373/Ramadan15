@@ -76,7 +76,7 @@
 			</Grid.RowDefinitions>
 			<Grid x:Name="_headingGrid" Margin="0 0 0 0" Grid.Row="0">
 				<StackPanel>
-					<TextBlock Text="Sahri Ifter Calender" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" FontSize="{StaticResource TextStyleExtraLargeFontSize}" Foreground="White"/>
+					<TextBlock Text="RAMADAN 2015" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" FontSize="{StaticResource TextStyleExtraExtraLargeFontSize}" Foreground="White"/>
 				</StackPanel>
 			</Grid>
 

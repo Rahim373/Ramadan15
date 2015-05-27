@@ -31,20 +31,20 @@
 
 			<Grid.RowDefinitions>
 				<RowDefinition/>
-				<RowDefinition Height="6*"/>
+				<RowDefinition Height="10*"/>
 			</Grid.RowDefinitions>
 			<!--Heading Grid-->
 			<Grid x:Name="_headingGrid" Grid.Row="0">
 				<StackPanel>
-					<TextBlock Text="Ramadan" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" FontSize="{StaticResource TextStyleExtraExtraLargeFontSize}"/>
-					<TextBlock Text="2015" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" FontSize="{StaticResource TextStyleExtraExtraLargeFontSize}"/>
+					<TextBlock Text="Ramadan 2015" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" FontSize="{StaticResource TextStyleExtraExtraLargeFontSize}"/>
 				</StackPanel>
 			</Grid>
 			<!--Content Grid-->
 			<Grid x:Name="_contentGrid" Grid.Row="1">
 				<Grid.RowDefinitions>
-					<RowDefinition/>
-					<RowDefinition Height="2.3*"/>
+					<RowDefinition Height="2*"/>
+					<RowDefinition Height="5*"/>
+					<RowDefinition Height="1*"/>
 				</Grid.RowDefinitions>
 
 				<!--For Time-->
