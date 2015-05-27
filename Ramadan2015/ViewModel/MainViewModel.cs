@@ -33,9 +33,9 @@ namespace Ramadan2015.ViewModel
 				foreach (RozaModel i in data)
 				{
 					string c;
-					if (i.Serial <= 10 && i.Serial > 0) c = "#990000";
-					else if (i.Serial < 20 && i.Serial > 10) c = "#CC6600";
-					else c = "#33CC99";
+					if (i.Serial <= 10 && i.Serial > 0) c = "#0C0032";
+					else if (i.Serial < 20 && i.Serial > 10) c = "#00005E";
+					else c = "#3100A0";
 					LoadData.Add(new RozaViewModel() {
 						Serial = (int)i.Serial,
 						Date = (DateTime)i.Date,

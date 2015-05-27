@@ -86,6 +86,12 @@
       <DependentUpon>Calender.xaml</DependentUpon>
     </Compile>
     <Compile Include="Converters\DateFormatConverter.cs" />
+    <Compile Include="DetailItemPage.xaml.cs">
+      <DependentUpon>DetailItemPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Duah.xaml.cs">
+      <DependentUpon>Duah.xaml</DependentUpon>
+    </Compile>
     <Compile Include="HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
     </Compile>
@@ -128,6 +134,14 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Page Include="Calender.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DetailItemPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Duah.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

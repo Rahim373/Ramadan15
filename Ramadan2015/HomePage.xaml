@@ -113,7 +113,7 @@
 					</Grid>
 
 					<Grid x:Name="_btn2" Grid.Column="1" Grid.Row="0" Margin="5 10 0 5">
-						<Button x:Name="_doa" BorderThickness="0" Padding="0" HorizontalContentAlignment="Stretch" Width="{Binding ActualWidth, ElementName=_btn2, Mode=OneWay}" Height="{Binding ActualWidth, ElementName=_btn1, Mode=OneWay}">
+						<Button x:Name="_doa" BorderThickness="0" Padding="0" HorizontalContentAlignment="Stretch" Width="{Binding ActualWidth, ElementName=_btn2, Mode=OneWay}" Height="{Binding ActualWidth, ElementName=_btn1, Mode=OneWay}" Click="_doa_Click">
 							<Button.Background>
 								<ImageBrush Stretch="UniformToFill" ImageSource="Assets/Resources/btnBg.png"/>
 							</Button.Background>

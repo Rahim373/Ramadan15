@@ -16,7 +16,7 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="Ramadan2015.App">
-      <m3:VisualElements DisplayName="Ramadan2015" Square150x150Logo="Assets\Logo.png" Square44x44Logo="Assets\SmallLogo.png" Description="Ramadan2015" ForegroundText="light" BackgroundColor="transparent">
+      <m3:VisualElements DisplayName="Ramadan 2015" Square150x150Logo="Assets\Logo.png" Square44x44Logo="Assets\SmallLogo.png" Description="Ramadan 2015 is an app for time schedule of Sahri, Ifter of Ramadan only for Bangladesh local time. There are also provided some Duah and other features." ForegroundText="light" BackgroundColor="transparent" ToastCapable="true">
         <m3:DefaultTile Wide310x150Logo="Assets\WideLogo.png" Square71x71Logo="Assets\Square71x71Logo.png">
         </m3:DefaultTile>
         <m3:SplashScreen Image="Assets\SplashScreen.png" />

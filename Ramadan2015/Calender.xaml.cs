@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Ramadan2015.Model;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -12,30 +13,34 @@ using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkID=390556
 
 namespace Ramadan2015
 {
-	/// <summary>
-	/// An empty page that can be used on its own or navigated to within a Frame.
-	/// </summary>
+
 	public sealed partial class Calender : Page
 	{
 		public Calender()
 		{
 			this.InitializeComponent();
+			Frame mainFrame = Window.Current.Content as Frame;
+			mainFrame.ContentTransitions = new TransitionCollection { new PaneThemeTransition { Edge = EdgeTransitionLocation.Bottom } };
+			
+		}
+
+		protected override void OnNavigatedTo(NavigationEventArgs e)
+		{
+		
 		}
 
 
-		/// <summary>
-		/// Invoked when this page is about to be displayed in a Frame.
-		/// </summary>
-		/// <param name="e">Event data that describes how this page was reached.
-		/// This parameter is typically used to configure the page.</param>
-		protected override void OnNavigatedTo(NavigationEventArgs e)
+		private void MainList_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
 		{
+			RozaViewModel item = (RozaViewModel)MainList.SelectedItem;
+			Frame.Navigate(typeof(DetailItemPage), item);
 		}
 	}
 }

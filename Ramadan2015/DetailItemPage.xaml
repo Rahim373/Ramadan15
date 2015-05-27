@@ -1,0 +1,58 @@
+﻿<Page
+    x:Class="Ramadan2015.DetailItemPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Ramadan2015"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+	<Page.Background>
+		<ImageBrush Stretch="UniformToFill" ImageSource="Assets/Resources/BG.jpg"/>
+	</Page.Background>
+	<Page.BottomAppBar>
+		<CommandBar Foreground="Black" Background="White">
+			<AppBarButton Icon="Flag" Label="About"/>
+			<AppBarButton Icon="Comment" Label="Credit"/>
+		</CommandBar>
+	</Page.BottomAppBar>
+
+	<Grid Margin="10">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="1*"/>
+			<RowDefinition Height="11*"/>
+		</Grid.RowDefinitions>
+		
+		<Grid x:Name="_headingGrid" Margin="0 0 0 0" Grid.Row="0">
+			<StackPanel>
+				<TextBlock Text="Sahri Ifter Calender" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" FontSize="{StaticResource TextStyleExtraLargeFontSize}" Foreground="White"/>
+			</StackPanel>
+		</Grid>
+
+		<Grid  Grid.Row="1" Background="#3F000000">
+
+			<Grid Margin="5 0">
+				<StackPanel>
+					<TextBlock Text="DATE" HorizontalAlignment="Center" Foreground="White" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" FontSize="{StaticResource TextStyleMediumFontSize}" Margin="0 10 0 0"/>
+					<TextBlock x:Name="_date" HorizontalAlignment="Center" Foreground="White" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" FontSize="{StaticResource TextStyleLargeFontSize}" Margin="0 5 0 15"/>
+
+					<TextBlock Text="DAY" HorizontalAlignment="Center" Foreground="White" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" FontSize="{StaticResource TextStyleMediumFontSize}"/>
+					<TextBlock x:Name="_day" HorizontalAlignment="Center" Foreground="White" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" FontSize="{StaticResource TextStyleLargeFontSize}" Margin="0 5 0 15" />
+
+					<TextBlock Text="SEHRI" HorizontalAlignment="Center" Foreground="White" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" FontSize="{StaticResource TextStyleMediumFontSize}"/>
+					<TextBlock x:Name="_sehri"  HorizontalAlignment="Center" Foreground="White" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" FontSize="{StaticResource TextStyleLargeFontSize}" Margin="0 5 0 15"/>
+
+					<TextBlock Text="TIME RMAIINING" HorizontalAlignment="Center" Foreground="White" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" FontSize="{StaticResource TextStyleMediumFontSize}"/>
+					<TextBlock x:Name="_str" HorizontalAlignment="Center" Foreground="White" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" FontSize="{StaticResource TextStyleLargeFontSize}" Margin="0 5 0 15"/>
+
+					<TextBlock Text="IFTER" HorizontalAlignment="Center" Foreground="White" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" FontSize="{StaticResource TextStyleMediumFontSize}"/>
+					<TextBlock x:Name="_ifter" HorizontalAlignment="Center" Foreground="White" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" FontSize="{StaticResource TextStyleLargeFontSize}" Margin="0 5 0 15"/>
+
+					<TextBlock Text="TIME REMAINING" HorizontalAlignment="Center" Foreground="White" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" FontSize="{StaticResource TextStyleMediumFontSize}"/>
+					<TextBlock x:Name="_itr" HorizontalAlignment="Center" Foreground="White" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" FontSize="{StaticResource TextStyleLargeFontSize}"  Margin="0 5 0 15"/>
+				</StackPanel>
+			</Grid>
+		</Grid>
+
+
+	</Grid>
+</Page>

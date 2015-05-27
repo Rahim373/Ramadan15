@@ -17,6 +17,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using System.ComponentModel;
 using Windows.Phone.UI.Input;
+using Windows.UI.Xaml.Media.Animation;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkID=390556
 
@@ -25,18 +26,17 @@ namespace Ramadan2015
 	
 	public sealed partial class HomePage : Page
 	{
+		Frame mainFrame = Window.Current.Content as Frame;
 		public HomePage()
 		{
 			this.InitializeComponent();
 			this.Loaded += HomePage_Loaded;
-			HardwareButtons.BackPressed += HardwareButtons_BackPressed;
+
+			mainFrame.ContentTransitions = new TransitionCollection { new PaneThemeTransition { Edge = EdgeTransitionLocation.Bottom } };
 		}
 
 		void HomePage_Loaded(object sender, RoutedEventArgs e)
 		{
-			//for clear all pagestack
-			Frame rootFrame = Window.Current.Content as Frame;
-			rootFrame.BackStack.Clear();
 
 			Date.Text = string.Format("{0:MMMM d, yyyy}", DateTime.Today);
 		}
@@ -50,21 +50,15 @@ namespace Ramadan2015
 
 		protected override void OnNavigatedTo(NavigationEventArgs e)
 		{
+			mainFrame.BackStack.Clear();
+		}
 
+		private void _doa_Click(object sender, RoutedEventArgs e)
+		{
+			Frame.Navigate(typeof(Duah));
 		}
 
 		
-
-		void HardwareButtons_BackPressed(object sender, BackPressedEventArgs e)
-        {
-            Frame rootFrame = Window.Current.Content as Frame;
-            if(rootFrame != null && rootFrame.CanGoBack)
-            {
-                rootFrame.GoBack();
-                e.Handled = true;
-            }
-
-        }
 	}
 
 
