@@ -19,9 +19,9 @@
 				</Grid.ColumnDefinitions>
 				<Grid x:Name="dayGrid" Background="{Binding Colour}">
 					<StackPanel VerticalAlignment="Center">
-						<TextBlock Text="Ramadan" FontSize="{StaticResource TextStyleLargeFontSize}" FontFamily="Segoe WP Light" FontWeight="Light" HorizontalAlignment="Center" Foreground="White"/>
+						<TextBlock x:Uid="ramadanHeading" FontSize="{StaticResource TextStyleLargeFontSize}" FontWeight="Light" HorizontalAlignment="Center" Foreground="White"/>
 						<Rectangle Height="1" Margin="15,2" Stroke="#CAFFFFFF" StrokeThickness="0.5"/>
-						<TextBlock Text="{Binding Serial}" FontSize="{StaticResource TextStyleLargeFontSize}" FontFamily="Segoe WP Light" FontWeight="Light" HorizontalAlignment="Center" Foreground="White"/>
+						<TextBlock x:Uid="TimeorDate" Text="{Binding Serial}" FontSize="{StaticResource TextStyleLargeFontSize}" FontWeight="Light" HorizontalAlignment="Center" Foreground="White"/>
 					</StackPanel>
 				</Grid>
 				<Grid Grid.Column="1">
@@ -36,22 +36,22 @@
 					<Grid Grid.Row="0" Background="#19000000" >
 						<StackPanel Margin="15, 5, 0, 2.5" Orientation="Horizontal" VerticalAlignment="Center">
 							<Image Source="Assets/Resources/date_icon.png" Stretch="Fill" VerticalAlignment="Center"/>
-							<TextBlock Text="{Binding Path=Date, Mode=OneWay, Converter={StaticResource ConverteDate}, ConverterParameter=\{0:D\}}" FontSize="{StaticResource TextStyleLargeFontSize}" VerticalAlignment="Center" Margin="10,0,0,0" Foreground="#BF000000"/>
+							<TextBlock x:Uid="TimeorDate" Text="{Binding Path=Date, Mode=OneWay, Converter={StaticResource ConverteDate}, ConverterParameter=\{0:D\}}" FontSize="{StaticResource TextStyleLargeFontSize}" VerticalAlignment="Center" Margin="10,0,0,0" Foreground="#BF000000" />
 						</StackPanel>
 					</Grid>
 					<Grid Grid.Row="1" Background="#26000000">
 						<StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="15,2.5,0,2.5">
 							<Image Source="Assets/Resources/sahri_icon.png" Stretch="Fill" VerticalAlignment="Center" />
-							<TextBlock Text="Sahri " FontSize="{StaticResource TextStyleLargeFontSize}" VerticalAlignment="Center" Margin="10,0,0,0" Foreground="#BF000000"  />
-							<TextBlock Text="{Binding Path=Sahri, Mode=OneWay, Converter={StaticResource ConverteTime}, ConverterParameter=\{0: h:mm tt\}}" FontSize="{StaticResource TextStyleLargeFontSize}" VerticalAlignment="Center" Margin="10,0,0,0" Foreground="#BF000000" />
+							<TextBlock x:Uid="sehriHeading" FontSize="{StaticResource TextStyleLargeFontSize}" VerticalAlignment="Center" Margin="10,0,0,0" Foreground="#BF000000"  />
+							<TextBlock x:Uid="TimeorDate" Text="{Binding Path=Sahri, Mode=OneWay, Converter={StaticResource ConverteTime}, ConverterParameter=\{0: h:mm tt\}}" FontSize="{StaticResource TextStyleLargeFontSize}" VerticalAlignment="Center" Margin="10,0,0,0" Foreground="#BF000000"/>
 
 						</StackPanel>
 					</Grid>
 					<Grid Grid.Row="2" Background="#19000000">
 						<StackPanel Margin="15,2.5,0,5" Orientation="Horizontal" VerticalAlignment="Center">
 							<Image Source="Assets/Resources/ifter_icon.png" Stretch="Fill" VerticalAlignment="Center"/>
-							<TextBlock Text="Ifter " FontSize="{StaticResource TextStyleLargeFontSize}" VerticalAlignment="Center" Margin="10,0,0,0" Foreground="#BF000000" />
-							<TextBlock Text="{Binding Path=Iftar, Mode=OneWay, Converter={StaticResource ConverteTime}, ConverterParameter=\{0: h:mm tt\}}" FontSize="{StaticResource TextStyleLargeFontSize}" VerticalAlignment="Center" Margin="10,0,0,0" Foreground="#BF000000"/>
+							<TextBlock x:Uid="ifterHeading" FontSize="{StaticResource TextStyleLargeFontSize}" VerticalAlignment="Center" Margin="10,0,0,0" Foreground="#BF000000" />
+							<TextBlock x:Uid="TimeorDate" Text="{Binding Path=Iftar, Mode=OneWay, Converter={StaticResource ConverteTime}, ConverterParameter=\{0: h:mm tt\}}" FontSize="{StaticResource TextStyleLargeFontSize}" VerticalAlignment="Center" Margin="10,0,0,0" Foreground="#BF000000"/>
 						</StackPanel>
 					</Grid>
 				</Grid>
@@ -76,7 +76,7 @@
 			</Grid.RowDefinitions>
 			<Grid x:Name="_headingGrid" Margin="0 0 0 0" Grid.Row="0">
 				<StackPanel>
-					<TextBlock Text="RAMADAN 2015" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" FontSize="{StaticResource TextStyleExtraExtraLargeFontSize}" Foreground="White"/>
+					<TextBlock x:Uid="AppName" FontSize="{StaticResource TextStyleExtraExtraLargeFontSize}" Foreground="White"/>
 				</StackPanel>
 			</Grid>
 

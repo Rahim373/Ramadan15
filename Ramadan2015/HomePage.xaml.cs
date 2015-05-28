@@ -58,17 +58,18 @@ namespace Ramadan2015
 			Frame.Navigate(typeof(Duah));
 		}
 
+		private void _others_Click(object sender, RoutedEventArgs e)
+		{
+			Frame.Navigate(typeof(Rules));
+		}
+
+		private void _setting_Click(object sender, RoutedEventArgs e)
+		{
+			Frame.Navigate(typeof(SettingPage));
+		}
+
 		
 	}
-
-
-
-
-
-
-
-
-
 
 	public sealed class DateFormatConverter : IValueConverter
     {

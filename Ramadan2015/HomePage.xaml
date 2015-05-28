@@ -36,7 +36,7 @@
 			<!--Heading Grid-->
 			<Grid x:Name="_headingGrid" Grid.Row="0">
 				<StackPanel>
-					<TextBlock Text="Ramadan 2015" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" FontSize="{StaticResource TextStyleExtraExtraLargeFontSize}"/>
+					<TextBlock x:Uid="AppName" FontSize="{StaticResource TextStyleExtraExtraLargeFontSize}"/>
 				</StackPanel>
 			</Grid>
 			<!--Content Grid-->
@@ -44,7 +44,6 @@
 				<Grid.RowDefinitions>
 					<RowDefinition Height="2*"/>
 					<RowDefinition Height="5*"/>
-					<RowDefinition Height="1*"/>
 				</Grid.RowDefinitions>
 
 				<!--For Time-->
@@ -60,29 +59,29 @@
 
 					<Grid HorizontalAlignment="Left" Margin="10" VerticalAlignment="Top">
 						<StackPanel VerticalAlignment="Top" HorizontalAlignment="Left">
-							<TextBlock Text="Today" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" FontSize="{StaticResource TextStyleMediumFontSize}"/>
-							<TextBlock x:Name="Date" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" FontSize="{StaticResource TextStyleLargeFontSize}"/>
+							<TextBlock x:Uid="todayHeading" FontSize="{StaticResource TextStyleMediumFontSize}"/>
+							<TextBlock x:Name="Date" FontSize="{StaticResource TextStyleLargeFontSize}"/>
 						</StackPanel>
 					</Grid>
 
 					<Grid HorizontalAlignment="Left" Margin="10" Grid.Column="0" Grid.Row="1" VerticalAlignment="Bottom">
 						<StackPanel HorizontalAlignment="Left" VerticalAlignment="Bottom">
-							<TextBlock Text="Day" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" FontSize="{StaticResource TextStyleMediumFontSize}"/>
+							<TextBlock x:Uid="todayDayHeading" FontSize="{StaticResource TextStyleMediumFontSize}"/>
 							<TextBlock x:Name="Day" Text="1st Ramadan"  FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" FontSize="{StaticResource TextStyleLargeFontSize}"/>
 						</StackPanel>
 					</Grid>
 
 					<Grid HorizontalAlignment="Right" Margin="10" Grid.Column="1" Grid.Row="0" VerticalAlignment="Top">
 						<StackPanel HorizontalAlignment="Right" VerticalAlignment="Top">
-							<TextBlock Text="Today's Sahri" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" FontSize="{StaticResource TextStyleMediumFontSize}"/>
-							<TextBlock x:Name="Sehri" Text="3:40 AM"  FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" FontSize="{StaticResource TextStyleLargeFontSize}" HorizontalAlignment="Right"/>
+							<TextBlock x:Uid="todaySahri" FontSize="{StaticResource TextStyleMediumFontSize}"/>
+							<TextBlock x:Name="Sehri" Text="3:40 AM"  FontSize="{StaticResource TextStyleLargeFontSize}" HorizontalAlignment="Right"/>
 						</StackPanel>
 					</Grid>
 
 					<Grid HorizontalAlignment="Right" Margin="10" Grid.Column="1" Grid.Row="1" VerticalAlignment="Bottom">
 						<StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Right">
-							<TextBlock Text="Today's Sahri" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" FontSize="{StaticResource TextStyleMediumFontSize}"/>
-							<TextBlock x:Name="Iftar" Text="6:40 PM"  FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" FontSize="{StaticResource TextStyleLargeFontSize}" HorizontalAlignment="Right"/>
+							<TextBlock x:Uid="todayIftar" FontSize="{StaticResource TextStyleMediumFontSize}"/>
+							<TextBlock x:Name="Iftar" Text="6:40 PM"  FontSize="{StaticResource TextStyleLargeFontSize}" HorizontalAlignment="Right"/>
 						</StackPanel>
 					</Grid>
 				</Grid>
@@ -106,7 +105,7 @@
 							<Grid HorizontalAlignment="Center" VerticalAlignment="Center">
 								<StackPanel>
 									<Image Height="80" RenderTransformOrigin="0.5,0.5" Source="Assets/Resources/time-calender.png"/>
-									<TextBlock Text="SEHRI IFTER TIME" FontSize="{StaticResource TextStyleMediumFontSize}" Foreground="Black" Margin="0,15,0,0" HorizontalAlignment="Center" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test"/>
+									<TextBlock x:Uid="menu_Time" FontSize="{StaticResource TextStyleMediumFontSize}" Foreground="Black" Margin="0,15,0,0" HorizontalAlignment="Center" />
 								</StackPanel>
 							</Grid>
 						</Button>
@@ -120,35 +119,35 @@
 							<Grid HorizontalAlignment="Center" VerticalAlignment="Center">
 								<StackPanel>
 									<Image Height="80" RenderTransformOrigin="0.5,0.5" Source="Assets/Resources/Book.png"/>
-									<TextBlock Text="DOAH" FontSize="{StaticResource TextStyleMediumFontSize}" Foreground="Black" Margin="0,15,0,0" HorizontalAlignment="Center" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test"/>
+									<TextBlock x:Uid="menu_Doah" FontSize="{StaticResource TextStyleMediumFontSize}" Foreground="Black" Margin="0,15,0,0" HorizontalAlignment="Center"/>
 								</StackPanel>
 							</Grid>
 						</Button>
 					</Grid>
 
 					<Grid x:Name="_btn3" Grid.Column="0" Grid.Row="1" Margin="0 5 5 0">
-						<Button x:Name="_others" BorderThickness="0" Padding="0" HorizontalContentAlignment="Stretch" Width="{Binding ActualWidth, ElementName=_btn3, Mode=OneWay}" Height="{Binding ActualWidth, ElementName=_btn1, Mode=OneWay}">
+						<Button x:Name="_others" BorderThickness="0" Padding="0" HorizontalContentAlignment="Stretch" Width="{Binding ActualWidth, ElementName=_btn3, Mode=OneWay}" Height="{Binding ActualWidth, ElementName=_btn1, Mode=OneWay}" Click="_others_Click">
 							<Button.Background>
 								<ImageBrush Stretch="UniformToFill" ImageSource="Assets/Resources/btnBg.png"/>
 							</Button.Background>
 							<Grid HorizontalAlignment="Center" VerticalAlignment="Center">
 								<StackPanel>
 									<Image Height="80" RenderTransformOrigin="0.5,0.5" Source="Assets/Resources/Rules.png"/>
-									<TextBlock Text="RULES" FontSize="{StaticResource TextStyleMediumFontSize}" Foreground="Black" Margin="0,15,0,0" HorizontalAlignment="Center" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test"/>
+									<TextBlock x:Uid="menu_Rules" FontSize="{StaticResource TextStyleMediumFontSize}" Foreground="Black" Margin="0,15,0,0" HorizontalAlignment="Center"/>
 								</StackPanel>
 							</Grid>
 						</Button>
 					</Grid>
 
 					<Grid x:Name="_btn4" Grid.Column="1" Grid.Row="1" Margin="5 5 0 0">
-						<Button x:Name="_setting" BorderThickness="0" Padding="0" HorizontalContentAlignment="Stretch" Width="{Binding ActualWidth, ElementName=_btn4, Mode=OneWay}" Height="{Binding ActualWidth, ElementName=_btn1, Mode=OneWay}">
+						<Button x:Name="_setting" BorderThickness="0" Padding="0" HorizontalContentAlignment="Stretch" Width="{Binding ActualWidth, ElementName=_btn4, Mode=OneWay}" Height="{Binding ActualWidth, ElementName=_btn1, Mode=OneWay}" Click="_setting_Click">
 							<Button.Background>
 								<ImageBrush Stretch="UniformToFill" ImageSource="Assets/Resources/btnBg.png"/>
 							</Button.Background>
 							<Grid HorizontalAlignment="Center" VerticalAlignment="Center">
 								<StackPanel>
 									<Image Height="80" RenderTransformOrigin="0.5,0.5" Source="Assets/Resources/setting.png"/>
-									<TextBlock Text="SETTING" FontSize="{StaticResource TextStyleMediumFontSize}" Foreground="Black" Margin="0,15,0,0" HorizontalAlignment="Center" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test"/>
+									<TextBlock x:Uid="menu_Setting" FontSize="{StaticResource TextStyleMediumFontSize}" Foreground="Black" Margin="0,15,0,0" HorizontalAlignment="Center"/>
 								</StackPanel>
 							</Grid>
 						</Button>

@@ -49,7 +49,7 @@ namespace Ramadan2015
 				_str.Text = "Time Over";
 			}
 			else {
-				_str.Text = a.Days + " Days " + a.Hours + " Hours " + a.Minutes + " Minutes " + a.Seconds + " Seconds";
+				_str.Text = a.Days + " : " + a.Hours + " : " + a.Minutes + " : " + a.Seconds;
 			}
 
 
@@ -59,7 +59,7 @@ namespace Ramadan2015
 			}
 			else
 			{
-				_itr.Text = b.Days + " Days " + b.Hours + " Hours " + b.Minutes + " Minutes " + b.Seconds + " Seconds";
+				_itr.Text = b.Days + " : " + b.Hours + " : " + b.Minutes + " : " + b.Seconds;
 			}	
 		}
 
@@ -68,7 +68,8 @@ namespace Ramadan2015
 		{
 			item = e.Parameter as RozaViewModel;
 			_date.Text = string.Format("{0:dd MMMM yyyy}", item.Date);
-			_day.Text = item.Serial + " Ramadan";
+
+			_day.Text = item.Serial.ToString();
 			_sehri.Text = string.Format("{0:t}", item.Sahri);
 			_ifter.Text = string.Format("{0:t}", item.Iftar);
 			

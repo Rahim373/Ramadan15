@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -43,6 +44,20 @@ namespace Ramadan2015
 			LoadTile();
 			HardwareButtons.BackPressed += HardwareButtons_BackPressed;
 
+			Windows.Storage.ApplicationDataContainer localSetting = Windows.Storage.ApplicationData.Current.LocalSettings;
+			if (localSetting.Values["Language"].ToString() == "bn-Bd")
+			{
+				var culture = new CultureInfo("bn-Bd");
+				Windows.Globalization.ApplicationLanguages.PrimaryLanguageOverride = culture.Name;
+				CultureInfo.DefaultThreadCurrentCulture = culture;
+				CultureInfo.DefaultThreadCurrentUICulture = culture;
+			}
+			else {
+				var culture = new CultureInfo("en-Us");
+				Windows.Globalization.ApplicationLanguages.PrimaryLanguageOverride = culture.Name;
+				CultureInfo.DefaultThreadCurrentCulture = culture;
+				CultureInfo.DefaultThreadCurrentUICulture = culture;
+			}
         }
 
 		void HardwareButtons_BackPressed(object sender, BackPressedEventArgs e)

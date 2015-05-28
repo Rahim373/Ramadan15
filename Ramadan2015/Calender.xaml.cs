@@ -28,12 +28,12 @@ namespace Ramadan2015
 			this.InitializeComponent();
 			Frame mainFrame = Window.Current.Content as Frame;
 			mainFrame.ContentTransitions = new TransitionCollection { new PaneThemeTransition { Edge = EdgeTransitionLocation.Bottom } };
-			
+
 		}
 
 		protected override void OnNavigatedTo(NavigationEventArgs e)
 		{
-		
+
 		}
 
 
@@ -57,13 +57,13 @@ public sealed class DateFormatConverter : IValueConverter
 		{
 			return string.Format("{0:D}", value);
 		}
-		value = string.Format("{0:D}", value);
+		//value = string.Format("{0:D}", value);
+
 		return value.ToString();
 	}
 
 	// No need to implement converting back on a one-way binding 
-	public object ConvertBack(object value, Type targetType,
-		object parameter, string language)
+	public object ConvertBack(object value, Type targetType,  object parameter, string language)
 	{
 		throw new NotImplementedException();
 	}

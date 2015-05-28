@@ -24,12 +24,19 @@
 
 		<Grid x:Name="_headingGrid" Margin="0 0 0 0" Grid.Row="0">
 			<StackPanel>
-				<TextBlock Text="RAMADAN 2015" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" FontSize="{StaticResource TextStyleExtraExtraLargeFontSize}" Foreground="White"/>
+				<TextBlock x:Uid="AppName" FontSize="{StaticResource TextStyleExtraExtraLargeFontSize}" Foreground="White"/>
 			</StackPanel>
 		</Grid>
 
-		<Pivot Grid.Row="1" Background="{x:Null}">
-			<PivotItem Header="Doah for Sahri" Background="#59000000">
+		<Pivot Grid.Row="1">
+			<Pivot.HeaderTemplate>
+				<DataTemplate>
+					<Grid Height="Auto" Margin="0">
+						<TextBlock Text="{Binding}" Margin="0 10 0 0" FontSize="{StaticResource TextStyleExtraLargeFontSize}" />
+					</Grid>
+				</DataTemplate>
+			</Pivot.HeaderTemplate>
+			<PivotItem x:Uid="DoahHeading1" Background="#25000000">
 				<StackPanel Margin="10">
 					<TextBlock Text="Arabic Pronunciation" TextWrapping="Wrap" FontSize="{StaticResource TextStyleLargeFontSize}" Margin="0,0,0,5" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" TextAlignment="Center" Pivot.SlideInAnimationGroup="GroupOne"/>
 					<TextBlock Text="وَبِصَوْمِ غَدٍ نَّوَيْتَ مِنْ شَهْرِ رَمَضَانَ"  TextWrapping="Wrap" FontSize="{StaticResource TextStyleLargeFontSize}" Margin="0,0,0,25" TextAlignment="Center" FontWeight="Bold" Pivot.SlideInAnimationGroup="GroupTwo">

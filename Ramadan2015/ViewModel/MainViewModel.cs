@@ -21,6 +21,7 @@ namespace Ramadan2015.ViewModel
 			LoadingData();
 		}
 
+		#region LoadMainListData
 		async void LoadingData()
 		{
 			LoadData = new ObservableCollection<RozaViewModel>();
@@ -33,10 +34,11 @@ namespace Ramadan2015.ViewModel
 				foreach (RozaModel i in data)
 				{
 					string c;
-					if (i.Serial <= 10 && i.Serial > 0) c = "#0C0032";
-					else if (i.Serial < 20 && i.Serial > 10) c = "#00005E";
-					else c = "#3100A0";
-					LoadData.Add(new RozaViewModel() {
+					if (i.Serial <= 10 && i.Serial > 0) c = "#750C0032";
+					else if (i.Serial < 20 && i.Serial > 10) c = "#7500005E";
+					else c = "#753100A0";
+					LoadData.Add(new RozaViewModel()
+					{
 						Serial = (int)i.Serial,
 						Date = (DateTime)i.Date,
 						Fazr = (DateTime)i.Fazr,
@@ -44,13 +46,13 @@ namespace Ramadan2015.ViewModel
 						Asr = (DateTime)i.Asr,
 						Iftar = (DateTime)i.Iftar,
 						Isha = (DateTime)i.Isha,
-						Colour = c					
+						Colour = c
 					});
 				}
 			}
 			catch (Exception ex)
 			{
-				doss(ex.ToString());
+				//doss(ex.ToString());
 			}
 		}
 
@@ -61,9 +63,6 @@ namespace Ramadan2015.ViewModel
 			vibrate.Vibrate(TimeSpan.FromSeconds(0.2));
 			await msg.ShowAsync();
 		}
-
-
-
 
 		public const string LoadDataPropertyName = "LoadData";
 		private ObservableCollection<RozaViewModel> _Roza = null;
@@ -84,6 +83,7 @@ namespace Ramadan2015.ViewModel
 				_Roza = value;
 				RaisePropertyChanged(LoadDataPropertyName);
 			}
-		}
+		} 
+		#endregion
 	}
 }
