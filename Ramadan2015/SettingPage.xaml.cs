@@ -32,14 +32,14 @@ namespace Ramadan2015
 
 		void SettingPage_Loaded(object sender, RoutedEventArgs e)
 		{
-			if (localSetting.Values["Language"].ToString() != "bn-Bd"){
-				cheackBox.IsChecked = false;
+			if (localSetting.Values["Language"].ToString() != "bn-Bd")
+			{
+				cheackBox.IsOn = false;
 			}
 			else
 			{
-				cheackBox.IsChecked = true;
+				cheackBox.IsOn = true;
 			}
-			asd.Text = localSetting.Values["Language"].ToString();
 		}
 
 		/// <summary>
@@ -49,28 +49,51 @@ namespace Ramadan2015
 		/// This parameter is typically used to configure the page.</param>
 		protected override void OnNavigatedTo(NavigationEventArgs e)
 		{
-			
+
 		}
 
-		private void cheackBox_Checked(object sender, RoutedEventArgs e)
+		//private void cheackBox_Checked(object sender, RoutedEventArgs e)
+		//{
+
+		//	localSetting.Values["Language"] = "bn-Bd";
+
+		//	var culture = new CultureInfo("bn-Bd");
+		//	Windows.Globalization.ApplicationLanguages.PrimaryLanguageOverride = culture.Name;
+		//	CultureInfo.DefaultThreadCurrentCulture = culture;
+		//	CultureInfo.DefaultThreadCurrentUICulture = culture;
+		//}
+
+		//private void cheackBox_Unchecked(object sender, RoutedEventArgs e)
+		//{
+		//	localSetting.Values["Language"] = "en-Us";
+
+		//	var culture = new CultureInfo("en-Us");
+		//	Windows.Globalization.ApplicationLanguages.PrimaryLanguageOverride = culture.Name;
+		//	CultureInfo.DefaultThreadCurrentCulture = culture;
+		//	CultureInfo.DefaultThreadCurrentUICulture = culture;
+		//}
+
+		private void cheackBox_Toggled(object sender, RoutedEventArgs e)
 		{
-			
-			localSetting.Values["Language"] = "bn-Bd";
+			if (cheackBox.IsOn)
+			{
+				localSetting.Values["Language"] = "bn-Bd";
 
-			var culture = new CultureInfo("bn-Bd");
-			Windows.Globalization.ApplicationLanguages.PrimaryLanguageOverride = culture.Name;
-			CultureInfo.DefaultThreadCurrentCulture = culture;
-			CultureInfo.DefaultThreadCurrentUICulture = culture;
-		}
+				var culture = new CultureInfo("bn-Bd");
+				Windows.Globalization.ApplicationLanguages.PrimaryLanguageOverride = culture.Name;
+				CultureInfo.DefaultThreadCurrentCulture = culture;
+				CultureInfo.DefaultThreadCurrentUICulture = culture;
+			}
+			else
+			{
+				localSetting.Values["Language"] = "en-Us";
 
-		private void cheackBox_Unchecked(object sender, RoutedEventArgs e)
-		{
-			localSetting.Values["Language"] = "en-Us";
+				var culture = new CultureInfo("en-Us");
+				Windows.Globalization.ApplicationLanguages.PrimaryLanguageOverride = culture.Name;
+				CultureInfo.DefaultThreadCurrentCulture = culture;
+				CultureInfo.DefaultThreadCurrentUICulture = culture;
 
-			var culture = new CultureInfo("en-Us");
-			Windows.Globalization.ApplicationLanguages.PrimaryLanguageOverride = culture.Name;
-			CultureInfo.DefaultThreadCurrentCulture = culture;
-			CultureInfo.DefaultThreadCurrentUICulture = culture;
+			}
 		}
 	}
 }

@@ -123,11 +123,23 @@
   <data name="AppName.Text" xml:space="preserve">
     <value>Ramadan 2015</value>
   </data>
+  <data name="ArabicPronounce.FontFamily" xml:space="preserve">
+    <value>Assets/Font/Barkentina 1.otf#Barkentina Test</value>
+  </data>
+  <data name="ArabicPronounce.Text" xml:space="preserve">
+    <value>Arabic Pronouncation</value>
+  </data>
   <data name="DoahHeading1.FontFamily" xml:space="preserve">
     <value>Assets/Font/Barkentina 1.otf#Barkentina Test</value>
   </data>
   <data name="DoahHeading1.Header" xml:space="preserve">
     <value>Doah For Sehri</value>
+  </data>
+  <data name="DoahHeading2.FontFamily" xml:space="preserve">
+    <value>Assets/Font/Barkentina 1.otf#Barkentina Test</value>
+  </data>
+  <data name="DoahHeading2.Header" xml:space="preserve">
+    <value>Doah For Iftar</value>
   </data>
   <data name="ifterHeading.FontFamily" xml:space="preserve">
     <value>Assets/Font/Barkentina 1.otf#Barkentina Test</value>
@@ -135,8 +147,11 @@
   <data name="ifterHeading.Text" xml:space="preserve">
     <value>Iftar </value>
   </data>
-  <data name="language.Content" xml:space="preserve">
+  <data name="LanguageSwitch.Header" xml:space="preserve">
     <value>Language</value>
+  </data>
+  <data name="LocationCombo.Header" xml:space="preserve">
+    <value>Location</value>
   </data>
   <data name="menu_Doah.FontFamily" xml:space="preserve">
     <value>Assets/Font/Barkentina 1.otf#Barkentina Test</value>

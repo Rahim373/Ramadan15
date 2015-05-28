@@ -10,8 +10,14 @@
 
     <Grid Margin="10">
 		<StackPanel>
-			<CheckBox x:Name="cheackBox" x:Uid="language" Checked="cheackBox_Checked" Unchecked="cheackBox_Unchecked"/>
-			<TextBlock x:Name="asd"/>
+			<ToggleSwitch x:Uid="LanguageSwitch" x:Name="cheackBox" OffContent="English" OnContent="বাংলা" Toggled="cheackBox_Toggled"/>
+			<ComboBox x:Uid="LocationCombo">
+				<ComboBoxItem Content="Dhaka"/>
+				<ComboBoxItem Content="Chittagong"/>
+				<ComboBoxItem Content="Sylhet"/>
+				<ComboBoxItem Content="Rajshahi"/>
+				<ComboBoxItem Content="Barisal"/>
+			</ComboBox>
 		</StackPanel>
 
     </Grid>

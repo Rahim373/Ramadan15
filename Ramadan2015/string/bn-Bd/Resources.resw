@@ -117,59 +117,41 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AppName.FontFamily" xml:space="preserve">
-    <value>Assets/Font/Siyam Rupali ANSI.ttf#Siyam Rupali ANSI</value>
-  </data>
   <data name="AppName.Text" xml:space="preserve">
     <value>রমজান ২০১৫</value>
   </data>
-  <data name="DoahHeading1.FontFamily" xml:space="preserve">
-    <value>Assets/Font/Siyam Rupali ANSI.ttf#Siyam Rupali ANSI</value>
+  <data name="ArabicPronounce.Text" xml:space="preserve">
+    <value>আরবি উচ্চারণ</value>
   </data>
   <data name="DoahHeading1.Header" xml:space="preserve">
     <value>সেহরির দোয়া</value>
   </data>
-  <data name="ifterHeading.FontFamily" xml:space="preserve">
-    <value>Assets/Font/Siyam Rupali ANSI.ttf#Siyam Rupali ANSI</value>
+  <data name="DoahHeading2.Header" xml:space="preserve">
+    <value>ইফতারের দোয়া</value>
   </data>
   <data name="ifterHeading.Text" xml:space="preserve">
     <value>ইফতার </value>
   </data>
-  <data name="language.Content" xml:space="preserve">
-    <value>বাংলা</value>
+  <data name="LanguageSwitch.Header" xml:space="preserve">
+    <value>ভাষা</value>
   </data>
-  <data name="menu_Doah.FontFamily" xml:space="preserve">
-    <value>Assets/Font/Siyam Rupali ANSI.ttf#Siyam Rupali ANSI</value>
+  <data name="LocationCombo.Header" xml:space="preserve">
+    <value>স্থান</value>
   </data>
   <data name="menu_Doah.Text" xml:space="preserve">
     <value>দোয়া</value>
   </data>
-  <data name="menu_Rules.FontFamily" xml:space="preserve">
-    <value>Assets/Font/Siyam Rupali ANSI.ttf#Siyam Rupali ANSI</value>
-  </data>
   <data name="menu_Rules.Text" xml:space="preserve">
     <value>নিয়মাবলী</value>
-  </data>
-  <data name="menu_Setting.FontFamily" xml:space="preserve">
-    <value>Assets/Font/Siyam Rupali ANSI.ttf#Siyam Rupali ANSI</value>
   </data>
   <data name="menu_Setting.Text" xml:space="preserve">
     <value>সেটিংস</value>
   </data>
-  <data name="menu_Time.FontFamily" xml:space="preserve">
-    <value>Assets/Font/Siyam Rupali ANSI.ttf#Siyam Rupali ANSI</value>
-  </data>
   <data name="menu_Time.Text" xml:space="preserve">
     <value>সময়সূচি</value>
   </data>
-  <data name="ramadanHeading.FontFamily" xml:space="preserve">
-    <value>Assets/Font/Siyam Rupali ANSI.ttf#Siyam Rupali ANSI</value>
-  </data>
   <data name="ramadanHeading.Text" xml:space="preserve">
     <value>রমজান</value>
-  </data>
-  <data name="sehriHeading.FontFamily" xml:space="preserve">
-    <value>Assets/Font/Siyam Rupali ANSI.ttf#Siyam Rupali ANSI</value>
   </data>
   <data name="sehriHeading.Text" xml:space="preserve">
     <value>সেহরি </value>
@@ -177,49 +159,25 @@
   <data name="TimeorDate.FontFamily" xml:space="preserve">
     <value>Assets/Font/Siyam Rupali ANSI.ttf#Siyam Rupali ANSI</value>
   </data>
-  <data name="TimeToIftar.FontFamily" xml:space="preserve">
-    <value>Assets/Font/Siyam Rupali ANSI.ttf#Siyam Rupali ANSI</value>
-  </data>
   <data name="TimeToIftar.Text" xml:space="preserve">
     <value>ইফতার এর বাকি</value>
-  </data>
-  <data name="TimeToSehri.FontFamily" xml:space="preserve">
-    <value>Assets/Font/Siyam Rupali ANSI.ttf#Siyam Rupali ANSI</value>
   </data>
   <data name="TimeToSehri.Text" xml:space="preserve">
     <value>সেহরি এর  বাকি</value>
   </data>
-  <data name="todayDayHeading.FontFamily" xml:space="preserve">
-    <value>Assets/Font/Siyam Rupali ANSI.ttf#Siyam Rupali ANSI</value>
-  </data>
   <data name="todayDayHeading.Text" xml:space="preserve">
     <value>দিন</value>
-  </data>
-  <data name="todayHeading.FontFamily" xml:space="preserve">
-    <value>Assets/Font/Siyam Rupali ANSI.ttf#Siyam Rupali ANSI</value>
   </data>
   <data name="todayHeading.Text" xml:space="preserve">
     <value>আজ</value>
   </data>
-  <data name="todayIftar.FontFamily" xml:space="preserve">
-    <value>Assets/Font/Siyam Rupali ANSI.ttf#Siyam Rupali ANSI</value>
-  </data>
   <data name="todayIftar.Text" xml:space="preserve">
     <value>আজকের ইফতার</value>
-  </data>
-  <data name="todaySahri.FontFamily" xml:space="preserve">
-    <value>Assets/Font/Siyam Rupali ANSI.ttf#Siyam Rupali ANSI</value>
   </data>
   <data name="todaySahri.Text" xml:space="preserve">
     <value>আজকের সেহরি</value>
   </data>
-  <data name="_dateHeading.FontFamily" xml:space="preserve">
-    <value>Assets/Font/Siyam Rupali ANSI.ttf#Siyam Rupali ANSI</value>
-  </data>
   <data name="_dateHeading.Text" xml:space="preserve">
     <value>তারিখ</value>
-  </data>
-  <data name="_dateTime.FontFamily" xml:space="preserve">
-    <value>Assets/Font/Siyam Rupali ANSI.ttf#Siyam Rupali ANSI</value>
   </data>
 </root>

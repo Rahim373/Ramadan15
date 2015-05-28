@@ -38,7 +38,7 @@
 			</Pivot.HeaderTemplate>
 			<PivotItem x:Uid="DoahHeading1" Background="#25000000">
 				<StackPanel Margin="10">
-					<TextBlock Text="Arabic Pronunciation" TextWrapping="Wrap" FontSize="{StaticResource TextStyleLargeFontSize}" Margin="0,0,0,5" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" TextAlignment="Center" Pivot.SlideInAnimationGroup="GroupOne"/>
+					<TextBlock x:Uid="ArabicPronounce" TextWrapping="Wrap" FontSize="{StaticResource TextStyleLargeFontSize}" Margin="0,0,0,5" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" TextAlignment="Center" Pivot.SlideInAnimationGroup="GroupOne"/>
 					<TextBlock Text="وَبِصَوْمِ غَدٍ نَّوَيْتَ مِنْ شَهْرِ رَمَضَانَ"  TextWrapping="Wrap" FontSize="{StaticResource TextStyleLargeFontSize}" Margin="0,0,0,25" TextAlignment="Center" FontWeight="Bold" Pivot.SlideInAnimationGroup="GroupTwo">
 						<TextBlock.Foreground>
 							<ImageBrush ImageSource="ms-appx:/Assets/Resources/btnBg.png" Stretch="Fill"/>
@@ -51,9 +51,9 @@
 				</StackPanel>
 			</PivotItem>
 
-			<PivotItem Header="Doah for Iftar" Background="#59000000">
+			<PivotItem x:Uid="DoahHeading2" Background="#59000000">
 				<StackPanel Margin="10">
-					<TextBlock Text="Arabic Pronunciation" TextWrapping="Wrap" FontSize="{StaticResource TextStyleLargeFontSize}" Margin="0,0,0,5" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" TextAlignment="Center" Pivot.SlideInAnimationGroup="GroupOne"/>
+					<TextBlock x:Uid="ArabicPronounce" TextWrapping="Wrap" FontSize="{StaticResource TextStyleLargeFontSize}" Margin="0,0,0,5" TextAlignment="Center" Pivot.SlideInAnimationGroup="GroupOne"/>
 					<TextBlock Text="اللَّهُمَّ اِنِّى لَكَ صُمْتُ وَبِكَ امنْتُ وَعَلَيْكَ تَوَكَّلْتُ وَعَلَى رِزْقِكَ اَفْطَرْتُ" TextWrapping="Wrap" FontSize="{StaticResource TextStyleLargeFontSize}" Margin="0,0,0,25" TextAlignment="Center" FontWeight="Bold" Pivot.SlideInAnimationGroup="GroupTwo">
 						<TextBlock.Foreground>
 							<ImageBrush ImageSource="ms-appx:/Assets/Resources/btnBg.png" Stretch="Fill"/>
