@@ -132,9 +132,6 @@
   <data name="ifterHeading.Text" xml:space="preserve">
     <value>ইফতার </value>
   </data>
-  <data name="LanguageSwitch.Header" xml:space="preserve">
-    <value>ভাষা</value>
-  </data>
   <data name="LocationCombo.Header" xml:space="preserve">
     <value>স্থান</value>
   </data>

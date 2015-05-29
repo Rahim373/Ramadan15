@@ -140,7 +140,7 @@
 					</Grid>
 
 					<Grid x:Name="_btn4" Grid.Column="1" Grid.Row="1" Margin="5 5 0 0">
-						<Button x:Name="_setting" BorderThickness="0" Padding="0" HorizontalContentAlignment="Stretch" Width="{Binding ActualWidth, ElementName=_btn4, Mode=OneWay}" Height="{Binding ActualWidth, ElementName=_btn1, Mode=OneWay}" Click="_setting_Click">
+						<Button x:Name="_setting" BorderThickness="0" Padding="0" HorizontalContentAlignment="Stretch" Width="{Binding ActualWidth, ElementName=_btn4, Mode=OneWay}" Height="{Binding ActualWidth, ElementName=_btn1, Mode=OneWay}" Click="_setting_Click" Command="{Binding LoadLocationClearly}">
 							<Button.Background>
 								<ImageBrush Stretch="UniformToFill" ImageSource="Assets/Resources/btnBg.png"/>
 							</Button.Background>

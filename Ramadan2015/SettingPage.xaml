@@ -9,8 +9,9 @@
 	DataContext="{Binding Main, Source={StaticResource Locator}}">
 	<Page.Resources>
 		<DataTemplate x:Key="DropDownListTemplate">
-			<Grid>
-				<TextBlock x:Name="Location" Text="{Binding Name}" />
+			<Grid Width="{StaticResource ContentDialogContentLandscapeWidth}">
+				<TextBlock x:Name="Location" Text="{Binding Name}" HorizontalAlignment="Left" />
+				<TextBlock x:Name="Minutes" Text="{Binding minutes}" HorizontalAlignment="Right" Margin="0 0 15 0"/>
 			</Grid>
 		</DataTemplate>
 	</Page.Resources>
@@ -20,8 +21,8 @@
 	</Page.Background>
 	<Page.BottomAppBar>
 		<CommandBar Foreground="Black" Background="White">
-			<AppBarButton Icon="Flag" Label="About"/>
-			<AppBarButton Icon="Comment" Label="Credit"/>
+			<AppBarButton x:Name="Save" Icon="Save" Label="Save" Click="Save_Click" Command="{Binding LoadLocationClearly}"/>
+			<AppBarButton x:Name="cancel" Icon="Cancel" Label="Cancel" Click="cancel_Click"/>
 		</CommandBar>
 	</Page.BottomAppBar>
 
@@ -38,8 +39,15 @@
 		</Grid>
 		
 		<StackPanel Grid.Row="1">
-			<ToggleSwitch x:Uid="LanguageSwitch" x:Name="cheackBox" OffContent="English" OnContent="বাংলা" Toggled="cheackBox_Toggled"/>
-			<ComboBox x:Uid="LocationCombo" x:Name="LocationList" ItemsSource="{Binding LocationAndTime}" ItemTemplate="{StaticResource DropDownListTemplate}" SelectionChanged="LocationList_SelectionChanged" SelectedItem="{Binding getSelectedLocation}"></ComboBox>
+			<CheckBox x:Name="cheackBox" Content="বাংলা" Command="{Binding ChangeLanguageUpdateforList}" Checked="cheackBox_Checked" Unchecked="cheackBox_Unchecked"/>
+			
+			<ComboBox x:Uid="LocationCombo" x:Name="LocationList" ItemsSource="{Binding LocationAndTime}" ItemTemplate="{StaticResource DropDownListTemplate}" AllowDrop="True" SelectedItem="{Binding getSelectedLocation}" Foreground="White" BorderBrush="White">
+				<ComboBox.Transitions>
+					<TransitionCollection>
+						<PopupThemeTransition/>
+					</TransitionCollection>
+				</ComboBox.Transitions>
+			</ComboBox>
 		</StackPanel>
 
 	</Grid>

@@ -147,9 +147,6 @@
   <data name="ifterHeading.Text" xml:space="preserve">
     <value>Iftar </value>
   </data>
-  <data name="LanguageSwitch.Header" xml:space="preserve">
-    <value>Language</value>
-  </data>
   <data name="LocationCombo.Header" xml:space="preserve">
     <value>Location</value>
   </data>

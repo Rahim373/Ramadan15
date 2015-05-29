@@ -69,8 +69,8 @@ namespace Ramadan2015
 
 			if (localSetting.Values["LocationID"].ToString() == "")
 			{
+				localSetting.Values["LocationID"] = "14";
 				localSetting.Values["Minute"] = "0";
-				localSetting.Values["LocationID"] = "1";
 			}
 		}
 

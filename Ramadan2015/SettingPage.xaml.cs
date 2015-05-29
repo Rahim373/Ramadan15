@@ -40,47 +40,60 @@ namespace Ramadan2015
 		{
 			if (localSetting.Values["Language"].ToString() != "bn-Bd")
 			{
-				cheackBox.IsOn = false;
+				cheackBox.IsChecked = false;
 			}
 			else
 			{
-				cheackBox.IsOn = true;
+				cheackBox.IsChecked = true;
 			}
 		}
 
-		private void cheackBox_Toggled(object sender, RoutedEventArgs e)
-		{
-			if (cheackBox.IsOn)
-			{
-				localSetting.Values["Language"] = "bn-Bd";
 
-				var culture = new CultureInfo("bn-Bd");
-				Windows.Globalization.ApplicationLanguages.PrimaryLanguageOverride = culture.Name;
-				CultureInfo.DefaultThreadCurrentCulture = culture;
-				CultureInfo.DefaultThreadCurrentUICulture = culture;
-			}
-			else
-			{
-				localSetting.Values["Language"] = "en-Us";
-
-				var culture = new CultureInfo("en-Us");
-				Windows.Globalization.ApplicationLanguages.PrimaryLanguageOverride = culture.Name;
-				CultureInfo.DefaultThreadCurrentCulture = culture;
-				CultureInfo.DefaultThreadCurrentUICulture = culture;
-
-			}
-		}
-		
 		protected override void OnNavigatedTo(NavigationEventArgs e)
 		{
 
 		}
 
-		private void LocationList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+		private void Save_Click(object sender, RoutedEventArgs e)
 		{
-			var location = (LocationNameAndTime)LocationList.SelectedItem ;
+			var location = (LocationNameAndTime)LocationList.SelectedItem;
 			localSetting.Values["LocationID"] = location.Id.ToString();
+			localSetting.Values["Name"] = location.Name.ToString();
 			localSetting.Values["Minute"] = location.minutes.ToString();
+
 		}
+
+		private void cheackBox_Checked(object sender, RoutedEventArgs e)
+		{
+			localSetting.Values["Language"] = "bn-Bd";
+			var culture = new CultureInfo("bn-Bd");
+			Windows.Globalization.ApplicationLanguages.PrimaryLanguageOverride = culture.Name;
+			CultureInfo.DefaultThreadCurrentCulture = culture;
+			CultureInfo.DefaultThreadCurrentUICulture = culture;
+		}
+
+		private void cheackBox_Unchecked(object sender, RoutedEventArgs e)
+		{
+			localSetting.Values["Language"] = "en-Us";
+			var culture = new CultureInfo("en-Us");
+			Windows.Globalization.ApplicationLanguages.PrimaryLanguageOverride = culture.Name;
+			CultureInfo.DefaultThreadCurrentCulture = culture;
+			CultureInfo.DefaultThreadCurrentUICulture = culture;
+
+			if (this.Frame.CanGoBack)
+			{
+				this.Frame.GoBack();
+			}
+		}
+
+		private void cancel_Click(object sender, RoutedEventArgs e)
+		{
+			if (this.Frame.CanGoBack) {
+				this.Frame.GoBack();
+			}
+		}
+
+
+
 	}
 }
