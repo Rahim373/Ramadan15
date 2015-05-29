@@ -42,9 +42,16 @@ namespace Ramadan2015
             this.InitializeComponent();
             this.Suspending += this.OnSuspending;
 			LoadTile();
+			LoadLocationAndLocalizing();
 			HardwareButtons.BackPressed += HardwareButtons_BackPressed;
 
+			
+        }
+
+		private void LoadLocationAndLocalizing()
+		{
 			Windows.Storage.ApplicationDataContainer localSetting = Windows.Storage.ApplicationData.Current.LocalSettings;
+
 			if (localSetting.Values["Language"].ToString() == "bn-Bd")
 			{
 				var culture = new CultureInfo("bn-Bd");
@@ -52,13 +59,20 @@ namespace Ramadan2015
 				CultureInfo.DefaultThreadCurrentCulture = culture;
 				CultureInfo.DefaultThreadCurrentUICulture = culture;
 			}
-			else {
+			else
+			{
 				var culture = new CultureInfo("en-Us");
 				Windows.Globalization.ApplicationLanguages.PrimaryLanguageOverride = culture.Name;
 				CultureInfo.DefaultThreadCurrentCulture = culture;
 				CultureInfo.DefaultThreadCurrentUICulture = culture;
 			}
-        }
+
+			if (localSetting.Values["LocationID"].ToString() == "")
+			{
+				localSetting.Values["Minute"] = "0";
+				localSetting.Values["LocationID"] = "1";
+			}
+		}
 
 		void HardwareButtons_BackPressed(object sender, BackPressedEventArgs e)
 		{

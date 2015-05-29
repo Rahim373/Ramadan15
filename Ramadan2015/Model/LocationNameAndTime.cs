@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace Ramadan2015.Model
 {
-	public class ValidOrInvalid
+	public class LocationNameAndTime
 	{
-		public int id { get; set; }
-		public string data { get; set; }
+		public int Id { get; set; }
+		public string Name { get; set; }
+		public int minutes { get; set; }
 	}
 }

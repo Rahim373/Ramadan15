@@ -96,7 +96,7 @@
       <DependentUpon>HomePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Model\RozaViewModel.cs" />
-    <Compile Include="Model\ValidOrInvalid.cs" />
+    <Compile Include="Model\LocationNameAndTime.cs" />
     <Compile Include="Rules.xaml.cs">
       <DependentUpon>Rules.xaml</DependentUpon>
     </Compile>

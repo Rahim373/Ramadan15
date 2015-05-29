@@ -6,19 +6,41 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+	DataContext="{Binding Main, Source={StaticResource Locator}}">
+	<Page.Resources>
+		<DataTemplate x:Key="DropDownListTemplate">
+			<Grid>
+				<TextBlock x:Name="Location" Text="{Binding Name}" />
+			</Grid>
+		</DataTemplate>
+	</Page.Resources>
 
-    <Grid Margin="10">
-		<StackPanel>
+	<Page.Background>
+		<ImageBrush Stretch="UniformToFill" ImageSource="Assets/Resources/BG.jpg"/>
+	</Page.Background>
+	<Page.BottomAppBar>
+		<CommandBar Foreground="Black" Background="White">
+			<AppBarButton Icon="Flag" Label="About"/>
+			<AppBarButton Icon="Comment" Label="Credit"/>
+		</CommandBar>
+	</Page.BottomAppBar>
+
+	<Grid Margin="10">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="1*"/>
+			<RowDefinition Height="11*"/>
+		</Grid.RowDefinitions>
+
+		<Grid x:Name="_headingGrid" Margin="0 0 0 0" Grid.Row="0">
+			<StackPanel>
+				<TextBlock x:Uid="AppName" FontSize="{StaticResource TextStyleExtraExtraLargeFontSize}" Foreground="White"/>
+			</StackPanel>
+		</Grid>
+		
+		<StackPanel Grid.Row="1">
 			<ToggleSwitch x:Uid="LanguageSwitch" x:Name="cheackBox" OffContent="English" OnContent="বাংলা" Toggled="cheackBox_Toggled"/>
-			<ComboBox x:Uid="LocationCombo">
-				<ComboBoxItem Content="Dhaka"/>
-				<ComboBoxItem Content="Chittagong"/>
-				<ComboBoxItem Content="Sylhet"/>
-				<ComboBoxItem Content="Rajshahi"/>
-				<ComboBoxItem Content="Barisal"/>
-			</ComboBox>
+			<ComboBox x:Uid="LocationCombo" x:Name="LocationList" ItemsSource="{Binding LocationAndTime}" ItemTemplate="{StaticResource DropDownListTemplate}" SelectionChanged="LocationList_SelectionChanged" SelectedItem="{Binding getSelectedLocation}"></ComboBox>
 		</StackPanel>
 
-    </Grid>
+	</Grid>
 </Page>

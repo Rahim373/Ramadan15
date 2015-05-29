@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Ramadan2015.Model;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
@@ -32,6 +33,11 @@ namespace Ramadan2015
 
 		void SettingPage_Loaded(object sender, RoutedEventArgs e)
 		{
+			LoadLanguageCheckBox();
+		}
+
+		private void LoadLanguageCheckBox()
+		{
 			if (localSetting.Values["Language"].ToString() != "bn-Bd")
 			{
 				cheackBox.IsOn = false;
@@ -41,37 +47,6 @@ namespace Ramadan2015
 				cheackBox.IsOn = true;
 			}
 		}
-
-		/// <summary>
-		/// Invoked when this page is about to be displayed in a Frame.
-		/// </summary>
-		/// <param name="e">Event data that describes how this page was reached.
-		/// This parameter is typically used to configure the page.</param>
-		protected override void OnNavigatedTo(NavigationEventArgs e)
-		{
-
-		}
-
-		//private void cheackBox_Checked(object sender, RoutedEventArgs e)
-		//{
-
-		//	localSetting.Values["Language"] = "bn-Bd";
-
-		//	var culture = new CultureInfo("bn-Bd");
-		//	Windows.Globalization.ApplicationLanguages.PrimaryLanguageOverride = culture.Name;
-		//	CultureInfo.DefaultThreadCurrentCulture = culture;
-		//	CultureInfo.DefaultThreadCurrentUICulture = culture;
-		//}
-
-		//private void cheackBox_Unchecked(object sender, RoutedEventArgs e)
-		//{
-		//	localSetting.Values["Language"] = "en-Us";
-
-		//	var culture = new CultureInfo("en-Us");
-		//	Windows.Globalization.ApplicationLanguages.PrimaryLanguageOverride = culture.Name;
-		//	CultureInfo.DefaultThreadCurrentCulture = culture;
-		//	CultureInfo.DefaultThreadCurrentUICulture = culture;
-		//}
 
 		private void cheackBox_Toggled(object sender, RoutedEventArgs e)
 		{
@@ -94,6 +69,18 @@ namespace Ramadan2015
 				CultureInfo.DefaultThreadCurrentUICulture = culture;
 
 			}
+		}
+		
+		protected override void OnNavigatedTo(NavigationEventArgs e)
+		{
+
+		}
+
+		private void LocationList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+		{
+			var location = (LocationNameAndTime)LocationList.SelectedItem ;
+			localSetting.Values["LocationID"] = location.Id.ToString();
+			localSetting.Values["Minute"] = location.minutes.ToString();
 		}
 	}
 }
