@@ -177,4 +177,47 @@
   <data name="_dateHeading.Text" xml:space="preserve">
     <value>তারিখ</value>
   </data>
+  <data name="AboutCredit.Text" xml:space="preserve">
+    <value>ডেভেলপার : মোঃ আব্দুর রহীম
+ডিজাইন  :  তানভীর হাসান নীল 
+সহায়তায়  :  ফয়সাল আহামেদ</value>
+  </data>
+  <data name="Aboutdetails.Text" xml:space="preserve">
+    <value>রমজান ২০১৫, এই অ্যাপটি তৈরি করা হয়েছে শুধুমাত্র হিজরি ১৪৩৬ (২০১৫ খ্রীঃ) এর রমজান মাসের সেহরি ও ইফতার এর সময়সূচী নিয়ে। এটি শুধুমাত্র বাংলাদেশ এর জন্যে প্রযোজ্য। এটার ফিচার সম্পর্কে বলা যায়,
+ 
+১। সম্পূর্ণ রমজানের সেহরি ইফতারে সময়সূচী
+২। বাংলাদেশের ৬৪ জেলার সময়সূচী 
+৩। বাংলা এবং ইংরেজি দুই ভাষাতেই ব্যাবহার করা যাবে 
+৪। সুবিধার জন্যে লাইভ টাইলের ব্যাবস্থা 
+৫। প্রয়োজনীয় দোয়া ও রোজার নিয়মকানুন 
+
+ভার্সনঃ ১.০.০.০</value>
+  </data>
+  <data name="AboutHeading.Text" xml:space="preserve">
+    <value>সম্পর্কে</value>
+  </data>
+  <data name="locationHeading.Text" xml:space="preserve">
+    <value>স্থান</value>
+  </data>
+  <data name="iftarPronounce.Text" xml:space="preserve">
+    <value>আল্লাহুম্মা ইন্নি লাকা সুমতু ওয়াবিকা আমানতু ওয়া আলাইকা তাওাক্কালতু ওয়া আলা রিযক-ইকা-আফতারতু</value>
+  </data>
+  <data name="IftarTranslateBody.Text" xml:space="preserve">
+    <value>“ইয়া আল্লাহ! আমি তোমার সন্তুষ্টির জন্য রোযা রেখেছি এবং তোমার দেয়া রিযিক আহার করে ইফতার করছি।’’</value>
+  </data>
+  <data name="location.FontFamily" xml:space="preserve">
+    <value>Assets/Font/Siyam Rupali ANSI.ttf#Siyam Rupali ANSI</value>
+  </data>
+  <data name="Pronounce.Text" xml:space="preserve">
+    <value>বাংলা উচ্চারণ</value>
+  </data>
+  <data name="sehriPronounce.Text" xml:space="preserve">
+    <value>নাওয়াইতু আন আছুমাগাদাম মিন শাহরি রমাজানাল মুবারাকি ফারদ্বল্লাকা ইয়া আল্লাহু ফাতাকাব্বাল মিন্নি ইন্নীকা আন্তাস সামিউল আলীম।</value>
+  </data>
+  <data name="sehriTranslate.Text" xml:space="preserve">
+    <value>“হে আল্লাহ্! আগামীকাল পবিত্র রমযান মাসে তোমার পক্ষ হতে ফরয করা রোযা রাখার নিয়ত করলাম, অতএব তুমি আমার পক্ষ হতে কবুল কর, নিশ্চয়ই তুমি সর্বশ্রোতা ও সর্বজ্ঞানী।”</value>
+  </data>
+  <data name="Translate.Text" xml:space="preserve">
+    <value>অনুবাদ</value>
+  </data>
 </root>

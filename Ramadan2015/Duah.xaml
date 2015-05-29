@@ -9,17 +9,11 @@
 	<Page.Background>
 		<ImageBrush Stretch="UniformToFill" ImageSource="Assets/Resources/BG.jpg"/>
 	</Page.Background>
-	<Page.BottomAppBar>
-		<CommandBar Foreground="Black" Background="White">
-			<AppBarButton Icon="Flag" Label="About"/>
-			<AppBarButton Icon="Comment" Label="Credit"/>
-		</CommandBar>
-	</Page.BottomAppBar>
 
 	<Grid Margin="10">
 		<Grid.RowDefinitions>
 			<RowDefinition Height="1*"/>
-			<RowDefinition Height="11*"/>
+			<RowDefinition Height="10*"/>
 		</Grid.RowDefinitions>
 
 		<Grid x:Name="_headingGrid" Margin="0 0 0 0" Grid.Row="0">
@@ -28,7 +22,7 @@
 			</StackPanel>
 		</Grid>
 
-		<Pivot Grid.Row="1">
+		<Pivot Grid.Row="1" RequestedTheme="Dark">
 			<Pivot.HeaderTemplate>
 				<DataTemplate>
 					<Grid Height="Auto" Margin="0">
@@ -36,7 +30,8 @@
 					</Grid>
 				</DataTemplate>
 			</Pivot.HeaderTemplate>
-			<PivotItem x:Uid="DoahHeading1" Background="#25000000">
+			
+			<PivotItem x:Uid="DoahHeading1" Background="#4C000000">
 				<StackPanel Margin="10">
 					<TextBlock x:Uid="ArabicPronounce" TextWrapping="Wrap" FontSize="{StaticResource TextStyleLargeFontSize}" Margin="0,0,0,5" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" TextAlignment="Center" Pivot.SlideInAnimationGroup="GroupOne"/>
 					<TextBlock Text="وَبِصَوْمِ غَدٍ نَّوَيْتَ مِنْ شَهْرِ رَمَضَانَ"  TextWrapping="Wrap" FontSize="{StaticResource TextStyleLargeFontSize}" Margin="0,0,0,25" TextAlignment="Center" FontWeight="Bold" Pivot.SlideInAnimationGroup="GroupTwo">
@@ -44,10 +39,10 @@
 							<ImageBrush ImageSource="ms-appx:/Assets/Resources/btnBg.png" Stretch="Fill"/>
 						</TextBlock.Foreground>
 					</TextBlock>
-					<TextBlock Text="English Pronunciation" TextWrapping="Wrap" FontSize="{StaticResource TextStyleLargeFontSize}" Margin="0,0,0,5" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" HorizontalAlignment="Center" Pivot.SlideInAnimationGroup="GroupOne"/>
-					<TextBlock Text="Wa Bisowmi Gadin Nawaytoo Min Shahre Ramadhan" TextWrapping="Wrap" FontSize="{StaticResource TextStyleLargeFontSize}" Margin="0,0,0,25" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" TextAlignment="Center" Pivot.SlideInAnimationGroup="GroupTwo"/>
-					<TextBlock Text="Meaning" TextWrapping="Wrap" FontSize="{StaticResource TextStyleLargeFontSize}" Margin="0,0,0,5" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" HorizontalAlignment="Center" Pivot.SlideInAnimationGroup="GroupOne"/>
-					<TextBlock Text="I intend to keep the fast for tomorrow in the month of Ramadan	[Abu Dawud]" TextWrapping="Wrap" FontSize="{StaticResource TextStyleLargeFontSize}" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" TextAlignment="Center" Pivot.SlideInAnimationGroup="GroupTwo"/>
+					<TextBlock x:Uid="Pronounce" TextWrapping="Wrap" FontSize="{StaticResource TextStyleLargeFontSize}" Margin="0,0,0,5" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" HorizontalAlignment="Center" Pivot.SlideInAnimationGroup="GroupOne"/>
+					<TextBlock x:Uid="sehriPronounce" TextWrapping="Wrap" FontSize="{StaticResource TextStyleLargeFontSize}" Margin="0,0,0,25" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" TextAlignment="Center" Pivot.SlideInAnimationGroup="GroupTwo"/>
+					<TextBlock x:Uid="Translate" TextWrapping="Wrap" FontSize="{StaticResource TextStyleLargeFontSize}" Margin="0,0,0,5" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" HorizontalAlignment="Center" Pivot.SlideInAnimationGroup="GroupOne"/>
+					<TextBlock x:Uid="sehriTranslate" TextWrapping="Wrap" FontSize="{StaticResource TextStyleLargeFontSize}" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" TextAlignment="Center" Pivot.SlideInAnimationGroup="GroupTwo"/>
 				</StackPanel>
 			</PivotItem>
 
@@ -59,10 +54,10 @@
 							<ImageBrush ImageSource="ms-appx:/Assets/Resources/btnBg.png" Stretch="Fill"/>
 						</TextBlock.Foreground>
 					</TextBlock>
-					<TextBlock Text="English Pronunciation" TextWrapping="Wrap" FontSize="{StaticResource TextStyleLargeFontSize}" Margin="0,0,0,5" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" HorizontalAlignment="Center" Pivot.SlideInAnimationGroup="GroupOne"/>
-					<TextBlock Text="Allahumma inni laka sumtu wa bika aamantu wa alayka tawakkaltu wa ala rizq-ika-aftartu" TextWrapping="Wrap" FontSize="{StaticResource TextStyleLargeFontSize}" Margin="0,0,0,25" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" TextAlignment="Center" Pivot.SlideInAnimationGroup="GroupTwo"/>
-					<TextBlock Text="Meaning" TextWrapping="Wrap" FontSize="{StaticResource TextStyleLargeFontSize}" Margin="0,0,0,5" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" HorizontalAlignment="Center" Pivot.SlideInAnimationGroup="GroupOne"/>
-					<TextBlock Text="O Allah! I fasted for You and I believe in You and I put my trust in You and I break my fast with Your sustenance." TextWrapping="Wrap" FontSize="{StaticResource TextStyleLargeFontSize}" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" TextAlignment="Center" Pivot.SlideInAnimationGroup="GroupTwo"/>
+					<TextBlock x:Uid="Pronounce" TextWrapping="Wrap" FontSize="{StaticResource TextStyleLargeFontSize}" Margin="0,0,0,5" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" HorizontalAlignment="Center" Pivot.SlideInAnimationGroup="GroupOne"/>
+					<TextBlock x:Uid="iftarPronounce" TextWrapping="Wrap" FontSize="{StaticResource TextStyleLargeFontSize}" Margin="0,0,0,25" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" TextAlignment="Center" Pivot.SlideInAnimationGroup="GroupTwo"/>
+					<TextBlock x:Uid="Translate" TextWrapping="Wrap" FontSize="{StaticResource TextStyleLargeFontSize}" Margin="0,0,0,5" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" HorizontalAlignment="Center" Pivot.SlideInAnimationGroup="GroupOne"/>
+					<TextBlock x:Uid="IftarTranslateBody" TextWrapping="Wrap" FontSize="{StaticResource TextStyleLargeFontSize}" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" TextAlignment="Center" Pivot.SlideInAnimationGroup="GroupTwo"/>
 				</StackPanel>
 			</PivotItem>
 		</Pivot>

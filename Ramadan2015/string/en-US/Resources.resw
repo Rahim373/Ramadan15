@@ -231,4 +231,50 @@
   <data name="_dateHeading.Text" xml:space="preserve">
     <value>Date</value>
   </data>
+  <data name="AboutCredit.Text" xml:space="preserve">
+    <value>Developer : Md. Abdur Rahim
+Designer : Tanvir Hasan Nil
+Associated by : Foysal Ahamed</value>
+  </data>
+  <data name="Aboutdetails.Text" xml:space="preserve">
+    <value>Ramadan 2015, this app is only made for the holy Ramadan month of Hijri 1436. This app is only developed for the people of Bangladesh. The features of this app are,
+
+1. Complete time-table of Sehri and Iftar
+2. Time table also with 64 district of Bangladesh
+3. Both Bangla ang English language for use
+4. Live tile to give update
+5. Important duah and rules and regulation of ramadan
+
+Version: 1.0.0.0</value>
+  </data>
+  <data name="AboutHeading.Text" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="locationHeading.FontFamily" xml:space="preserve">
+    <value>Assets/Font/Barkentina 1.otf#Barkentina Test</value>
+  </data>
+  <data name="locationHeading.Text" xml:space="preserve">
+    <value>Location</value>
+  </data>
+  <data name="iftarPronounce.Text" xml:space="preserve">
+    <value>Allahumma inni laka sumtu wa bika aamantu wa alayka tawakkaltu wa ala rizq-ika-aftartu</value>
+  </data>
+  <data name="IftarTranslateBody.Text" xml:space="preserve">
+    <value>O Allah! I fasted for You and I believe in You and I put my trust in You and I break my fast with Your sustenance.</value>
+  </data>
+  <data name="location.FontFamily" xml:space="preserve">
+    <value>Assets/Font/Barkentina 1.otf#Barkentina Test</value>
+  </data>
+  <data name="Pronounce.Text" xml:space="preserve">
+    <value>Engliah Pronouncation</value>
+  </data>
+  <data name="sehriPronounce.Text" xml:space="preserve">
+    <value>Wa Bisowmi Gadin Nawaytoo Min Shahre Ramadhan</value>
+  </data>
+  <data name="sehriTranslate.Text" xml:space="preserve">
+    <value>I intend to keep the fast for tomorrow in the month of Ramadan</value>
+  </data>
+  <data name="Translate.Text" xml:space="preserve">
+    <value>Translation</value>
+  </data>
 </root>

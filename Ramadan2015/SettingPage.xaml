@@ -21,7 +21,7 @@
 	</Page.Background>
 	<Page.BottomAppBar>
 		<CommandBar Foreground="Black" Background="White">
-			<AppBarButton x:Name="Save" Icon="Save" Label="Save" Click="Save_Click" Command="{Binding LoadLocationClearly}"/>
+			<AppBarButton x:Name="Save" Icon="Save" Label="Save" Click="Save_Click" Command="{Binding UpdateTimesList}"/>
 			<AppBarButton x:Name="cancel" Icon="Cancel" Label="Cancel" Click="cancel_Click"/>
 		</CommandBar>
 	</Page.BottomAppBar>

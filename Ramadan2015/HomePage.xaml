@@ -19,9 +19,9 @@
 		<Binding Path="Main" Source="{StaticResource Locator}"/>
 	</Page.DataContext>
 	<Page.BottomAppBar>
-		<CommandBar Foreground="Black" Background="White">
-			<AppBarButton Icon="Flag" Label="About"/>
-			<AppBarButton Icon="Comment" Label="Credit"/>
+		<CommandBar Foreground="Black" Background="White" ClosedDisplayMode="Minimal">
+			<AppBarButton x:Name="about" Label="About" Icon="Page2" Click="about_Click"/>
+			<AppBarButton x:Name="rate" Label="Rate" Icon="Favorite" Click="rate_Click"/>
 		</CommandBar>
 	</Page.BottomAppBar>
 	<!--Main Grid-->
@@ -40,14 +40,15 @@
 				</StackPanel>
 			</Grid>
 			<!--Content Grid-->
-			<Grid x:Name="_contentGrid" Grid.Row="1">
+			<Grid x:Name="_contentGrid" Grid.Row="1"  Background="#59000000">
 				<Grid.RowDefinitions>
-					<RowDefinition Height="2*"/>
-					<RowDefinition Height="5*"/>
+					<RowDefinition Height="2.5*"/>
+					<RowDefinition Height="1*"/>
+					<RowDefinition Height="6*"/>
 				</Grid.RowDefinitions>
 
 				<!--For Time-->
-				<Grid Margin="0 5 0 0" Background="#4C000000">
+				<Grid Margin="0 5 0 0">
 					<Grid.RowDefinitions>
 						<RowDefinition Height="1*"/>
 						<RowDefinition/>
@@ -60,34 +61,45 @@
 					<Grid HorizontalAlignment="Left" Margin="10" VerticalAlignment="Top">
 						<StackPanel VerticalAlignment="Top" HorizontalAlignment="Left">
 							<TextBlock x:Uid="todayHeading" FontSize="{StaticResource TextStyleMediumFontSize}"/>
-							<TextBlock x:Name="Date" FontSize="{StaticResource TextStyleLargeFontSize}"/>
+							<TextBlock x:Name="Date" FontSize="{StaticResource TextStyleLargeFontSize}" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" FontWeight="Light" />
 						</StackPanel>
 					</Grid>
 
 					<Grid HorizontalAlignment="Left" Margin="10" Grid.Column="0" Grid.Row="1" VerticalAlignment="Bottom">
 						<StackPanel HorizontalAlignment="Left" VerticalAlignment="Bottom">
 							<TextBlock x:Uid="todayDayHeading" FontSize="{StaticResource TextStyleMediumFontSize}"/>
-							<TextBlock x:Name="Day" Text="1st Ramadan"  FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" FontSize="{StaticResource TextStyleLargeFontSize}"/>
+							<TextBlock x:Name="Day" Text="1st Ramadan" FontSize="{StaticResource TextStyleLargeFontSize}" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" FontWeight="Light" />
 						</StackPanel>
 					</Grid>
 
 					<Grid HorizontalAlignment="Right" Margin="10" Grid.Column="1" Grid.Row="0" VerticalAlignment="Top">
 						<StackPanel HorizontalAlignment="Right" VerticalAlignment="Top">
 							<TextBlock x:Uid="todaySahri" FontSize="{StaticResource TextStyleMediumFontSize}"/>
-							<TextBlock x:Name="Sehri" Text="3:40 AM"  FontSize="{StaticResource TextStyleLargeFontSize}" HorizontalAlignment="Right"/>
+							<TextBlock x:Name="Sehri" Text="3:40 AM" FontSize="{StaticResource TextStyleLargeFontSize}" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" FontWeight="Light"  HorizontalAlignment="Right"/>
 						</StackPanel>
 					</Grid>
 
 					<Grid HorizontalAlignment="Right" Margin="10" Grid.Column="1" Grid.Row="1" VerticalAlignment="Bottom">
 						<StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Right">
 							<TextBlock x:Uid="todayIftar" FontSize="{StaticResource TextStyleMediumFontSize}"/>
-							<TextBlock x:Name="Iftar" Text="6:40 PM"  FontSize="{StaticResource TextStyleLargeFontSize}" HorizontalAlignment="Right"/>
+							<TextBlock x:Name="Iftar" Text="6:40 PM"  FontSize="{StaticResource TextStyleLargeFontSize}" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" FontWeight="Light"  HorizontalAlignment="Right"/>
 						</StackPanel>
 					</Grid>
 				</Grid>
 
+				<Grid Grid.Row="1" Background="#26FFFFFF">
+					<StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+						<TextBlock x:Uid="locationHeading" FontSize="{StaticResource TextStyleExtraLargeFontSize}" VerticalAlignment="Center"/>
+						<TextBlock Text=":" Margin="10 0" FontSize="{StaticResource TextStyleExtraLargeFontSize}" VerticalAlignment="Center"/>
+						<TextBlock x:Uid="location" x:Name="_Location" FontSize="{StaticResource TextStyleExtraLargeFontSize}" VerticalAlignment="Center"/>
+						
+					</StackPanel>
+					
+				</Grid>
+				
+				
 				<!--For Buttons-->
-				<Grid Grid.Row="1">
+				<Grid Grid.Row="2">
 					<Grid.RowDefinitions>
 						<RowDefinition/>
 						<RowDefinition/>
@@ -105,7 +117,7 @@
 							<Grid HorizontalAlignment="Center" VerticalAlignment="Center">
 								<StackPanel>
 									<Image Height="80" RenderTransformOrigin="0.5,0.5" Source="Assets/Resources/time-calender.png"/>
-									<TextBlock x:Uid="menu_Time" FontSize="{StaticResource TextStyleMediumFontSize}" Foreground="Black" Margin="0,15,0,0" HorizontalAlignment="Center" />
+									<TextBlock x:Uid="menu_Time" Foreground="Black" Margin="0,15,0,0" HorizontalAlignment="Center" FontSize="{StaticResource TextStyleLargeFontSize}" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" FontWeight="Light" />
 								</StackPanel>
 							</Grid>
 						</Button>
@@ -119,7 +131,7 @@
 							<Grid HorizontalAlignment="Center" VerticalAlignment="Center">
 								<StackPanel>
 									<Image Height="80" RenderTransformOrigin="0.5,0.5" Source="Assets/Resources/Book.png"/>
-									<TextBlock x:Uid="menu_Doah" FontSize="{StaticResource TextStyleMediumFontSize}" Foreground="Black" Margin="0,15,0,0" HorizontalAlignment="Center"/>
+									<TextBlock x:Uid="menu_Doah" Foreground="Black" Margin="0,15,0,0" HorizontalAlignment="Center" FontSize="{StaticResource TextStyleLargeFontSize}" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" FontWeight="Light"/>
 								</StackPanel>
 							</Grid>
 						</Button>
@@ -133,7 +145,7 @@
 							<Grid HorizontalAlignment="Center" VerticalAlignment="Center">
 								<StackPanel>
 									<Image Height="80" RenderTransformOrigin="0.5,0.5" Source="Assets/Resources/Rules.png"/>
-									<TextBlock x:Uid="menu_Rules" FontSize="{StaticResource TextStyleMediumFontSize}" Foreground="Black" Margin="0,15,0,0" HorizontalAlignment="Center"/>
+									<TextBlock x:Uid="menu_Rules" Foreground="Black" Margin="0,15,0,0" HorizontalAlignment="Center" FontSize="{StaticResource TextStyleLargeFontSize}" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" FontWeight="Light"/>
 								</StackPanel>
 							</Grid>
 						</Button>
@@ -147,7 +159,7 @@
 							<Grid HorizontalAlignment="Center" VerticalAlignment="Center">
 								<StackPanel>
 									<Image Height="80" RenderTransformOrigin="0.5,0.5" Source="Assets/Resources/setting.png"/>
-									<TextBlock x:Uid="menu_Setting" FontSize="{StaticResource TextStyleMediumFontSize}" Foreground="Black" Margin="0,15,0,0" HorizontalAlignment="Center"/>
+									<TextBlock x:Uid="menu_Setting" Foreground="Black" Margin="0,15,0,0" HorizontalAlignment="Center" FontSize="{StaticResource TextStyleLargeFontSize}" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" FontWeight="Light"/>
 								</StackPanel>
 							</Grid>
 						</Button>

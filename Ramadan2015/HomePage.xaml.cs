@@ -18,6 +18,7 @@ using Windows.UI.Xaml.Navigation;
 using System.ComponentModel;
 using Windows.Phone.UI.Input;
 using Windows.UI.Xaml.Media.Animation;
+using Windows.System;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkID=390556
 
@@ -27,6 +28,8 @@ namespace Ramadan2015
 	public sealed partial class HomePage : Page
 	{
 		Frame mainFrame = Window.Current.Content as Frame;
+		Windows.Storage.ApplicationDataContainer localSetting = Windows.Storage.ApplicationData.Current.LocalSettings;
+
 		public HomePage()
 		{
 			this.InitializeComponent();
@@ -39,6 +42,7 @@ namespace Ramadan2015
 		{
 
 			Date.Text = string.Format("{0:MMMM d, yyyy}", DateTime.Today);
+			_Location.Text = localSetting.Values["Name"].ToString();
 		}
 
 
@@ -66,6 +70,16 @@ namespace Ramadan2015
 		private void _setting_Click(object sender, RoutedEventArgs e)
 		{
 			Frame.Navigate(typeof(SettingPage));
+		}
+
+		private void about_Click(object sender, RoutedEventArgs e)
+		{
+			Frame.Navigate(typeof(AboutPage));
+		}
+
+		private async void rate_Click(object sender, RoutedEventArgs e)
+		{
+			await Launcher.LaunchUriAsync(new Uri(@"ms-windows-store:reviewapp?appid=fc5da213-50e9-4f68-9137-ac0bebe84ece"));
 		}
 
 		

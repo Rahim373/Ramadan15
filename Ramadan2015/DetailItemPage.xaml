@@ -9,50 +9,63 @@
 	<Page.Background>
 		<ImageBrush Stretch="UniformToFill" ImageSource="Assets/Resources/BG.jpg"/>
 	</Page.Background>
-	<Page.BottomAppBar>
-		<CommandBar Foreground="Black" Background="White">
-			<AppBarButton Icon="Flag" Label="About"/>
-			<AppBarButton Icon="Comment" Label="Credit"/>
-		</CommandBar>
-	</Page.BottomAppBar>
-
 	<Grid Margin="10">
 		<Grid.RowDefinitions>
 			<RowDefinition Height="1*"/>
-			<RowDefinition Height="11*"/>
+			<RowDefinition Height="10*"/>
 		</Grid.RowDefinitions>
-		
+
 		<Grid x:Name="_headingGrid" Margin="0 0 0 0" Grid.Row="0">
 			<StackPanel>
 				<TextBlock x:Uid="AppName" FontSize="{StaticResource TextStyleExtraExtraLargeFontSize}" Foreground="White"/>
 			</StackPanel>
 		</Grid>
 
-		<Grid  Grid.Row="1" Background="#3F000000">
-
-			<Grid Margin="5 0">
-				<StackPanel>
-					<TextBlock x:Uid="_dateHeading" HorizontalAlignment="Center" Foreground="White" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" FontSize="{StaticResource TextStyleMediumFontSize}" Margin="0 10 0 0"/>
-					<TextBlock x:Name="_date" x:Uid="TimeorDate" HorizontalAlignment="Center" Foreground="White" FontSize="{StaticResource TextStyleLargeFontSize}" Margin="0 5 0 15"/>
-
-					<TextBlock x:Uid="ramadanHeading" HorizontalAlignment="Center" Foreground="White" FontSize="{StaticResource TextStyleMediumFontSize}"/>
-					<TextBlock x:Name="_day" x:Uid="TimeorDate"  HorizontalAlignment="Center" Foreground="White" FontSize="{StaticResource TextStyleLargeFontSize}" Margin="0 5 0 15" />
-
-					<TextBlock x:Uid="sehriHeading" HorizontalAlignment="Center" Foreground="White"  FontSize="{StaticResource TextStyleMediumFontSize}"/>
-					<TextBlock x:Name="_sehri" x:Uid="TimeorDate"  HorizontalAlignment="Center" Foreground="White" FontSize="{StaticResource TextStyleLargeFontSize}" Margin="0 5 0 15"/>
-
-					<TextBlock x:Uid="TimeToSehri" HorizontalAlignment="Center" Foreground="White" FontSize="{StaticResource TextStyleMediumFontSize}"/>
-					<TextBlock x:Name="_str" x:Uid="TimeorDate"  HorizontalAlignment="Center" Foreground="White" FontSize="{StaticResource TextStyleLargeFontSize}" Margin="0 5 0 15"/>
-
-					<TextBlock  x:Uid="ifterHeading" HorizontalAlignment="Center" Foreground="White" FontSize="{StaticResource TextStyleMediumFontSize}"/>
-					<TextBlock x:Name="_ifter" x:Uid="TimeorDate" HorizontalAlignment="Center" Foreground="White"  FontSize="{StaticResource TextStyleLargeFontSize}" Margin="0 5 0 15"/>
-
-					<TextBlock x:Uid="TimeToIftar" HorizontalAlignment="Center" Foreground="White" FontSize="{StaticResource TextStyleMediumFontSize}"/>
-					<TextBlock x:Name="_itr" x:Uid="TimeorDate" HorizontalAlignment="Center" Foreground="White" FontSize="{StaticResource TextStyleLargeFontSize}"  Margin="0 5 0 15"/>
+		<Grid  Grid.Row="1" Background="#4C000000">
+			<Grid.RowDefinitions>
+				<RowDefinition/>
+				<RowDefinition/>
+				<RowDefinition/>
+				<RowDefinition/>
+				<RowDefinition/>
+				<RowDefinition/>
+			</Grid.RowDefinitions>
+			<Grid Grid.Row="0" Background="#26FFFFFF">
+				<StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+					<TextBlock x:Uid="_dateHeading" HorizontalAlignment="Center" Foreground="White"  FontSize="{StaticResource TextStyleLargeFontSize}"/>
+					<TextBlock x:Name="_date" x:Uid="TimeorDate" HorizontalAlignment="Center" Foreground="White" FontSize="{StaticResource TextStyleExtraLargeFontSize}"/>
+				</StackPanel>
+			</Grid>
+			<Grid Grid.Row="1">
+				<StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+					<TextBlock x:Uid="ramadanHeading" HorizontalAlignment="Center" Foreground="White"  FontSize="{StaticResource TextStyleLargeFontSize}"/>
+					<TextBlock x:Name="_day" x:Uid="TimeorDate"  HorizontalAlignment="Center" Foreground="White" FontSize="{StaticResource TextStyleExtraLargeFontSize}" />
+				</StackPanel>
+			</Grid>
+			<Grid Grid.Row="2" Background="#26FFFFFF">
+				<StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+					<TextBlock x:Uid="sehriHeading" HorizontalAlignment="Center" Foreground="White"  FontSize="{StaticResource TextStyleLargeFontSize}"/>
+					<TextBlock x:Name="_sehri" x:Uid="TimeorDate"  HorizontalAlignment="Center" Foreground="White" FontSize="{StaticResource TextStyleExtraLargeFontSize}"/>
+				</StackPanel>
+			</Grid>
+			<Grid Grid.Row="3">
+				<StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+					<TextBlock x:Uid="TimeToSehri" HorizontalAlignment="Center" Foreground="White"  FontSize="{StaticResource TextStyleLargeFontSize}"/>
+					<TextBlock x:Name="_str" x:Uid="TimeorDate"  HorizontalAlignment="Center" Foreground="White" FontSize="{StaticResource TextStyleExtraLargeFontSize}"/>
+				</StackPanel>
+			</Grid>
+			<Grid Grid.Row="4" Background="#26FFFFFF">
+				<StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+					<TextBlock x:Uid="ifterHeading" HorizontalAlignment="Center" Foreground="White" FontSize="{StaticResource TextStyleLargeFontSize}"/>
+					<TextBlock x:Name="_ifter" x:Uid="TimeorDate" HorizontalAlignment="Center" Foreground="White" FontSize="{StaticResource TextStyleExtraLargeFontSize}"/>
+				</StackPanel>
+			</Grid>
+			<Grid Grid.Row="5">
+				<StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+					<TextBlock x:Uid="TimeToIftar" HorizontalAlignment="Center" Foreground="White"  FontSize="{StaticResource TextStyleLargeFontSize}"/>
+					<TextBlock x:Name="_itr" x:Uid="TimeorDate" HorizontalAlignment="Center" Foreground="White" FontSize="{StaticResource TextStyleExtraLargeFontSize}"/>
 				</StackPanel>
 			</Grid>
 		</Grid>
-
-
 	</Grid>
 </Page>

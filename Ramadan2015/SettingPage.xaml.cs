@@ -61,6 +61,12 @@ namespace Ramadan2015
 			localSetting.Values["Name"] = location.Name.ToString();
 			localSetting.Values["Minute"] = location.minutes.ToString();
 
+
+			if (this.Frame.CanGoBack)
+			{
+				this.Frame.GoBack();
+			}
+
 		}
 
 		private void cheackBox_Checked(object sender, RoutedEventArgs e)
@@ -80,10 +86,6 @@ namespace Ramadan2015
 			CultureInfo.DefaultThreadCurrentCulture = culture;
 			CultureInfo.DefaultThreadCurrentUICulture = culture;
 
-			if (this.Frame.CanGoBack)
-			{
-				this.Frame.GoBack();
-			}
 		}
 
 		private void cancel_Click(object sender, RoutedEventArgs e)

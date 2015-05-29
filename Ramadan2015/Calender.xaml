@@ -12,7 +12,7 @@
 		<local:TimeFormatConverter x:Key="ConverteTime"/>
 
 		<DataTemplate x:Key="ItemListTemplate01">
-			<Grid Margin="0 0 0 10" Width="{StaticResource ContentDialogContentLandscapeWidth}" Height="150">
+			<Grid Width="{StaticResource ContentDialogContentLandscapeWidth}" Height="150">
 				<Grid.ColumnDefinitions>
 					<ColumnDefinition/>
 					<ColumnDefinition Width="3*"/>
@@ -61,12 +61,6 @@
 	<Page.Background>
 		<ImageBrush ImageSource="Assets/Resources/BG.jpg" Stretch="UniformToFill"/>
 	</Page.Background>
-	<Page.BottomAppBar>
-		<CommandBar Foreground="Black" Background="White">
-			<AppBarButton Icon="Flag" Label="About"/>
-			<AppBarButton Icon="Comment" Label="Credit"/>
-		</CommandBar>
-	</Page.BottomAppBar>
 
 	<Grid>
 		<Grid Margin="10">

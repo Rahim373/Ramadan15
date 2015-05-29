@@ -27,8 +27,36 @@ namespace Ramadan2015.ViewModel
 			LoadLocationClearly = new RelayCommand(getLocation);
 
 			ChangeLanguageUpdateforList = new RelayCommand(ChangeListLanguage);
+
+			UpdateTimesList = new RelayCommand(LoadingData);
 		}
 
+		
+		public const string UpdateTimesListPropertyName = "UpdateTimesList";
+
+		private RelayCommand _UpdateTimes = null;
+
+		#region UpdateTimeRelay
+
+		public RelayCommand UpdateTimesList
+		{
+			get
+			{
+				return _UpdateTimes;
+			}
+
+			set
+			{
+				if (_UpdateTimes == value)
+				{
+					return;
+				}
+
+				_UpdateTimes = value;
+				RaisePropertyChanged(UpdateTimesListPropertyName);
+			}
+		} 
+		#endregion
 
 		#region LanguageChangeUpdate
 
@@ -308,14 +336,16 @@ namespace Ramadan2015.ViewModel
 					if (i.Serial <= 10 && i.Serial > 0) c = "#750C0032";
 					else if (i.Serial < 20 && i.Serial > 10) c = "#7500005E";
 					else c = "#753100A0";
+					int min = Convert.ToInt16(localSetting.Values["Minute"].ToString());
 					LoadData.Add(new RozaViewModel()
 					{
 						Serial = (int)i.Serial,
+						Sahri = (DateTime)i.Sahri + new TimeSpan(0, min, 0),
 						Date = (DateTime)i.Date,
 						Fazr = (DateTime)i.Fazr,
 						Johr = (DateTime)i.Johr,
 						Asr = (DateTime)i.Asr,
-						Iftar = (DateTime)i.Iftar,
+						Iftar = (DateTime)i.Iftar + new TimeSpan(0, min, 0),
 						Isha = (DateTime)i.Isha,
 						Colour = c
 					});
