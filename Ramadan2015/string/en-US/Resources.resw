@@ -277,4 +277,7 @@ Version: 1.0.0.0</value>
   <data name="Translate.Text" xml:space="preserve">
     <value>Translation</value>
   </data>
+  <data name="dayNo.FontFamily" xml:space="preserve">
+    <value>Assets/Font/Barkentina 1.otf#Barkentina Test</value>
+  </data>
 </root>

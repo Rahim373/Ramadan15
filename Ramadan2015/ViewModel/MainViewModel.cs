@@ -340,13 +340,9 @@ namespace Ramadan2015.ViewModel
 					LoadData.Add(new RozaViewModel()
 					{
 						Serial = (int)i.Serial,
-						Sahri = (DateTime)i.Sahri + new TimeSpan(0, min, 0),
+						Sehri = (DateTime)i.Sehri + new TimeSpan(0, min, 0),
 						Date = (DateTime)i.Date,
-						Fazr = (DateTime)i.Fazr,
-						Johr = (DateTime)i.Johr,
-						Asr = (DateTime)i.Asr,
 						Iftar = (DateTime)i.Iftar + new TimeSpan(0, min, 0),
-						Isha = (DateTime)i.Isha,
 						Colour = c
 					});
 				}

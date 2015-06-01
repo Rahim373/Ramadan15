@@ -220,4 +220,7 @@
   <data name="Translate.Text" xml:space="preserve">
     <value>অনুবাদ</value>
   </data>
+  <data name="dayNo.FontFamily" xml:space="preserve">
+    <value>Assets/Font/Siyam Rupali ANSI.ttf#Siyam Rupali ANSI</value>
+  </data>
 </root>

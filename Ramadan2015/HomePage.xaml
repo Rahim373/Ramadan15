@@ -48,7 +48,7 @@
 				</Grid.RowDefinitions>
 
 				<!--For Time-->
-				<Grid Margin="0 5 0 0">
+				<Grid Margin="10">
 					<Grid.RowDefinitions>
 						<RowDefinition Height="1*"/>
 						<RowDefinition/>
@@ -58,31 +58,31 @@
 						<ColumnDefinition/>
 					</Grid.ColumnDefinitions>
 
-					<Grid HorizontalAlignment="Left" Margin="10" VerticalAlignment="Top">
+					<Grid HorizontalAlignment="Left" VerticalAlignment="Top">
 						<StackPanel VerticalAlignment="Top" HorizontalAlignment="Left">
 							<TextBlock x:Uid="todayHeading" FontSize="{StaticResource TextStyleMediumFontSize}"/>
-							<TextBlock x:Name="Date" FontSize="{StaticResource TextStyleLargeFontSize}" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" FontWeight="Light" />
+							<TextBlock  x:Uid="dayNo" x:Name="Date" FontSize="{StaticResource TextStyleLargeFontSize}" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" FontWeight="Light" />
 						</StackPanel>
 					</Grid>
 
-					<Grid HorizontalAlignment="Left" Margin="10" Grid.Column="0" Grid.Row="1" VerticalAlignment="Bottom">
+					<Grid HorizontalAlignment="Left" Grid.Column="0" Grid.Row="1" VerticalAlignment="Bottom">
 						<StackPanel HorizontalAlignment="Left" VerticalAlignment="Bottom">
 							<TextBlock x:Uid="todayDayHeading" FontSize="{StaticResource TextStyleMediumFontSize}"/>
-							<TextBlock x:Name="Day" FontSize="{StaticResource TextStyleLargeFontSize}" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" FontWeight="Light" />
+							<TextBlock x:Uid="dayNo" x:Name="Day" FontSize="{StaticResource TextStyleLargeFontSize}" FontWeight="Light" />
 						</StackPanel>
 					</Grid>
 
-					<Grid HorizontalAlignment="Right" Margin="10" Grid.Column="1" Grid.Row="0" VerticalAlignment="Top">
+					<Grid HorizontalAlignment="Right" Grid.Column="1" Grid.Row="0" VerticalAlignment="Top">
 						<StackPanel HorizontalAlignment="Right" VerticalAlignment="Top">
 							<TextBlock x:Uid="todaySahri" FontSize="{StaticResource TextStyleMediumFontSize}"/>
-							<TextBlock x:Name="Sehri" Text="3:40 AM" FontSize="{StaticResource TextStyleLargeFontSize}" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" FontWeight="Light"  HorizontalAlignment="Right"/>
+							<TextBlock x:Uid="dayNo" x:Name="Sehri" Text="3:40 AM" FontSize="{StaticResource TextStyleLargeFontSize}" FontWeight="Light"  HorizontalAlignment="Right"/>
 						</StackPanel>
 					</Grid>
 
-					<Grid HorizontalAlignment="Right" Margin="10" Grid.Column="1" Grid.Row="1" VerticalAlignment="Bottom">
+					<Grid HorizontalAlignment="Right" Grid.Column="1" Grid.Row="1" VerticalAlignment="Bottom">
 						<StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Right">
 							<TextBlock x:Uid="todayIftar" FontSize="{StaticResource TextStyleMediumFontSize}"/>
-							<TextBlock x:Name="Iftar" Text="6:40 PM"  FontSize="{StaticResource TextStyleLargeFontSize}" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" FontWeight="Light"  HorizontalAlignment="Right"/>
+							<TextBlock x:Uid="dayNo" x:Name="Iftar" Text="6:40 PM"  FontSize="{StaticResource TextStyleLargeFontSize}"  FontWeight="Light"  HorizontalAlignment="Right"/>
 						</StackPanel>
 					</Grid>
 				</Grid>

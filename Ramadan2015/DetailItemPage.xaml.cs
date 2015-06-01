@@ -41,7 +41,7 @@ namespace Ramadan2015
 
 		void timer_Tick(object sender, object e)
 		{
-			var a = (item.Fazr - DateTime.Now);
+			var a = (item.Sehri - DateTime.Now);
 			var b = (item.Iftar - DateTime.Now);
 
 			if (a.Seconds < 0)
@@ -70,7 +70,7 @@ namespace Ramadan2015
 			_date.Text = string.Format("{0:dd MMMM yyyy}", item.Date);
 
 			_day.Text = item.Serial.ToString();
-			_sehri.Text = string.Format("{0:t}", item.Sahri);
+			_sehri.Text = string.Format("{0:t}", item.Sehri);
 			_ifter.Text = string.Format("{0:t}", item.Iftar);
 			
 		}

@@ -43,7 +43,7 @@
 						<StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="15,2.5,0,2.5">
 							<Image Source="Assets/Resources/sahri_icon.png" Stretch="Fill" VerticalAlignment="Center" />
 							<TextBlock x:Uid="sehriHeading" FontSize="{StaticResource TextStyleLargeFontSize}" VerticalAlignment="Center" Margin="10,0,0,0" Foreground="#BF000000"  />
-							<TextBlock x:Uid="TimeorDate" Text="{Binding Path=Sahri, Mode=OneWay, Converter={StaticResource ConverteTime}, ConverterParameter=\{0: h:mm tt\}}" FontSize="{StaticResource TextStyleLargeFontSize}" VerticalAlignment="Center" Margin="10,0,0,0" Foreground="#BF000000"/>
+							<TextBlock x:Uid="TimeorDate" Text="{Binding Path=Sehri, Mode=OneWay, Converter={StaticResource ConverteTime}, ConverterParameter=\{0: h:mm tt\}}" FontSize="{StaticResource TextStyleLargeFontSize}" VerticalAlignment="Center" Margin="10,0,0,0" Foreground="#BF000000"/>
 
 						</StackPanel>
 					</Grid>

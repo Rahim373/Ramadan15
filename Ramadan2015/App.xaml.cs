@@ -33,7 +33,7 @@ namespace Ramadan2015
     public sealed partial class App : Application
     {
         private TransitionCollection transitions;
-
+		Windows.Storage.ApplicationDataContainer localSetting = Windows.Storage.ApplicationData.Current.LocalSettings;
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().
@@ -42,16 +42,30 @@ namespace Ramadan2015
         {
             this.InitializeComponent();
             this.Suspending += this.OnSuspending;
-			LoadTile();
-			LoadLocationAndLocalizing();
+		//	LoadTile();
+		//	LoadLocationAndLocalizing();
 			HardwareButtons.BackPressed += HardwareButtons_BackPressed;
+			setSetting();
 
 			
         }
 
+		private void setSetting() {
+			if (localSetting.Values["LocationID"] == null)
+			{
+				localSetting.Values["Name"] = "Dhaka";
+				localSetting.Values["LocationID"] = "14";
+				localSetting.Values["Minute"] = "0";
+				localSetting.Values["Language"] = "en-Us";
+			}
+		}
+
+
+
+		//CanDeletethisMethde
 		private void LoadLocationAndLocalizing()
 		{
-			Windows.Storage.ApplicationDataContainer localSetting = Windows.Storage.ApplicationData.Current.LocalSettings;
+			
 
 			if (localSetting.Values["Language"].ToString() == "bn-Bd")
 			{
@@ -62,17 +76,11 @@ namespace Ramadan2015
 			}
 			else
 			{
+				localSetting.Values["Language"] = "en-Us";
 				var culture = new CultureInfo("en-Us");
 				Windows.Globalization.ApplicationLanguages.PrimaryLanguageOverride = culture.Name;
 				CultureInfo.DefaultThreadCurrentCulture = culture;
 				CultureInfo.DefaultThreadCurrentUICulture = culture;
-			}
-
-			if (localSetting.Values["LocationID"].ToString() == "")
-			{
-				localSetting.Values["Name"] = "Dhaka";
-				localSetting.Values["LocationID"] = "14";
-				localSetting.Values["Minute"] = "0";
 			}
 		}
 

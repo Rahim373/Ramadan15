@@ -45,21 +45,54 @@ namespace Ramadan2015
 			Date.Text = string.Format("{0:MMMM d, yyyy}", DateTime.Today);
 			_Location.Text = localSetting.Values["Name"].ToString();
 
-			var date = (DateTime.Today.Date - data[0].Date.Date).Days;
-			if (date < 0)
+
+			var sub = (DateTime)DateTime.Today - data[0].Date;
+			var cheackDate = sub.Days;
+			if (cheackDate < 0)
 			{
-				Day.Text = date.ToString();
+				Day.Text = cheackDate.ToString();
+				if (localSetting.Values["Language"].ToString() != "bn-Bd")
+				{
+					Day.Text = Math.Abs(cheackDate) + "Days remining"; 
+					Sehri.Text = "Wait for Ramadan";
+					Iftar.Text = "Wait for Ramadan";
+				}
+				else
+				{
+					Day.Text = Math.Abs(cheackDate) + "দিন বাকি";
+					Sehri.Text = "অপেক্ষা করুন ";
+					Iftar.Text = "অপেক্ষা করুন ";
+				}
 			}
-			else
+			else if(cheackDate < data.Count())
 			{
 				foreach (var i in data)
 				{
 					if (DateTime.Today.Day == i.Date.Day)
 					{
+						int min = Convert.ToInt16(localSetting.Values["Minute"].ToString());
 						Day.Text = i.Serial.ToString();
+						Sehri.Text = string.Format("{0: h:mm tt}", i.Sehri + new TimeSpan(0, min, 0));
+						Iftar.Text = string.Format("{0: h:mm tt}", i.Iftar + new TimeSpan(0, min, 0));
 						break;
 					}
 				}
+			}
+			else
+			{
+				if (localSetting.Values["Language"].ToString() != "bn-Bd")
+				{
+					Day.Text = "End of Ramadan";
+					Sehri.Text = "End of Ramadan";
+					Iftar.Text = "End of Ramadan";
+				}
+				else
+				{
+					Day.Text = "রমজান শেষ";
+					Sehri.Text = "রমজান শেষ";
+					Iftar.Text = "রমজান শেষ";
+				}
+				
 			}
 		}
 
@@ -100,7 +133,6 @@ namespace Ramadan2015
 			mainFrame.BackStack.Clear();
 
 			data = e.Parameter as List<RozaModel>;
-			
 		}
 	}
 
