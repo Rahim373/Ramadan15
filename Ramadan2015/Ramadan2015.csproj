@@ -88,6 +88,10 @@
     <Compile Include="Calender.xaml.cs">
       <DependentUpon>Calender.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Common\NavigationHelper.cs" />
+    <Compile Include="Common\ObservableDictionary.cs" />
+    <Compile Include="Common\RelayCommand.cs" />
+    <Compile Include="Common\SuspensionManager.cs" />
     <Compile Include="Converters\DateFormatConverter.cs" />
     <Compile Include="DetailItemPage.xaml.cs">
       <DependentUpon>DetailItemPage.xaml</DependentUpon>

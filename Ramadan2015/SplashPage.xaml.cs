@@ -68,9 +68,11 @@ namespace Ramadan2015
 				StorageFolder SFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
 				StorageFile SFile = await SFolder.GetFileAsync("RamdanData.txt");
 				var success = true;
+				var Content = await FileIO.ReadTextAsync(SFile);
+				var data = JsonConvert.DeserializeObject<List<RozaModel>>(Content);
 				if (success)
 				{
-					Frame.Navigate(typeof(HomePage));
+					Frame.Navigate(typeof(HomePage), data);
 				}
 			}
 			catch (Exception ex)

@@ -10,11 +10,8 @@ namespace Ramadan2015.Model
 	{
 		public int Serial { get; set; }
 		public DateTime Date { get; set; }
-		public DateTime Sahri { get; set; }
-		public DateTime Fazr { get; set; }
-		public DateTime Johr { get; set; }
-		public DateTime Asr { get; set; }
+		public DateTime Sehri { get; set; }
 		public DateTime Iftar { get; set; }
-		public DateTime Isha { get; set; }
+		public string Type { get; set; }
 	}
 }

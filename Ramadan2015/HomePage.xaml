@@ -68,7 +68,7 @@
 					<Grid HorizontalAlignment="Left" Margin="10" Grid.Column="0" Grid.Row="1" VerticalAlignment="Bottom">
 						<StackPanel HorizontalAlignment="Left" VerticalAlignment="Bottom">
 							<TextBlock x:Uid="todayDayHeading" FontSize="{StaticResource TextStyleMediumFontSize}"/>
-							<TextBlock x:Name="Day" Text="1st Ramadan" FontSize="{StaticResource TextStyleLargeFontSize}" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" FontWeight="Light" />
+							<TextBlock x:Name="Day" FontSize="{StaticResource TextStyleLargeFontSize}" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" FontWeight="Light" />
 						</StackPanel>
 					</Grid>
 

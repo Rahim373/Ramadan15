@@ -32,12 +32,12 @@ namespace Ramadan2015.ViewModel
 		}
 
 		
+		
+
+		#region UpdateTimeRelay
 		public const string UpdateTimesListPropertyName = "UpdateTimesList";
 
 		private RelayCommand _UpdateTimes = null;
-
-		#region UpdateTimeRelay
-
 		public RelayCommand UpdateTimesList
 		{
 			get

@@ -27,6 +27,7 @@ namespace Ramadan2015
 	
 	public sealed partial class HomePage : Page
 	{
+		List<RozaModel> data;
 		Frame mainFrame = Window.Current.Content as Frame;
 		Windows.Storage.ApplicationDataContainer localSetting = Windows.Storage.ApplicationData.Current.LocalSettings;
 
@@ -43,6 +44,23 @@ namespace Ramadan2015
 
 			Date.Text = string.Format("{0:MMMM d, yyyy}", DateTime.Today);
 			_Location.Text = localSetting.Values["Name"].ToString();
+
+			var date = (DateTime.Today.Date - data[0].Date.Date).Days;
+			if (date < 0)
+			{
+				Day.Text = date.ToString();
+			}
+			else
+			{
+				foreach (var i in data)
+				{
+					if (DateTime.Today.Day == i.Date.Day)
+					{
+						Day.Text = i.Serial.ToString();
+						break;
+					}
+				}
+			}
 		}
 
 
@@ -50,11 +68,6 @@ namespace Ramadan2015
 		private void _calender_Tapped(object sender, TappedRoutedEventArgs e)
 		{
 			Frame.Navigate(typeof(Calender));
-		}
-
-		protected override void OnNavigatedTo(NavigationEventArgs e)
-		{
-			mainFrame.BackStack.Clear();
 		}
 
 		private void _doa_Click(object sender, RoutedEventArgs e)
@@ -82,7 +95,13 @@ namespace Ramadan2015
 			await Launcher.LaunchUriAsync(new Uri(@"ms-windows-store:reviewapp?appid=fc5da213-50e9-4f68-9137-ac0bebe84ece"));
 		}
 
-		
+		protected override void OnNavigatedTo(NavigationEventArgs e)
+		{
+			mainFrame.BackStack.Clear();
+
+			data = e.Parameter as List<RozaModel>;
+			
+		}
 	}
 
 	public sealed class DateFormatConverter : IValueConverter
