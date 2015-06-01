@@ -42,7 +42,6 @@ namespace Ramadan2015
         {
             this.InitializeComponent();
             this.Suspending += this.OnSuspending;
-		//	LoadTile();
 		//	LoadLocationAndLocalizing();
 			HardwareButtons.BackPressed += HardwareButtons_BackPressed;
 			setSetting();
@@ -53,6 +52,7 @@ namespace Ramadan2015
 		private void setSetting() {
 			if (localSetting.Values["LocationID"] == null)
 			{
+				localSetting.Values["Tile"] = "Off";
 				localSetting.Values["Name"] = "Dhaka";
 				localSetting.Values["LocationID"] = "14";
 				localSetting.Values["Minute"] = "0";
@@ -99,25 +99,6 @@ namespace Ramadan2015
 			}
 		}
 
-		private void LoadTile()
-		{
-			XmlDocument tileXml = TileUpdateManager.GetTemplateContent(TileTemplateType.TileWide310x150PeekImage05);
-
-			XmlNodeList tileTextAttributes = tileXml.GetElementsByTagName("text");
-			tileTextAttributes[0].InnerText = "Ifter 6.35 PM";
-			tileTextAttributes[1].InnerText = "Sahri 4.08 AM";
-
-			XmlNodeList tileImageAttributes = tileXml.GetElementsByTagName("image");
-			((XmlElement)tileImageAttributes[0]).SetAttribute("src", "ms-appx:///Assets/WideLogo.scale-240.png");
-			((XmlElement)tileImageAttributes[0]).SetAttribute("alt", "red graphic");
-			((XmlElement)tileImageAttributes[1]).SetAttribute("src", "ms-appx:///Assets/WideLogo.scale-240.png");
-			((XmlElement)tileImageAttributes[1]).SetAttribute("alt", "red graphic");
-
-
-			TileNotification tileNotification = new TileNotification(tileXml);
-			tileNotification.ExpirationTime = null;
-			TileUpdateManager.CreateTileUpdaterForApplication().Update(tileNotification);
-		}
 
         /// <summary>
         /// Invoked when the application is launched normally by the end user.  Other entry points

@@ -48,6 +48,9 @@
 					</TransitionCollection>
 				</ComboBox.Transitions>
 			</ComboBox>
+			
+			<ToggleSwitch x:Name="liveTileToggle" Header="LiveTile" RequestedTheme="Dark" Toggled="liveTileToggle_Toggled"/>
+			<TextBlock x:Name="da"/>
 		</StackPanel>
 
 	</Grid>

@@ -280,4 +280,22 @@ Version: 1.0.0.0</value>
   <data name="dayNo.FontFamily" xml:space="preserve">
     <value>Assets/Font/Barkentina 1.otf#Barkentina Test</value>
   </data>
+  <data name="Rule1.Header" xml:space="preserve">
+    <value>Actions that invalidate fasting</value>
+  </data>
+  <data name="Rule1Detail.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Rule2.Header" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Rule2Detail.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Rule3.Header" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Rule3Detail.Text" xml:space="preserve">
+    <value />
+  </data>
 </root>

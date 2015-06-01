@@ -19,9 +19,7 @@ using Windows.UI.Xaml.Navigation;
 
 namespace Ramadan2015
 {
-	/// <summary>
-	/// An empty page that can be used on its own or navigated to within a Frame.
-	/// </summary>
+
 	public sealed partial class SettingPage : Page
 	{
 		Windows.Storage.ApplicationDataContainer localSetting = Windows.Storage.ApplicationData.Current.LocalSettings;
@@ -34,6 +32,19 @@ namespace Ramadan2015
 		void SettingPage_Loaded(object sender, RoutedEventArgs e)
 		{
 			LoadLanguageCheckBox();
+			LoadTileToggle();
+		}
+
+		private void LoadTileToggle()
+		{
+			if (localSetting.Values["Tile"].ToString() == "Off")
+			{
+				liveTileToggle.IsOn = false;
+			}
+			else
+			{
+				liveTileToggle.IsOn = true;
+			}
 		}
 
 		private void LoadLanguageCheckBox()
@@ -93,6 +104,23 @@ namespace Ramadan2015
 			if (this.Frame.CanGoBack) {
 				this.Frame.GoBack();
 			}
+		}
+
+		private void liveTileToggle_Toggled(object sender, RoutedEventArgs e)
+		{
+			if (liveTileToggle.IsOn)
+			{
+				liveTileToggle.IsOn = true;
+				localSetting.Values["Tile"] = "On";
+				da.Text = "On";
+			}
+			else
+			{
+				liveTileToggle.IsOn = false;
+				localSetting.Values["Tile"] = "Off";
+				da.Text = "Off";
+			}
+			
 		}
 
 

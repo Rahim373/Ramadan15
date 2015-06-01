@@ -11,13 +11,6 @@
 	<Page.Background>
 		<ImageBrush Stretch="UniformToFill" ImageSource="Assets/Resources/BG.jpg"/>
 	</Page.Background>
-	<Page.BottomAppBar>
-		<CommandBar Foreground="Black" Background="White">
-			<AppBarButton Icon="Flag" Label="About"/>
-			<AppBarButton Icon="Comment" Label="Credit"/>
-		</CommandBar>
-	</Page.BottomAppBar>
-
 	<Grid Margin="10">
 		<Grid.RowDefinitions>
 			<RowDefinition Height="1*"/>
@@ -34,42 +27,37 @@
 			<Pivot>
 				<Pivot.HeaderTemplate>
 					<DataTemplate>
-						<Grid Height="Auto" Margin="0">
+						<Grid Height="Auto" Margin="0 10 0 0">
 							<TextBlock Text="{Binding}" FontSize="{StaticResource TextStyleExtraLargeFontSize}" />
 							
 						</Grid>
 					</DataTemplate>
 				</Pivot.HeaderTemplate>
 				
-				<PivotItem Header="One">
-					<Grid>
-						<ScrollViewer>
-							<StackPanel>
-								<TextBlock Text="Demo 1"/>
-								<TextBlock Text="Demo 2"/>
-								<TextBlock Text="Demo 3"/>
+				<PivotItem x:Uid="Rule1">
+						<Grid Background="#21000000">
+							<ScrollViewer VerticalScrollBarVisibility="Auto">
+							<StackPanel Margin="5 10 5 10">
+								<TextBlock x:Uid="Rule1Detail" FontSize="{StaticResource TextStyleLargeFontSize}" TextWrapping="Wrap"/>
 							</StackPanel>
 						</ScrollViewer>
 					</Grid>
 				</PivotItem>
-				<PivotItem Header="Two">
-					<Grid>
+				<PivotItem  x:Uid="Rule2">
+					<Grid Background="#21000000">
 						<ScrollViewer>
-							<StackPanel>
-								<TextBlock Text="Demo 1"/>
-								<TextBlock Text="Demo 2"/>
-								<TextBlock Text="Demo 3"/>
+							<StackPanel Margin="5 10 5 10">
+								<TextBlock x:Uid="Rule2Detail" FontSize="{StaticResource TextStyleLargeFontSize}" TextWrapping="Wrap"/>
 							</StackPanel>
 						</ScrollViewer>
 					</Grid>
 				</PivotItem>
-				<PivotItem Header="Three">
-					<Grid>
+				<PivotItem   x:Uid="Rule3">
+					<Grid Background="#21000000">
 						<ScrollViewer>
-							<StackPanel>
-								<TextBlock Text="Demo 1"/>
-								<TextBlock Text="Demo 2"/>
-								<TextBlock Text="Demo 3"/>
+							<StackPanel Margin="5 10 5 10">
+								<TextBlock x:Uid="Rule3Detail" FontSize="{StaticResource TextStyleLargeFontSize}" TextWrapping="Wrap"/>
+							
 							</StackPanel>
 						</ScrollViewer>
 					</Grid>
