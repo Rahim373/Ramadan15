@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest" xmlns:m3="http://schemas.microsoft.com/appx/2014/manifest" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest">
-  <Identity Name="9f82c1d3-dc90-4b39-984b-4313fa9f664c" Publisher="CN=Abdur Rahim" Version="1.0.0.0" />
-  <mp:PhoneIdentity PhoneProductId="9f82c1d3-dc90-4b39-984b-4313fa9f664c" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <Identity Name="2294AbdurRahim.Ramadan2015" Publisher="CN=87E84F27-8E6A-45B1-9D70-776504FB5D3F" Version="1.0.0.0" />
+  <mp:PhoneIdentity PhoneProductId="ba121917-adda-4e1a-81be-321747eddf11" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
-    <DisplayName>Ramadan2015</DisplayName>
+    <DisplayName>Ramadan 2015</DisplayName>
     <PublisherDisplayName>Abdur Rahim</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
@@ -16,7 +16,7 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="Ramadan2015.App">
-      <m3:VisualElements DisplayName="Ramadan 2015" Square150x150Logo="Assets\Logo.png" Square44x44Logo="Assets\SmallLogo.png" Description="Ramadan 2015 is an app for time schedule of Sahri, Ifter of Ramadan only for Bangladesh local time. There are also provided some Duah and other features." ForegroundText="light" BackgroundColor="transparent" ToastCapable="true">
+      <m3:VisualElements DisplayName="Ramadan 2015" Square150x150Logo="Assets\Logo.png" Square44x44Logo="Assets\SmallLogo.png" Description="Ramadan 2015 is an app for time schedule of Sahri, Ifter of Ramadan only for Bangladesh local time. There are also provided some Duah and other features." ForegroundText="light" BackgroundColor="transparent">
         <m3:DefaultTile Wide310x150Logo="Assets\WideLogo.png" Square71x71Logo="Assets\Square71x71Logo.png">
         </m3:DefaultTile>
         <m3:SplashScreen Image="Assets\SplashScreen.png" BackgroundColor="#d65c4f" />
