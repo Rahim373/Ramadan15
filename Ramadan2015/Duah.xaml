@@ -60,6 +60,25 @@
 					<TextBlock x:Uid="IftarTranslateBody" TextWrapping="Wrap" FontSize="{StaticResource TextStyleLargeFontSize}" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" TextAlignment="Center" Pivot.SlideInAnimationGroup="GroupTwo"/>
 				</StackPanel>
 			</PivotItem>
+
+
+			<PivotItem x:Uid="DoahHeading3" Background="#59000000">
+				<ScrollViewer>
+					<StackPanel Margin="10" Height="Auto">
+					<TextBlock x:Uid="ArabicPronounce" TextWrapping="Wrap" FontSize="{StaticResource TextStyleLargeFontSize}" Margin="0,0,0,5" TextAlignment="Center" Pivot.SlideInAnimationGroup="GroupOne"/>
+					<TextBlock Text="سُبْحَانَ ذِيْ الْمُلْكِ وَالْمَلَكُوْتِ سُبْحَانَ ذِيْ الْعِزَّةِ وَالْعَظْمَةِ وَالْهَيْبَةِ وَالْقُدْرَةِ وَالْكِبْرِيَاءِ وَالْجَبَرُوْتِ سُبْحَانَ الْمُلْكِ الْحَيِّ الَّذِيْ لاَيَنَامُ وَلاَ يَمُوْتُ سُبُّوْحٌ قُدُّوْسٌ رَبُّنَا وَرَبُّ الْمَلَـِءكَةِ وَالرُّوْحُ اَلْلَهُمَّ اَجِرْنَا مِنَ النَّارِ يَامُجِيْرُ يَامُجِيْرُ يَامُجِيْرُ" TextWrapping="Wrap" FontSize="{StaticResource TextStyleLargeFontSize}" Margin="0,0,0,25" TextAlignment="Center" FontWeight="Bold" Pivot.SlideInAnimationGroup="GroupTwo">
+						<TextBlock.Foreground>
+							<ImageBrush ImageSource="ms-appx:/Assets/Resources/btnBg.png" Stretch="Fill"/>
+						</TextBlock.Foreground>
+					</TextBlock>
+					<TextBlock x:Uid="Pronounce" TextWrapping="Wrap" FontSize="{StaticResource TextStyleLargeFontSize}" Margin="0,0,0,5" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" HorizontalAlignment="Center" Pivot.SlideInAnimationGroup="GroupOne"/>
+					<TextBlock x:Uid="TaraweehPronounce" TextWrapping="Wrap" FontSize="{StaticResource TextStyleLargeFontSize}" Margin="0,0,0,25" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" TextAlignment="Center" Pivot.SlideInAnimationGroup="GroupTwo"/>
+					<TextBlock x:Uid="Translate" TextWrapping="Wrap" FontSize="{StaticResource TextStyleLargeFontSize}" Margin="0,0,0,5" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" HorizontalAlignment="Center" Pivot.SlideInAnimationGroup="GroupOne"/>
+					<TextBlock x:Uid="TaraweehTranslateBody" TextWrapping="Wrap" FontSize="{StaticResource TextStyleLargeFontSize}" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" TextAlignment="Center" Pivot.SlideInAnimationGroup="GroupTwo"/>
+				</StackPanel>
+				</ScrollViewer>
+				
+			</PivotItem>
 		</Pivot>
 
 	</Grid>

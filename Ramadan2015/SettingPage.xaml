@@ -6,7 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-	DataContext="{Binding Main, Source={StaticResource Locator}}">
+	DataContext="{Binding Main, Source={StaticResource Locator}}" RequestedTheme="Dark">
 	<Page.Resources>
 		<DataTemplate x:Key="DropDownListTemplate">
 			<Grid Width="{StaticResource ContentDialogContentLandscapeWidth}">
@@ -49,8 +49,6 @@
 				</ComboBox.Transitions>
 			</ComboBox>
 			
-			<ToggleSwitch x:Name="liveTileToggle" Header="LiveTile" RequestedTheme="Dark" Toggled="liveTileToggle_Toggled"/>
-			<TextBlock x:Name="da"/>
 		</StackPanel>
 
 	</Grid>

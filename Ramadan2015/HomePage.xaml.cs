@@ -19,6 +19,7 @@ using System.ComponentModel;
 using Windows.Phone.UI.Input;
 using Windows.UI.Xaml.Media.Animation;
 using Windows.System;
+using Windows.ApplicationModel.Store;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkID=390556
 
@@ -42,7 +43,7 @@ namespace Ramadan2015
 		void HomePage_Loaded(object sender, RoutedEventArgs e)
 		{
 
-			Date.Text = string.Format("{0:MMMM d, yyyy}", DateTime.Today);
+			Date.Text = string.Format("{0:ddd, d MMMM, yy}", DateTime.Today);
 			_Location.Text = localSetting.Values["Name"].ToString();
 
 
@@ -53,13 +54,13 @@ namespace Ramadan2015
 				Day.Text = cheackDate.ToString();
 				if (localSetting.Values["Language"].ToString() != "bn-Bd")
 				{
-					Day.Text = Math.Abs(cheackDate) + "Days remining"; 
+					Day.Text = Math.Abs(cheackDate) + " Days remining"; 
 					Sehri.Text = "Wait for Ramadan";
 					Iftar.Text = "Wait for Ramadan";
 				}
 				else
 				{
-					Day.Text = Math.Abs(cheackDate) + "দিন বাকি";
+					Day.Text = Math.Abs(cheackDate) + " দিন বাকি";
 					Sehri.Text = "অপেক্ষা করুন ";
 					Iftar.Text = "অপেক্ষা করুন ";
 				}
@@ -125,7 +126,7 @@ namespace Ramadan2015
 
 		private async void rate_Click(object sender, RoutedEventArgs e)
 		{
-			await Launcher.LaunchUriAsync(new Uri(@"ms-windows-store:reviewapp?appid=fc5da213-50e9-4f68-9137-ac0bebe84ece"));
+			await Launcher.LaunchUriAsync(new Uri(@"ms-windows-store:reviewapp?appid"+ CurrentApp.AppId));
 		}
 
 		protected override void OnNavigatedTo(NavigationEventArgs e)

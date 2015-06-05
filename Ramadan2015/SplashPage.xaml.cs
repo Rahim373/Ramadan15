@@ -40,19 +40,24 @@ namespace Ramadan2015
 		{
 			try
 			{
+				List<RozaModel> DataToPass = null;
 				using (HttpClient client = new HttpClient())
 				{
+					_state.Text = "Downloading updated file";
 					Uri link = new Uri(@"http://rahim373-001-site1.myasp.net/api/values", UriKind.Absolute);
 					var Content = await client.GetStringAsync(link);
-					var data = JsonConvert.DeserializeObject<List<RozaModel>>(Content);
+					DataToPass = JsonConvert.DeserializeObject<List<RozaModel>>(Content);
+					_state.Text = "Saving update";
 					StorageFolder SFolder = ApplicationData.Current.LocalFolder;
 					StorageFile SFile = await SFolder.CreateFileAsync("RamdanData.txt", CreationCollisionOption.ReplaceExisting);
 					await FileIO.WriteTextAsync(SFile, Content);
+					_state.Text = "Successfully saved";
 				}
 				var success = true;
 				if (success)
 				{
-					Frame.Navigate(typeof(HomePage));
+					_state.Text = "Loading data";
+					Frame.Navigate(typeof(HomePage), DataToPass);
 				}
 			}
 			catch (Exception exception)
@@ -65,13 +70,16 @@ namespace Ramadan2015
 		{
 			try
 			{
+				_state.Text = "Checking current data file location";
 				StorageFolder SFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
 				StorageFile SFile = await SFolder.GetFileAsync("RamdanData.txt");
 				var success = true;
+				_state.Text = "Data file found";
 				var Content = await FileIO.ReadTextAsync(SFile);
 				var data = JsonConvert.DeserializeObject<List<RozaModel>>(Content);
 				if (success)
 				{
+					_state.Text = "Loading data";
 					Frame.Navigate(typeof(HomePage), data);
 				}
 			}

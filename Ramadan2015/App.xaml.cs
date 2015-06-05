@@ -46,8 +46,29 @@ namespace Ramadan2015
 			HardwareButtons.BackPressed += HardwareButtons_BackPressed;
 			setSetting();
 
+			LiveTile();
+
 			
         }
+
+		private void LiveTile()
+		{
+			XmlDocument tileXml = TileUpdateManager.GetTemplateContent(TileTemplateType.TileWide310x150PeekImage05);
+
+			XmlNodeList tileTextAttributes = tileXml.GetElementsByTagName("text");
+			tileTextAttributes[0].InnerText = "Sehri Iftar Time";
+			tileTextAttributes[1].InnerText = "Only for Bangladesh";
+
+			XmlNodeList tileImageAttributes = tileXml.GetElementsByTagName("image");
+			((XmlElement)tileImageAttributes[0]).SetAttribute("src", "ms-appx:///Assets/WideLogo.scale-240.png");
+			((XmlElement)tileImageAttributes[0]).SetAttribute("alt", "red graphic");
+			((XmlElement)tileImageAttributes[1]).SetAttribute("src", "ms-appx:///Assets/WideLogo.scale-240.png");
+			((XmlElement)tileImageAttributes[1]).SetAttribute("alt", "red graphic");
+
+			TileNotification tileNotification = new TileNotification(tileXml);
+			tileNotification.ExpirationTime = DateTimeOffset.UtcNow.AddMinutes(2);
+			TileUpdateManager.CreateTileUpdaterForApplication().Update(tileNotification);
+		}
 
 		private void setSetting() {
 			if (localSetting.Values["LocationID"] == null)

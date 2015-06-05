@@ -242,8 +242,7 @@ Associated by : Foysal Ahamed</value>
 1. Complete time-table of Sehri and Iftar
 2. Time table also with 64 district of Bangladesh
 3. Both Bangla ang English language for use
-4. Live tile to give update
-5. Important duah and rules and regulation of ramadan
+4. Important duah and rules and regulation of ramadan
 
 Version: 1.0.0.0</value>
   </data>
@@ -284,18 +283,78 @@ Version: 1.0.0.0</value>
     <value>Actions that invalidate fasting</value>
   </data>
   <data name="Rule1Detail.Text" xml:space="preserve">
-    <value />
+    <value>1.Intentional eating or drinking
+
+2. having sexual intercourse
+
+3. When the water goes down the hall porter (do not break the Ramadan fast if you do not remember)
+
+4. Willingly vomiting with full mouth
+
+5. Taking iota, medicine or oil through nose or ears
+
+6. If somebody disintegrates fasting forcefully
+
+7. If medicine reaches in senses taken through injection or saline
+
+8. If gravel stone or fruit seed is swallowed
+
+9. Taking iftar thinking it’s sunset, but after that if seen that sun doesn’t set yet
+
+10. Not willing for fasting in full Ramadan
+
+11. If a chickpea like food swallowed from dental gap
+
+12. Smoking, willingly breath smoke of benzoin or agarbati
+
+13. Swallow vomit
+
+14. Eating after Fazr thinking it is still night
+
+15. Sleeping in the night keeping battle leaf in mouth and wake up after fazr. 
+
+Kaza will be wazib for the reasons mentioned above. If husband and wife having sexual intercourse or eating intentionally, kaza and kaffara both will be wazib.</value>
   </data>
   <data name="Rule2.Header" xml:space="preserve">
-    <value />
+    <value>Makruh of Ramadan</value>
   </data>
   <data name="Rule2Detail.Text" xml:space="preserve">
-    <value />
+    <value>1. Chewing or tasting anything unnecessarily. 
+
+2. Keeping something in mouth. 
+
+3. Taking water through and goes to throat then roza will be invalid.
+
+4. Saving spittle in mouth and then drinking.
+
+5. Quarrelling aggressively
+
+6. Remaining dirty all day
+
+7. Express unrest and languishment
+
+8. Cleaning teeth with tooth-paste, powder or chewing coal</value>
   </data>
   <data name="Rule3.Header" xml:space="preserve">
-    <value />
+    <value>Ramadan can be broken</value>
   </data>
   <data name="Rule3Detail.Text" xml:space="preserve">
-    <value />
+    <value>1. Losing energy to keep fasting or possibility to get illness
+
+2. Possibility to die or death to child of pregnant. 
+
+3.  In the time of means of women</value>
+  </data>
+  <data name="DoahHeading3.FontFamily" xml:space="preserve">
+    <value>Assets/Font/Barkentina 1.otf#Barkentina Test</value>
+  </data>
+  <data name="DoahHeading3.Header" xml:space="preserve">
+    <value>Tarabeew's Dua</value>
+  </data>
+  <data name="TaraweehPronounce.Text" xml:space="preserve">
+    <value>Subhana dhil Mulki wal Malakuti, Subhana dhil izzati wal aDhmati wal haybati wal Qudrati, wal kibriyaa'i wal jabaroot Subhanal Malikil hayyil ladhi, la yunaamu wa la yamutu, Subbuhun, Quddusun, Rabbul malaa'ikati war-rooh, Yaa muzeeru,  Yaa muzeeru,  Yaa muzeeru</value>
+  </data>
+  <data name="TaraweehTranslateBody.Text" xml:space="preserve">
+    <value>Glorified is the Owner of the Kingdom of the earth and the heavens; Glorified is the Possessor of Honour and Magnificence and Awe, and Power and Greatness and Omnipotence Glorified is the Sovereign, the Living, Who does neither sleep nor die O all Glorious, All Holy one, Our lord and the Lord of the Angels, And the soul. There is no God but You, Forgive us, Grant us Paradise, and save us from (hell) fire.</value>
   </data>
 </root>
