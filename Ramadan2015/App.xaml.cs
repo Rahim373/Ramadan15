@@ -77,7 +77,7 @@ namespace Ramadan2015
 				localSetting.Values["Name"] = "Dhaka";
 				localSetting.Values["LocationID"] = "14";
 				localSetting.Values["Minute"] = "0";
-				localSetting.Values["Language"] = "en-Us";
+				localSetting.Values["Language"] = "en-US";
 			}
 		}
 
