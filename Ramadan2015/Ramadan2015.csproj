@@ -207,8 +207,8 @@
     <Content Include="Assets\Font\Barkentina 1.otf" />
     <Content Include="Assets\Font\Siyam Rupali ANSI.ttf" />
     <None Include="packages.config" />
-    <PRIResource Include="string\en\Resources.resw" />
-    <PRIResource Include="string\bn\Resources.resw" />
+    <PRIResource Include="Strings\en-US\Resources.resw" />
+    <PRIResource Include="Strings\bn-BD\Resources.resw" />
   </ItemGroup>
   <ItemGroup>
     <SDKReference Include="Microsoft.Advertising.Mobile.Display, Version=8.1">

@@ -37,7 +37,7 @@ namespace Ramadan2015
 
 		private void LoadLanguageCheckBox()
 		{
-			if (localSetting.Values["Language"].ToString() != "bn-Bd")
+			if (localSetting.Values["Language"].ToString() != "bn-BD")
 			{
 				cheackBox.IsChecked = false;
 			}
@@ -70,16 +70,16 @@ namespace Ramadan2015
 
 		private void cheackBox_Checked(object sender, RoutedEventArgs e)
 		{
-			localSetting.Values["Language"] = "bn-Bd";
-			var culture = new CultureInfo("bn-Bd");
+			localSetting.Values["Language"] = "bn-BD";
+			var culture = new CultureInfo("bn-BD");
 			Windows.Globalization.ApplicationLanguages.PrimaryLanguageOverride = culture.Name;
 			CultureInfo.DefaultThreadCurrentCulture = culture;
 		}
 
 		private void cheackBox_Unchecked(object sender, RoutedEventArgs e)
 		{
-			localSetting.Values["Language"] = "en-Us";
-			var culture = new CultureInfo("en-Us");
+			localSetting.Values["Language"] = "en-US";
+			var culture = new CultureInfo("en-US");
 			Windows.Globalization.ApplicationLanguages.PrimaryLanguageOverride = culture.Name;
 			CultureInfo.DefaultThreadCurrentCulture = culture;
 			CultureInfo.DefaultThreadCurrentUICulture = culture;

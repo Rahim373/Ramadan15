@@ -355,4 +355,16 @@ Kaza will be wazib for the reasons mentioned above. If husband and wife having s
   <data name="TaraweehTranslateBody.Text" xml:space="preserve">
     <value>Glorified is the Owner of the Kingdom of the earth and the heavens; Glorified is the Possessor of Honour and Magnificence and Awe, and Power and Greatness and Omnipotence Glorified is the Sovereign, the Living, Who does neither sleep nor die O all Glorious, All Holy one, Our lord and the Lord of the Angels, And the soul. There is no God but You, Forgive us, Grant us Paradise, and save us from (hell) fire.</value>
   </data>
+  <data name="sehriPronounce.FontFamily" xml:space="preserve">
+    <value>Assets/Font/Barkentina 1.otf#Barkentina Test</value>
+  </data>
+  <data name="Rule1.FontFamily" xml:space="preserve">
+    <value>Assets/Font/Barkentina 1.otf#Barkentina Test</value>
+  </data>
+  <data name="Rule2.FontFamily" xml:space="preserve">
+    <value>Assets/Font/Barkentina 1.otf#Barkentina Test</value>
+  </data>
+  <data name="Rule3.FontFamily" xml:space="preserve">
+    <value>Assets/Font/Barkentina 1.otf#Barkentina Test</value>
+  </data>
 </root>

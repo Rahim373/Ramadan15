@@ -26,7 +26,7 @@
 			<Pivot.HeaderTemplate>
 				<DataTemplate>
 					<Grid Height="Auto" Margin="0">
-						<TextBlock Text="{Binding}" Margin="0 10 0 0" FontSize="{StaticResource TextStyleExtraLargeFontSize}" />
+						<TextBlock Text="{Binding}" Margin="0 10 0 0" FontSize="{StaticResource TextStyleExtraLargeFontSize}" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" />
 					</Grid>
 				</DataTemplate>
 			</Pivot.HeaderTemplate>

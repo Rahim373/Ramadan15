@@ -77,7 +77,7 @@ namespace Ramadan2015
 				localSetting.Values["Name"] = "Dhaka";
 				localSetting.Values["LocationID"] = "14";
 				localSetting.Values["Minute"] = "0";
-				localSetting.Values["Language"] = "en-Us";
+				localSetting.Values["Language"] = "en-US";
 			}
 		}
 
@@ -90,17 +90,17 @@ namespace Ramadan2015
 		{
 			
 
-			if (localSetting.Values["Language"].ToString() == "bn-Bd")
+			if (localSetting.Values["Language"].ToString() == "bn-BD")
 			{
-				var culture = new CultureInfo("bn-Bd");
+				var culture = new CultureInfo("bn-BD");
 				Windows.Globalization.ApplicationLanguages.PrimaryLanguageOverride = culture.Name;
 				CultureInfo.DefaultThreadCurrentCulture = culture;
 				CultureInfo.DefaultThreadCurrentUICulture = culture;
 			}
 			else
 			{
-				localSetting.Values["Language"] = "en-Us";
-				var culture = new CultureInfo("en-Us");
+				localSetting.Values["Language"] = "en-US";
+				var culture = new CultureInfo("en-US");
 				Windows.Globalization.ApplicationLanguages.PrimaryLanguageOverride = culture.Name;
 				CultureInfo.DefaultThreadCurrentCulture = culture;
 				CultureInfo.DefaultThreadCurrentUICulture = culture;

@@ -148,7 +148,7 @@ namespace Ramadan2015.ViewModel
 
 		private void ChangeListLanguage()
 		{
-			if (localSetting.Values["Language"].ToString() == "bn-Bd") LoadLocationBd();
+			if (localSetting.Values["Language"].ToString() == "bn-BD") LoadLocationBd();
 			else LoadLocation();
 		}
 

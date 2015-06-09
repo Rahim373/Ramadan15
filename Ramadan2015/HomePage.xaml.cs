@@ -52,7 +52,7 @@ namespace Ramadan2015
 			if (cheackDate < 0)
 			{
 				Day.Text = cheackDate.ToString();
-				if (localSetting.Values["Language"].ToString() != "bn-Bd")
+				if (localSetting.Values["Language"].ToString() != "bn-BD")
 				{
 					Day.Text = Math.Abs(cheackDate) + " Days remining"; 
 					Sehri.Text = "Wait for Ramadan";
@@ -81,7 +81,7 @@ namespace Ramadan2015
 			}
 			else
 			{
-				if (localSetting.Values["Language"].ToString() != "bn-Bd")
+				if (localSetting.Values["Language"].ToString() != "bn-BD")
 				{
 					Day.Text = "End of Ramadan";
 					Sehri.Text = "End of Ramadan";
@@ -126,7 +126,7 @@ namespace Ramadan2015
 
 		private async void rate_Click(object sender, RoutedEventArgs e)
 		{
-			await Launcher.LaunchUriAsync(new Uri(@"ms-windows-store:reviewapp?appid"+ CurrentApp.AppId));
+			await Launcher.LaunchUriAsync(new Uri(@"ms-windows-store:reviewapp?appid="+ CurrentApp.AppId));
 		}
 
 		protected override void OnNavigatedTo(NavigationEventArgs e)

@@ -46,7 +46,7 @@ namespace Ramadan2015
 
 		void timer_Tick(object sender, object e)
 		{
-			if (timeCount >= 2)
+			if (timeCount >= 1)
 			{
 				timer.Stop();
 				WriteFile();

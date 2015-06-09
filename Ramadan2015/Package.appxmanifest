@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest" xmlns:m3="http://schemas.microsoft.com/appx/2014/manifest" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest">
-  <Identity Name="2294AbdurRahim.Ramadan2015BD" Publisher="CN=87E84F27-8E6A-45B1-9D70-776504FB5D3F" Version="2.2.0.2" />
+  <Identity Name="2294AbdurRahim.Ramadan2015BD" Publisher="CN=87E84F27-8E6A-45B1-9D70-776504FB5D3F" Version="2.2.0.6" />
   <mp:PhoneIdentity PhoneProductId="d87ddafd-4f3f-44ad-a104-b5114b3af2b9" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>Ramadan2015BD</DisplayName>
@@ -12,8 +12,7 @@
     <OSMaxVersionTested>6.3.1</OSMaxVersionTested>
   </Prerequisites>
   <Resources>
-    <Resource Language="en" />
-    <Resource Language="ar" />
+		<Resource Language="en-us" />
   </Resources>
   <Applications>
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="Ramadan2015.App">
