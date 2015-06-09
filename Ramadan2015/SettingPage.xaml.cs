@@ -22,6 +22,7 @@ namespace Ramadan2015
 
 	public sealed partial class SettingPage : Page
 	{
+
 		Windows.Storage.ApplicationDataContainer localSetting = Windows.Storage.ApplicationData.Current.LocalSettings;
 		public SettingPage()
 		{
@@ -69,17 +70,16 @@ namespace Ramadan2015
 
 		private void cheackBox_Checked(object sender, RoutedEventArgs e)
 		{
-			localSetting.Values["Language"] = "bn-BD";
-			var culture = new CultureInfo("bn-BD");
+			localSetting.Values["Language"] = "bn-Bd";
+			var culture = new CultureInfo("bn-Bd");
 			Windows.Globalization.ApplicationLanguages.PrimaryLanguageOverride = culture.Name;
 			CultureInfo.DefaultThreadCurrentCulture = culture;
-			CultureInfo.DefaultThreadCurrentUICulture = culture;
 		}
 
 		private void cheackBox_Unchecked(object sender, RoutedEventArgs e)
 		{
-			localSetting.Values["Language"] = "en-US";
-			var culture = new CultureInfo("en-US");
+			localSetting.Values["Language"] = "en-Us";
+			var culture = new CultureInfo("en-Us");
 			Windows.Globalization.ApplicationLanguages.PrimaryLanguageOverride = culture.Name;
 			CultureInfo.DefaultThreadCurrentCulture = culture;
 			CultureInfo.DefaultThreadCurrentUICulture = culture;
@@ -88,7 +88,8 @@ namespace Ramadan2015
 
 		private void cancel_Click(object sender, RoutedEventArgs e)
 		{
-			if (this.Frame.CanGoBack) {
+			if (this.Frame.CanGoBack)
+			{
 				this.Frame.GoBack();
 			}
 		}

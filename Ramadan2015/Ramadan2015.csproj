@@ -14,8 +14,9 @@
     <MinimumVisualStudioVersion>12</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{76F1466A-8B6D-4E39-A767-685A06062A39};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <AppxAutoIncrementPackageRevision>False</AppxAutoIncrementPackageRevision>
+    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
     <AppxBundlePlatforms>neutral</AppxBundlePlatforms>
+    <AppxBundle>Always</AppxBundle>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -133,6 +134,7 @@
     <Content Include="Assets\Resources\date_icon.png" />
     <Content Include="Assets\Resources\Food.png" />
     <Content Include="Assets\Resources\ifter_icon.png" />
+    <Content Include="Assets\Resources\logo.png" />
     <Content Include="Assets\Resources\Rules.png" />
     <Content Include="Assets\Resources\sahri_icon.png" />
     <Content Include="Assets\Resources\setting.png" />
@@ -205,8 +207,8 @@
     <Content Include="Assets\Font\Barkentina 1.otf" />
     <Content Include="Assets\Font\Siyam Rupali ANSI.ttf" />
     <None Include="packages.config" />
-    <PRIResource Include="string\en-US\Resources.resw" />
-    <PRIResource Include="string\bn-BD\Resources.resw" />
+    <PRIResource Include="string\en\Resources.resw" />
+    <PRIResource Include="string\bn\Resources.resw" />
   </ItemGroup>
   <ItemGroup>
     <SDKReference Include="Microsoft.Advertising.Mobile.Display, Version=8.1">

@@ -24,6 +24,9 @@ namespace Ramadan2015
 {
 	public sealed partial class SplashPage : Page
 	{
+		DispatcherTimer timer;
+		int timeCount = 0;
+
 		public SplashPage()
 		{
 			this.InitializeComponent();
@@ -33,7 +36,25 @@ namespace Ramadan2015
 
 		void MainPage_Loaded(object sender, RoutedEventArgs e)
 		{
-			WriteFile();
+			timer = new DispatcherTimer();
+			timer.Interval = new TimeSpan(0, 0, 1);
+			timer.Tick += timer_Tick;
+			timer.Start();
+
+
+		}
+
+		void timer_Tick(object sender, object e)
+		{
+			if (timeCount >= 2)
+			{
+				timer.Stop();
+				WriteFile();
+			}
+			else
+			{
+				timeCount++;
+			}
 		}
 
 		async void WriteFile()

@@ -5,12 +5,12 @@
     xmlns:local="using:Ramadan2015"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
-	<Page.Background>
-		<ImageBrush Stretch="UniformToFill" ImageSource="Assets/Resources/Splash.jpg"/>
-	</Page.Background>
+    mc:Ignorable="d" Background="DarkSlateGray">
 
 	<Grid>
+		<Grid.Background>
+			<ImageBrush Stretch="Uniform" ImageSource="Assets/Resources/logo.png"/>
+		</Grid.Background>
 		<Grid.RowDefinitions>
 			<RowDefinition Height="4*"/>
 			<RowDefinition/>

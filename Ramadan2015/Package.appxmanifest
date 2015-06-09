@@ -1,34 +1,33 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest" xmlns:m3="http://schemas.microsoft.com/appx/2014/manifest" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest">
-	<Identity Name="2294AbdurRahim.Ramadan2015" Publisher="CN=87E84F27-8E6A-45B1-9D70-776504FB5D3F" Version="1.1.0.0" />
-	<mp:PhoneIdentity PhoneProductId="ba121917-adda-4e1a-81be-321747eddf11" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
-	<Properties>
-		<DisplayName>Ramadan 2015</DisplayName>
-		<PublisherDisplayName>Abdur Rahim</PublisherDisplayName>
-		<Logo>Assets\StoreLogo.png</Logo>
-	</Properties>
-	<Prerequisites>
-		<OSMinVersion>6.3.1</OSMinVersion>
-		<OSMaxVersionTested>6.3.1</OSMaxVersionTested>
-	</Prerequisites>
-	<Resources>
-		<Resource Language="x-generate"/>
-		<Resource Language="en-US"/>
-		<Resource Language="bn-BD"/>
-	</Resources>
-	<Applications>
-		<Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="Ramadan2015.App">
-			<m3:VisualElements DisplayName="Ramadan 2015" Square150x150Logo="Assets\Logo.png" Square44x44Logo="Assets\SmallLogo.png" Description="Ramadan 2015 is an app for time schedule of Sahri, Ifter of Ramadan only for Bangladesh local time. There are also provided some Duah and other features." ForegroundText="light" BackgroundColor="transparent">
-				<m3:DefaultTile Wide310x150Logo="Assets\WideLogo.png" Square71x71Logo="Assets\Square71x71Logo.png">
-				</m3:DefaultTile>
-				<m3:SplashScreen Image="Assets\SplashScreen.png" BackgroundColor="#d65c4f" />
-				<m3:InitialRotationPreference>
-					<m3:Rotation Preference="portrait" />
-				</m3:InitialRotationPreference>
-			</m3:VisualElements>
-		</Application>
-	</Applications>
-	<Capabilities>
-		<Capability Name="internetClientServer" />
-	</Capabilities>
+  <Identity Name="2294AbdurRahim.Ramadan2015BD" Publisher="CN=87E84F27-8E6A-45B1-9D70-776504FB5D3F" Version="2.2.0.2" />
+  <mp:PhoneIdentity PhoneProductId="d87ddafd-4f3f-44ad-a104-b5114b3af2b9" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <Properties>
+    <DisplayName>Ramadan2015BD</DisplayName>
+    <PublisherDisplayName>Abdur Rahim</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+  </Properties>
+  <Prerequisites>
+    <OSMinVersion>6.3.1</OSMinVersion>
+    <OSMaxVersionTested>6.3.1</OSMaxVersionTested>
+  </Prerequisites>
+  <Resources>
+    <Resource Language="en" />
+    <Resource Language="ar" />
+  </Resources>
+  <Applications>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="Ramadan2015.App">
+      <m3:VisualElements DisplayName="Ramadan 2015 BD" Square150x150Logo="Assets\Logo.png" Square44x44Logo="Assets\SmallLogo.png" Description="Ramadan 2015 is an app for time schedule of Sahri, Ifter of Ramadan only for Bangladesh local time. There are also provided some Duah and other features." ForegroundText="light" BackgroundColor="transparent">
+        <m3:DefaultTile Wide310x150Logo="Assets\WideLogo.png" Square71x71Logo="Assets\Square71x71Logo.png">
+        </m3:DefaultTile>
+        <m3:SplashScreen Image="Assets\SplashScreen.png" BackgroundColor="#2F4F4F" />
+        <m3:InitialRotationPreference>
+          <m3:Rotation Preference="portrait" />
+        </m3:InitialRotationPreference>
+      </m3:VisualElements>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClientServer" />
+  </Capabilities>
 </Package>

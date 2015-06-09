@@ -184,9 +184,9 @@
     <Language Code="vi-vn" InMinimumRequirementSet="true" />
   </SupportedLocales>
   <ProductReservedInfo>
-    <MainPackageIdentityName>2294AbdurRahim.Ramadan2015</MainPackageIdentityName>
+    <MainPackageIdentityName>2294AbdurRahim.Ramadan2015BD</MainPackageIdentityName>
     <ReservedNames>
-      <ReservedName>Ramadan 2015</ReservedName>
+      <ReservedName>Ramadan2015BD</ReservedName>
     </ReservedNames>
   </ProductReservedInfo>
   <AccountPackageIdentityNames>
@@ -214,5 +214,13 @@
     <MainPackageIdentityName>2294AbdurRahim.UniversityOfRajshahi</MainPackageIdentityName>
     <MainPackageIdentityName>2294AbdurRahim.WorldCup2015latestNews</MainPackageIdentityName>
   </AccountPackageIdentityNames>
-  <PackageInfoList LandingUrl="https://dev.windowsphone.com/AppSubmission/AssociationLanding?windowsProductId=e6d71aea-9699-44fb-8a26-04d37ce0b3d0" />
+  <PackageInfoList LandingUrl="https://dev.windowsphone.com/AppSubmission/AssociationLanding?windowsProductId=49c4a9a7-a22b-4e69-8d62-988b5cd04d66">
+    <BundleInfo>
+      <PackageInfo>
+        <OsMinVersion>6.3.0.0</OsMinVersion>
+        <PackageArchitecture>neutral</PackageArchitecture>
+        <PackageMaxArchitectureVersion>1.1.0.0</PackageMaxArchitectureVersion>
+      </PackageInfo>
+    </BundleInfo>
+  </PackageInfoList>
 </StoreAssociation>
