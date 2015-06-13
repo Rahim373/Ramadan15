@@ -46,7 +46,7 @@ namespace Ramadan2015
 
 			if (a.Seconds < 0)
 			{
-				_str.Text = "Time Over";
+				_str.Text = "সময় শেষ";
 			}
 			else {
 				_str.Text = a.Days + " : " + a.Hours + " : " + a.Minutes + " : " + a.Seconds;
@@ -55,7 +55,7 @@ namespace Ramadan2015
 
 			if (b.Seconds < 0)
 			{
-				_itr.Text = "Time Over";
+				_itr.Text = "সময় শেষ";
 			}
 			else
 			{

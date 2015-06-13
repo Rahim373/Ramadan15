@@ -42,13 +42,9 @@ namespace Ramadan2015
         {
             this.InitializeComponent();
             this.Suspending += this.OnSuspending;
-		//	LoadLocationAndLocalizing();
 			HardwareButtons.BackPressed += HardwareButtons_BackPressed;
 			setSetting();
-
 			LiveTile();
-
-			
         }
 
 		private void LiveTile()
@@ -56,8 +52,8 @@ namespace Ramadan2015
 			XmlDocument tileXml = TileUpdateManager.GetTemplateContent(TileTemplateType.TileWide310x150PeekImage05);
 
 			XmlNodeList tileTextAttributes = tileXml.GetElementsByTagName("text");
-			tileTextAttributes[0].InnerText = "Sehri Iftar Time";
-			tileTextAttributes[1].InnerText = "Only for Bangladesh";
+			tileTextAttributes[0].InnerText = "সেহরি ইফতার এর সময়";
+			tileTextAttributes[1].InnerText = "শুধুমাত্র বাংলাদেশের জন্যে";
 
 			XmlNodeList tileImageAttributes = tileXml.GetElementsByTagName("image");
 			((XmlElement)tileImageAttributes[0]).SetAttribute("src", "ms-appx:///Assets/WideLogo.scale-240.png");
@@ -66,44 +62,23 @@ namespace Ramadan2015
 			((XmlElement)tileImageAttributes[1]).SetAttribute("alt", "red graphic");
 
 			TileNotification tileNotification = new TileNotification(tileXml);
-			tileNotification.ExpirationTime = DateTimeOffset.UtcNow.AddMinutes(2);
+			tileNotification.ExpirationTime = DateTimeOffset.UtcNow.AddMonths(1);
 			TileUpdateManager.CreateTileUpdaterForApplication().Update(tileNotification);
 		}
 
 		private void setSetting() {
+			localSetting.Values["Language"] = "bn-BD";
+			var culture = new CultureInfo("bn-BD");
+			Windows.Globalization.ApplicationLanguages.PrimaryLanguageOverride = culture.Name;
+			CultureInfo.DefaultThreadCurrentCulture = culture;
+
 			if (localSetting.Values["LocationID"] == null)
 			{
-				localSetting.Values["Tile"] = "Off";
-				localSetting.Values["Name"] = "Dhaka";
+				localSetting.Values["Name"] = "ঢাকা";
 				localSetting.Values["LocationID"] = "14";
 				localSetting.Values["Minute"] = "0";
-				localSetting.Values["Language"] = "en-US";
-			}
-		}
+				localSetting.Values["Language"] = "bn-BD";
 
-
-
-
-
-		//CanDeletethisMethde
-		private void LoadLocationAndLocalizing()
-		{
-			
-
-			if (localSetting.Values["Language"].ToString() == "bn-BD")
-			{
-				var culture = new CultureInfo("bn-BD");
-				Windows.Globalization.ApplicationLanguages.PrimaryLanguageOverride = culture.Name;
-				CultureInfo.DefaultThreadCurrentCulture = culture;
-				CultureInfo.DefaultThreadCurrentUICulture = culture;
-			}
-			else
-			{
-				localSetting.Values["Language"] = "en-US";
-				var culture = new CultureInfo("en-US");
-				Windows.Globalization.ApplicationLanguages.PrimaryLanguageOverride = culture.Name;
-				CultureInfo.DefaultThreadCurrentCulture = culture;
-				CultureInfo.DefaultThreadCurrentUICulture = culture;
 			}
 		}
 
@@ -122,13 +97,6 @@ namespace Ramadan2015
 			}
 		}
 
-
-        /// <summary>
-        /// Invoked when the application is launched normally by the end user.  Other entry points
-        /// will be used when the application is launched to open a specific file, to display
-        /// search results, and so forth.
-        /// </summary>
-        /// <param name="e">Details about the launch request and process.</param>
         protected async override void OnLaunched(LaunchActivatedEventArgs e)
         {
 #if DEBUG
@@ -190,11 +158,6 @@ namespace Ramadan2015
             Window.Current.Activate();
         }
 
-        /// <summary>
-        /// Restores the content transitions after the app has launched.
-        /// </summary>
-        /// <param name="sender">The object where the handler is attached.</param>
-        /// <param name="e">Details about the navigation event.</param>
         private void RootFrame_FirstNavigated(object sender, NavigationEventArgs e)
         {
             var rootFrame = sender as Frame;
@@ -202,13 +165,6 @@ namespace Ramadan2015
             rootFrame.Navigated -= this.RootFrame_FirstNavigated;
         }
 
-        /// <summary>
-        /// Invoked when application execution is being suspended.  Application state is saved
-        /// without knowing whether the application will be terminated or resumed with the contents
-        /// of memory still intact.
-        /// </summary>
-        /// <param name="sender">The source of the suspend request.</param>
-        /// <param name="e">Details about the suspend request.</param>
         private async void OnSuspending(object sender, SuspendingEventArgs e)
         {
             var deferral = e.SuspendingOperation.GetDeferral();

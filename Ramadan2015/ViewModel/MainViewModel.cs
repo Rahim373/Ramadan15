@@ -20,208 +20,39 @@ namespace Ramadan2015.ViewModel
 		public MainViewModel()
 		{
 			LoadingData();
-
-			ChangeListLanguage();
-
-			getLocation();
-			LoadLocationClearly = new RelayCommand(getLocation);
-
-			ChangeLanguageUpdateforList = new RelayCommand(ChangeListLanguage);
-
-			UpdateTimesList = new RelayCommand(LoadingData);
+			LoadLocationBd();
+			UpdateTime = new RelayCommand(LoadingData);
 		}
 
-		
-		
+		#region UpdateTime
 
-		#region UpdateTimeRelay
-		public const string UpdateTimesListPropertyName = "UpdateTimesList";
+		public const string UpdateTimePropertyName = "UpdateTime";
 
-		private RelayCommand _UpdateTimes = null;
-		public RelayCommand UpdateTimesList
+		private RelayCommand _UpdateTime = null;
+
+		public RelayCommand UpdateTime
 		{
 			get
 			{
-				return _UpdateTimes;
+				return _UpdateTime;
 			}
 
 			set
 			{
-				if (_UpdateTimes == value)
+				if (_UpdateTime == value)
 				{
 					return;
 				}
 
-				_UpdateTimes = value;
-				RaisePropertyChanged(UpdateTimesListPropertyName);
-			}
-		} 
-		#endregion
-
-		#region LanguageChangeUpdate
-
-		public const string ChangeLanguageUpdateforListPropertyName = "ChangeLanguageUpdateforList";
-		private RelayCommand _ChangeLanguage = null;
-		public RelayCommand ChangeLanguageUpdateforList
-		{
-			get
-			{
-				return _ChangeLanguage;
-			}
-
-			set
-			{
-				if (_ChangeLanguage == value)
-				{
-					return;
-				}
-
-				_ChangeLanguage = value;
-				RaisePropertyChanged(ChangeLanguageUpdateforListPropertyName);
-			}
-		} 
-		#endregion
-
-		#region LoadLocationUpdate
-
-		public const string LoadLocationClearlyPropertyName = "LoadLocationClearly";
-		private RelayCommand _LoadLocationClearly = null;
-		public RelayCommand LoadLocationClearly
-		{
-			get
-			{
-				return _LoadLocationClearly;
-			}
-
-			set
-			{
-				if (_LoadLocationClearly == value)
-				{
-					return;
-				}
-
-				_LoadLocationClearly = value;
-				RaisePropertyChanged(LoadLocationClearlyPropertyName);
+				_UpdateTime = value;
+				RaisePropertyChanged(UpdateTimePropertyName);
 			}
 		}
 
-
-		#endregion
-
-		#region GetSelected
-		public void getLocation() {
-			getSelectedLocation = new LocationNameAndTime();
-			int id = Convert.ToInt16(localSetting.Values["LocationID"]);
-			foreach (var i in LocationAndTime){
-				if (i.Id == id) {
-					getSelectedLocation = i;
-				}
-			}
-		}
-
-		
-		public const string getSelectedLocationPropertyName = "getSelectedLocation";
-
-		private LocationNameAndTime _getLocation = null;
-
-		public LocationNameAndTime getSelectedLocation
-		{
-			get
-			{
-				return _getLocation;
-			}
-
-			set
-			{
-				if (_getLocation == value)
-				{
-					return;
-				}
-
-				_getLocation = value;
-				RaisePropertyChanged(getSelectedLocationPropertyName);
-			}
-		} 
 		#endregion
 
 		#region Location
 
-		private void ChangeListLanguage()
-		{
-			if (localSetting.Values["Language"].ToString() == "bn-BD") LoadLocationBd();
-			else LoadLocation();
-		}
-
-		private void LoadLocation()
-		{
-			LocationAndTime = new ObservableCollection<LocationNameAndTime>();
-			LocationAndTime.Clear();
-
-			LocationAndTime.Add(new LocationNameAndTime() { Id = 1, Name = "Bagerhat", minutes = 3 });
-			LocationAndTime.Add(new LocationNameAndTime() { Id = 2, Name = "Bandarban", minutes = -8 });
-			LocationAndTime.Add(new LocationNameAndTime() { Id = 3, Name = "Barguna", minutes = 2 });
-			LocationAndTime.Add(new LocationNameAndTime() { Id = 4, Name = "Barisal", minutes = 0 });
-			LocationAndTime.Add(new LocationNameAndTime() { Id = 5, Name = "Bhola", minutes = -2 });
-			LocationAndTime.Add(new LocationNameAndTime() { Id = 6, Name = "Bogra", minutes = 5 });
-			LocationAndTime.Add(new LocationNameAndTime() { Id = 7, Name = "Brahmanbaria", minutes = -3 });
-			LocationAndTime.Add(new LocationNameAndTime() { Id = 8, Name = "Chandpur", minutes = -2 });
-			LocationAndTime.Add(new LocationNameAndTime() { Id = 9, Name = "Chapainawabganj", minutes = 9 });
-			LocationAndTime.Add(new LocationNameAndTime() { Id = 10, Name = "Chittagong", minutes = -6 });
-			LocationAndTime.Add(new LocationNameAndTime() { Id = 11, Name = "Chuadanga", minutes = 7 });
-			LocationAndTime.Add(new LocationNameAndTime() { Id = 12, Name = "Comilla", minutes = -4 });
-			LocationAndTime.Add(new LocationNameAndTime() { Id = 13, Name = "Cox's Bazar", minutes = -7 });
-			LocationAndTime.Add(new LocationNameAndTime() { Id = 14, Name = "Dhaka", minutes = 0 });
-			LocationAndTime.Add(new LocationNameAndTime() { Id = 15, Name = "Dinajpur", minutes = 7 });
-			LocationAndTime.Add(new LocationNameAndTime() { Id = 16, Name = "Faridpur", minutes = 3 });
-			LocationAndTime.Add(new LocationNameAndTime() { Id = 17, Name = "Feni", minutes = -5 });
-			LocationAndTime.Add(new LocationNameAndTime() { Id = 18, Name = "Gaibandha", minutes = 4 });
-			LocationAndTime.Add(new LocationNameAndTime() { Id = 19, Name = "Gazipur", minutes = 0 });
-			LocationAndTime.Add(new LocationNameAndTime() { Id = 20, Name = "Gopalganj", minutes = 3 });
-			LocationAndTime.Add(new LocationNameAndTime() { Id = 21, Name = "Habiganj", minutes = -5 });
-			LocationAndTime.Add(new LocationNameAndTime() { Id = 22, Name = "Jamalpur", minutes = 2 });
-			LocationAndTime.Add(new LocationNameAndTime() { Id = 23, Name = "Jessore", minutes = 5 });
-			LocationAndTime.Add(new LocationNameAndTime() { Id = 24, Name = "Jhalokati", minutes = 1 });
-			LocationAndTime.Add(new LocationNameAndTime() { Id = 25, Name = "Jhenaidah", minutes = 5 });
-			LocationAndTime.Add(new LocationNameAndTime() { Id = 26, Name = "Joypurhat", minutes = 6 });
-			LocationAndTime.Add(new LocationNameAndTime() { Id = 27, Name = "Khagrachhari", minutes = -7 });
-			LocationAndTime.Add(new LocationNameAndTime() { Id = 28, Name = "Khulna", minutes = 4 });
-			LocationAndTime.Add(new LocationNameAndTime() { Id = 29, Name = "Kishoreganj", minutes = -2 });
-			LocationAndTime.Add(new LocationNameAndTime() { Id = 30, Name = "Kurigram", minutes = 3 });
-			LocationAndTime.Add(new LocationNameAndTime() { Id = 31, Name = "Kushtia", minutes = 5 });
-			LocationAndTime.Add(new LocationNameAndTime() { Id = 32, Name = "Lakshmipur", minutes = -2 });
-			LocationAndTime.Add(new LocationNameAndTime() { Id = 33, Name = "Lalmonirhat", minutes = 4 });
-			LocationAndTime.Add(new LocationNameAndTime() { Id = 34, Name = "Madaripur", minutes = 1 });
-			LocationAndTime.Add(new LocationNameAndTime() { Id = 35, Name = "Magura", minutes = 4 });
-			LocationAndTime.Add(new LocationNameAndTime() { Id = 36, Name = "Manikganj", minutes = 2 });
-			LocationAndTime.Add(new LocationNameAndTime() { Id = 37, Name = "Meherpur", minutes = 8 });
-			LocationAndTime.Add(new LocationNameAndTime() { Id = 38, Name = "Moulvibazar", minutes = -6 });
-			LocationAndTime.Add(new LocationNameAndTime() { Id = 39, Name = "Munshiganj", minutes = -1 });
-			LocationAndTime.Add(new LocationNameAndTime() { Id = 40, Name = "Mymensingh", minutes = -1 });
-			LocationAndTime.Add(new LocationNameAndTime() { Id = 41, Name = "Naogaon", minutes = 6 });
-			LocationAndTime.Add(new LocationNameAndTime() { Id = 42, Name = "Narail", minutes = 4 });
-			LocationAndTime.Add(new LocationNameAndTime() { Id = 43, Name = "Narayanganj", minutes = -1 });
-			LocationAndTime.Add(new LocationNameAndTime() { Id = 44, Name = "Narsingdi", minutes = -2 });
-			LocationAndTime.Add(new LocationNameAndTime() { Id = 45, Name = "Natore", minutes = 6 });
-			LocationAndTime.Add(new LocationNameAndTime() { Id = 46, Name = "Netrakona", minutes = -2 });
-			LocationAndTime.Add(new LocationNameAndTime() { Id = 47, Name = "Nilphamari", minutes = 7 });
-			LocationAndTime.Add(new LocationNameAndTime() { Id = 48, Name = "Noakhali", minutes = -3});
-			LocationAndTime.Add(new LocationNameAndTime() { Id = 49, Name = "Pabna", minutes = 5 });
-			LocationAndTime.Add(new LocationNameAndTime() { Id = 50, Name = "Panchagarh", minutes = 8 });
-			LocationAndTime.Add(new LocationNameAndTime() { Id = 51, Name = "Patuakhali", minutes = 1 });
-			LocationAndTime.Add(new LocationNameAndTime() { Id = 52, Name = "Pirojpur", minutes = 2 });
-			LocationAndTime.Add(new LocationNameAndTime() { Id = 53, Name = "Rajbari", minutes = 2 });
-			LocationAndTime.Add(new LocationNameAndTime() { Id = 54, Name = "Rajshahi", minutes = 7 });
-			LocationAndTime.Add(new LocationNameAndTime() { Id = 55, Name = "Rangamati", minutes = -8 });
-			LocationAndTime.Add(new LocationNameAndTime() { Id = 56, Name = "Rangpur", minutes = 5 });
-			LocationAndTime.Add(new LocationNameAndTime() { Id = 57, Name = "Satkhira", minutes = 6 });
-			LocationAndTime.Add(new LocationNameAndTime() { Id = 58, Name = "Shariatpur", minutes = 0 });
-			LocationAndTime.Add(new LocationNameAndTime() { Id = 59, Name = "Sherpur", minutes = 2 });
-			LocationAndTime.Add(new LocationNameAndTime() { Id = 60, Name = "Sirajganj", minutes = 3 });
-			LocationAndTime.Add(new LocationNameAndTime() { Id = 61, Name = "Sunamganj", minutes = -4 });
-			LocationAndTime.Add(new LocationNameAndTime() { Id = 62, Name = "Sylhet", minutes = -6 });
-			LocationAndTime.Add(new LocationNameAndTime() { Id = 63, Name = "Tangail", minutes = 2 });
-			LocationAndTime.Add(new LocationNameAndTime() { Id = 64, Name = "Thakurgaon", minutes = 8 });
-		}
 
 		private void LoadLocationBd()
 		{

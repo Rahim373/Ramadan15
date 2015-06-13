@@ -105,13 +105,13 @@
     <Compile Include="HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Importance.xaml.cs">
+      <DependentUpon>Importance.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Model\RozaViewModel.cs" />
     <Compile Include="Model\LocationNameAndTime.cs" />
     <Compile Include="Rules.xaml.cs">
       <DependentUpon>Rules.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="SettingPage.xaml.cs">
-      <DependentUpon>SettingPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="SplashPage.xaml.cs">
       <DependentUpon>SplashPage.xaml</DependentUpon>
@@ -134,6 +134,7 @@
     <Content Include="Assets\Resources\date_icon.png" />
     <Content Include="Assets\Resources\Food.png" />
     <Content Include="Assets\Resources\ifter_icon.png" />
+    <Content Include="Assets\Resources\importants.png" />
     <Content Include="Assets\Resources\logo.png" />
     <Content Include="Assets\Resources\Rules.png" />
     <Content Include="Assets\Resources\sahri_icon.png" />
@@ -173,11 +174,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Rules.xaml">
+    <Page Include="Importance.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="SettingPage.xaml">
+    <Page Include="Rules.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

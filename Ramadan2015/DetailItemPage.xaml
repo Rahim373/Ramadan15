@@ -17,7 +17,7 @@
 
 		<Grid x:Name="_headingGrid" Margin="0 0 0 0" Grid.Row="0">
 			<StackPanel>
-				<TextBlock x:Uid="AppName" FontSize="{StaticResource TextStyleExtraExtraLargeFontSize}" Foreground="White"/>
+				<TextBlock Text="রমজান ২০১৫" FontSize="{StaticResource TextStyleExtraExtraLargeFontSize}" Foreground="White"/>
 			</StackPanel>
 		</Grid>
 
@@ -32,38 +32,38 @@
 			</Grid.RowDefinitions>
 			<Grid Grid.Row="0" Background="#26FFFFFF">
 				<StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-					<TextBlock x:Uid="_dateHeading" HorizontalAlignment="Center" Foreground="White"  FontSize="{StaticResource TextStyleLargeFontSize}"/>
-					<TextBlock x:Name="_date" x:Uid="TimeorDate" HorizontalAlignment="Center" Foreground="White" FontSize="{StaticResource TextStyleExtraLargeFontSize}"/>
+					<TextBlock Text="তারিখ" FontFamily="Assets/Font/Siyam Rupali ANSI.ttf#Siyam Rupali ANSI" HorizontalAlignment="Center" Foreground="White"  FontSize="{StaticResource TextStyleLargeFontSize}"/>
+					<TextBlock x:Name="_date" FontFamily="Assets/Font/Siyam Rupali ANSI.ttf#Siyam Rupali ANSI" HorizontalAlignment="Center" Foreground="White" FontSize="{StaticResource TextStyleExtraLargeFontSize}"/>
 				</StackPanel>
 			</Grid>
 			<Grid Grid.Row="1">
 				<StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-					<TextBlock x:Uid="ramadanHeading" HorizontalAlignment="Center" Foreground="White"  FontSize="{StaticResource TextStyleLargeFontSize}"/>
-					<TextBlock x:Name="_day" x:Uid="TimeorDate"  HorizontalAlignment="Center" Foreground="White" FontSize="{StaticResource TextStyleExtraLargeFontSize}" />
+					<TextBlock Text="রমজান" FontFamily="Assets/Font/Siyam Rupali ANSI.ttf#Siyam Rupali ANSI" HorizontalAlignment="Center" Foreground="White"  FontSize="{StaticResource TextStyleLargeFontSize}"/>
+					<TextBlock x:Name="_day" FontFamily="Assets/Font/Siyam Rupali ANSI.ttf#Siyam Rupali ANSI"  HorizontalAlignment="Center" Foreground="White" FontSize="{StaticResource TextStyleExtraLargeFontSize}" />
 				</StackPanel>
 			</Grid>
 			<Grid Grid.Row="2" Background="#26FFFFFF">
 				<StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-					<TextBlock x:Uid="sehriHeading" HorizontalAlignment="Center" Foreground="White"  FontSize="{StaticResource TextStyleLargeFontSize}"/>
-					<TextBlock x:Name="_sehri" x:Uid="TimeorDate"  HorizontalAlignment="Center" Foreground="White" FontSize="{StaticResource TextStyleExtraLargeFontSize}"/>
+					<TextBlock Text="সেহরি" FontFamily="Assets/Font/Siyam Rupali ANSI.ttf#Siyam Rupali ANSI" HorizontalAlignment="Center" Foreground="White"  FontSize="{StaticResource TextStyleLargeFontSize}"/>
+					<TextBlock x:Name="_sehri" FontFamily="Assets/Font/Siyam Rupali ANSI.ttf#Siyam Rupali ANSI" HorizontalAlignment="Center" Foreground="White" FontSize="{StaticResource TextStyleExtraLargeFontSize}"/>
 				</StackPanel>
 			</Grid>
 			<Grid Grid.Row="3">
 				<StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-					<TextBlock x:Uid="TimeToSehri" HorizontalAlignment="Center" Foreground="White"  FontSize="{StaticResource TextStyleLargeFontSize}"/>
-					<TextBlock x:Name="_str" x:Uid="TimeorDate"  HorizontalAlignment="Center" Foreground="White" FontSize="{StaticResource TextStyleExtraLargeFontSize}"/>
+					<TextBlock Text="সেহরির বাকি" FontFamily="Assets/Font/Siyam Rupali ANSI.ttf#Siyam Rupali ANSI" HorizontalAlignment="Center" Foreground="White"  FontSize="{StaticResource TextStyleLargeFontSize}"/>
+					<TextBlock x:Name="_str" FontFamily="Assets/Font/Siyam Rupali ANSI.ttf#Siyam Rupali ANSI" HorizontalAlignment="Center" Foreground="White" FontSize="{StaticResource TextStyleExtraLargeFontSize}"/>
 				</StackPanel>
 			</Grid>
 			<Grid Grid.Row="4" Background="#26FFFFFF">
 				<StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-					<TextBlock x:Uid="ifterHeading" HorizontalAlignment="Center" Foreground="White" FontSize="{StaticResource TextStyleLargeFontSize}"/>
-					<TextBlock x:Name="_ifter" x:Uid="TimeorDate" HorizontalAlignment="Center" Foreground="White" FontSize="{StaticResource TextStyleExtraLargeFontSize}"/>
+					<TextBlock Text="ইফতার" FontFamily="Assets/Font/Siyam Rupali ANSI.ttf#Siyam Rupali ANSI" HorizontalAlignment="Center" Foreground="White" FontSize="{StaticResource TextStyleLargeFontSize}"/>
+					<TextBlock x:Name="_ifter" FontFamily="Assets/Font/Siyam Rupali ANSI.ttf#Siyam Rupali ANSI" HorizontalAlignment="Center" Foreground="White" FontSize="{StaticResource TextStyleExtraLargeFontSize}"/>
 				</StackPanel>
 			</Grid>
 			<Grid Grid.Row="5">
 				<StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-					<TextBlock x:Uid="TimeToIftar" HorizontalAlignment="Center" Foreground="White"  FontSize="{StaticResource TextStyleLargeFontSize}"/>
-					<TextBlock x:Name="_itr" x:Uid="TimeorDate" HorizontalAlignment="Center" Foreground="White" FontSize="{StaticResource TextStyleExtraLargeFontSize}"/>
+					<TextBlock Text="ইফতারের বাকি" HorizontalAlignment="Center" Foreground="White"  FontSize="{StaticResource TextStyleLargeFontSize}"/>
+					<TextBlock x:Name="_itr" FontFamily="Assets/Font/Siyam Rupali ANSI.ttf#Siyam Rupali ANSI" HorizontalAlignment="Center" Foreground="White" FontSize="{StaticResource TextStyleExtraLargeFontSize}"/>
 				</StackPanel>
 			</Grid>
 		</Grid>

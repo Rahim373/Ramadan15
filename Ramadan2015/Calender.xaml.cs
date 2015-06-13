@@ -30,9 +30,7 @@ namespace Ramadan2015
 			this.InitializeComponent();
 			Frame mainFrame = Window.Current.Content as Frame;
 			mainFrame.ContentTransitions = new TransitionCollection { new PaneThemeTransition { Edge = EdgeTransitionLocation.Bottom } };
-
 		}
-
 		void navigationHelper_SaveState(object sender, SaveStateEventArgs e)
 		{
 			throw new NotImplementedException();

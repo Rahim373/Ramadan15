@@ -18,7 +18,7 @@
 
 		<Grid x:Name="_headingGrid" Margin="0 0 0 0" Grid.Row="0">
 			<StackPanel>
-				<TextBlock x:Uid="AppName" FontSize="{StaticResource TextStyleExtraExtraLargeFontSize}" Foreground="White"/>
+				<TextBlock Text="রমজান ২০১৫"  FontSize="{StaticResource TextStyleExtraExtraLargeFontSize}" Foreground="White"/>
 			</StackPanel>
 		</Grid>
 
@@ -26,58 +26,58 @@
 			<Pivot.HeaderTemplate>
 				<DataTemplate>
 					<Grid Height="Auto" Margin="0">
-						<TextBlock Text="{Binding}" Margin="0 10 0 0" FontSize="{StaticResource TextStyleExtraLargeFontSize}" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" />
+						<TextBlock Text="{Binding}" Margin="0 10 0 0" FontSize="{StaticResource TextStyleExtraLargeFontSize}"  />
 					</Grid>
 				</DataTemplate>
 			</Pivot.HeaderTemplate>
-			
-			<PivotItem x:Uid="DoahHeading1" Background="#4C000000">
+
+			<PivotItem Header="সেহরির দোয়া" Background="#4C000000">
 				<StackPanel Margin="10">
-					<TextBlock x:Uid="ArabicPronounce" TextWrapping="Wrap" FontSize="{StaticResource TextStyleLargeFontSize}" Margin="0,0,0,5" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" TextAlignment="Center" Pivot.SlideInAnimationGroup="GroupOne"/>
+					<TextBlock FontFamily="Assets/Font/Siyam Rupali ANSI.ttf#Siyam Rupali ANSI" Text="আরবি উচ্চারণ" TextWrapping="Wrap" FontSize="{StaticResource TextStyleLargeFontSize}" Margin="0,0,0,5"  TextAlignment="Center" Pivot.SlideInAnimationGroup="GroupOne"/>
 					<TextBlock Text="وَبِصَوْمِ غَدٍ نَّوَيْتَ مِنْ شَهْرِ رَمَضَانَ"  TextWrapping="Wrap" FontSize="{StaticResource TextStyleLargeFontSize}" Margin="0,0,0,25" TextAlignment="Center" FontWeight="Bold" Pivot.SlideInAnimationGroup="GroupTwo">
 						<TextBlock.Foreground>
 							<ImageBrush ImageSource="ms-appx:/Assets/Resources/btnBg.png" Stretch="Fill"/>
 						</TextBlock.Foreground>
 					</TextBlock>
-					<TextBlock x:Uid="Pronounce" TextWrapping="Wrap" FontSize="{StaticResource TextStyleLargeFontSize}" Margin="0,0,0,5" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" HorizontalAlignment="Center" Pivot.SlideInAnimationGroup="GroupOne"/>
-					<TextBlock x:Uid="sehriPronounce" TextWrapping="Wrap" FontSize="{StaticResource TextStyleLargeFontSize}" Margin="0,0,0,25" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" TextAlignment="Center" Pivot.SlideInAnimationGroup="GroupTwo"/>
-					<TextBlock x:Uid="Translate" TextWrapping="Wrap" FontSize="{StaticResource TextStyleLargeFontSize}" Margin="0,0,0,5" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" HorizontalAlignment="Center" Pivot.SlideInAnimationGroup="GroupOne"/>
-					<TextBlock x:Uid="sehriTranslate" TextWrapping="Wrap" FontSize="{StaticResource TextStyleLargeFontSize}" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" TextAlignment="Center" Pivot.SlideInAnimationGroup="GroupTwo"/>
+					<TextBlock FontFamily="Assets/Font/Siyam Rupali ANSI.ttf#Siyam Rupali ANSI" Text="বাংলা উচ্চারণ" TextWrapping="Wrap" FontSize="{StaticResource TextStyleLargeFontSize}" Margin="0,0,0,5"  HorizontalAlignment="Center" Pivot.SlideInAnimationGroup="GroupOne"/>
+					<TextBlock FontFamily="Assets/Font/Siyam Rupali ANSI.ttf#Siyam Rupali ANSI" Text="নাওয়াইতু আন আছুমাগাদাম মিন শাহরি রমাজানাল মুবারাকি ফারদ্বল্লাকা ইয়া আল্লাহু ফাতাকাব্বাল মিন্নি ইন্নীকা আন্তাস সামিউল আলীম।" TextWrapping="Wrap" FontSize="{StaticResource TextStyleLargeFontSize}" Margin="0,0,0,25"  TextAlignment="Center" Pivot.SlideInAnimationGroup="GroupTwo"/>
+					<TextBlock FontFamily="Assets/Font/Siyam Rupali ANSI.ttf#Siyam Rupali ANSI" Text="বাংলা অনুবাদ" TextWrapping="Wrap" FontSize="{StaticResource TextStyleLargeFontSize}" Margin="0,0,0,5"  HorizontalAlignment="Center" Pivot.SlideInAnimationGroup="GroupOne"/>
+					<TextBlock FontFamily="Assets/Font/Siyam Rupali ANSI.ttf#Siyam Rupali ANSI" Text="হে আল্লাহ্! আগামীকাল পবিত্র রমযান মাসে তোমার পক্ষ হতে ফরয করা রোযা রাখার নিয়ত করলাম, অতএব তুমি আমার পক্ষ হতে কবুল কর, নিশ্চয়ই তুমি সর্বশ্রোতা ও সর্বজ্ঞানী।" TextWrapping="Wrap" FontSize="{StaticResource TextStyleLargeFontSize}" TextAlignment="Center" Pivot.SlideInAnimationGroup="GroupTwo"/>
 				</StackPanel>
 			</PivotItem>
 
-			<PivotItem x:Uid="DoahHeading2" Background="#59000000">
+			<PivotItem Header="ইফতারের দোয়া" Background="#59000000">
 				<StackPanel Margin="10">
-					<TextBlock x:Uid="ArabicPronounce" TextWrapping="Wrap" FontSize="{StaticResource TextStyleLargeFontSize}" Margin="0,0,0,5" TextAlignment="Center" Pivot.SlideInAnimationGroup="GroupOne"/>
+					<TextBlock FontFamily="Assets/Font/Siyam Rupali ANSI.ttf#Siyam Rupali ANSI" Text="আরবি উচ্চারণ" TextWrapping="Wrap" FontSize="{StaticResource TextStyleLargeFontSize}" Margin="0,0,0,5" TextAlignment="Center" Pivot.SlideInAnimationGroup="GroupOne"/>
 					<TextBlock Text="اللَّهُمَّ اِنِّى لَكَ صُمْتُ وَبِكَ امنْتُ وَعَلَيْكَ تَوَكَّلْتُ وَعَلَى رِزْقِكَ اَفْطَرْتُ" TextWrapping="Wrap" FontSize="{StaticResource TextStyleLargeFontSize}" Margin="0,0,0,25" TextAlignment="Center" FontWeight="Bold" Pivot.SlideInAnimationGroup="GroupTwo">
 						<TextBlock.Foreground>
 							<ImageBrush ImageSource="ms-appx:/Assets/Resources/btnBg.png" Stretch="Fill"/>
 						</TextBlock.Foreground>
 					</TextBlock>
-					<TextBlock x:Uid="Pronounce" TextWrapping="Wrap" FontSize="{StaticResource TextStyleLargeFontSize}" Margin="0,0,0,5" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" HorizontalAlignment="Center" Pivot.SlideInAnimationGroup="GroupOne"/>
-					<TextBlock x:Uid="iftarPronounce" TextWrapping="Wrap" FontSize="{StaticResource TextStyleLargeFontSize}" Margin="0,0,0,25" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" TextAlignment="Center" Pivot.SlideInAnimationGroup="GroupTwo"/>
-					<TextBlock x:Uid="Translate" TextWrapping="Wrap" FontSize="{StaticResource TextStyleLargeFontSize}" Margin="0,0,0,5" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" HorizontalAlignment="Center" Pivot.SlideInAnimationGroup="GroupOne"/>
-					<TextBlock x:Uid="IftarTranslateBody" TextWrapping="Wrap" FontSize="{StaticResource TextStyleLargeFontSize}" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" TextAlignment="Center" Pivot.SlideInAnimationGroup="GroupTwo"/>
+					<TextBlock FontFamily="Assets/Font/Siyam Rupali ANSI.ttf#Siyam Rupali ANSI" Text="বাংলা উচ্চারণ" TextWrapping="Wrap" FontSize="{StaticResource TextStyleLargeFontSize}" Margin="0,0,0,5"  HorizontalAlignment="Center" Pivot.SlideInAnimationGroup="GroupOne"/>
+					<TextBlock FontFamily="Assets/Font/Siyam Rupali ANSI.ttf#Siyam Rupali ANSI" Text="আল্লাহুম্মা ইন্নি লাকা সুমতু ওয়াবিকা আমানতু ওয়া আলাইকা তাওাক্কালতু ওয়া আলা রিযক-ইকা-আফতারতু" TextWrapping="Wrap" FontSize="{StaticResource TextStyleLargeFontSize}" Margin="0,0,0,25" TextAlignment="Center" Pivot.SlideInAnimationGroup="GroupTwo"/>
+					<TextBlock FontFamily="Assets/Font/Siyam Rupali ANSI.ttf#Siyam Rupali ANSI" Text="বাংলা অনুবাদ" TextWrapping="Wrap" FontSize="{StaticResource TextStyleLargeFontSize}" Margin="0,0,0,5" HorizontalAlignment="Center" Pivot.SlideInAnimationGroup="GroupOne"/>
+					<TextBlock FontFamily="Assets/Font/Siyam Rupali ANSI.ttf#Siyam Rupali ANSI" Text="ইয়া আল্লাহ! আমি তোমার সন্তুষ্টির জন্য রোযা রেখেছি এবং তোমার দেয়া রিযিক আহার করে ইফতার করছি।" TextWrapping="Wrap" FontSize="{StaticResource TextStyleLargeFontSize}"  TextAlignment="Center" Pivot.SlideInAnimationGroup="GroupTwo"/>
 				</StackPanel>
 			</PivotItem>
 
 
-			<PivotItem x:Uid="DoahHeading3" Background="#59000000">
+			<PivotItem Header="তারাবীর দোয়া" Background="#59000000">
 				<ScrollViewer>
 					<StackPanel Margin="10" Height="Auto">
-					<TextBlock x:Uid="ArabicPronounce" TextWrapping="Wrap" FontSize="{StaticResource TextStyleLargeFontSize}" Margin="0,0,0,5" TextAlignment="Center" Pivot.SlideInAnimationGroup="GroupOne"/>
-					<TextBlock Text="سُبْحَانَ ذِيْ الْمُلْكِ وَالْمَلَكُوْتِ سُبْحَانَ ذِيْ الْعِزَّةِ وَالْعَظْمَةِ وَالْهَيْبَةِ وَالْقُدْرَةِ وَالْكِبْرِيَاءِ وَالْجَبَرُوْتِ سُبْحَانَ الْمُلْكِ الْحَيِّ الَّذِيْ لاَيَنَامُ وَلاَ يَمُوْتُ سُبُّوْحٌ قُدُّوْسٌ رَبُّنَا وَرَبُّ الْمَلَـِءكَةِ وَالرُّوْحُ اَلْلَهُمَّ اَجِرْنَا مِنَ النَّارِ يَامُجِيْرُ يَامُجِيْرُ يَامُجِيْرُ" TextWrapping="Wrap" FontSize="{StaticResource TextStyleLargeFontSize}" Margin="0,0,0,25" TextAlignment="Center" FontWeight="Bold" Pivot.SlideInAnimationGroup="GroupTwo">
-						<TextBlock.Foreground>
-							<ImageBrush ImageSource="ms-appx:/Assets/Resources/btnBg.png" Stretch="Fill"/>
-						</TextBlock.Foreground>
-					</TextBlock>
-					<TextBlock x:Uid="Pronounce" TextWrapping="Wrap" FontSize="{StaticResource TextStyleLargeFontSize}" Margin="0,0,0,5" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" HorizontalAlignment="Center" Pivot.SlideInAnimationGroup="GroupOne"/>
-					<TextBlock x:Uid="TaraweehPronounce" TextWrapping="Wrap" FontSize="{StaticResource TextStyleLargeFontSize}" Margin="0,0,0,25" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" TextAlignment="Center" Pivot.SlideInAnimationGroup="GroupTwo"/>
-					<TextBlock x:Uid="Translate" TextWrapping="Wrap" FontSize="{StaticResource TextStyleLargeFontSize}" Margin="0,0,0,5" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" HorizontalAlignment="Center" Pivot.SlideInAnimationGroup="GroupOne"/>
-					<TextBlock x:Uid="TaraweehTranslateBody" TextWrapping="Wrap" FontSize="{StaticResource TextStyleLargeFontSize}" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" TextAlignment="Center" Pivot.SlideInAnimationGroup="GroupTwo"/>
-				</StackPanel>
+						<TextBlock FontFamily="Assets/Font/Siyam Rupali ANSI.ttf#Siyam Rupali ANSI" Text="আরবি উচ্চারণ" TextWrapping="Wrap" FontSize="{StaticResource TextStyleLargeFontSize}" Margin="0,0,0,5" TextAlignment="Center" Pivot.SlideInAnimationGroup="GroupOne"/>
+						<TextBlock Text="سُبْحَانَ ذِيْ الْمُلْكِ وَالْمَلَكُوْتِ سُبْحَانَ ذِيْ الْعِزَّةِ وَالْعَظْمَةِ وَالْهَيْبَةِ وَالْقُدْرَةِ وَالْكِبْرِيَاءِ وَالْجَبَرُوْتِ سُبْحَانَ الْمُلْكِ الْحَيِّ الَّذِيْ لاَيَنَامُ وَلاَ يَمُوْتُ سُبُّوْحٌ قُدُّوْسٌ رَبُّنَا وَرَبُّ الْمَلَـِءكَةِ وَالرُّوْحُ اَلْلَهُمَّ اَجِرْنَا مِنَ النَّارِ يَامُجِيْرُ يَامُجِيْرُ يَامُجِيْرُ" TextWrapping="Wrap" FontSize="{StaticResource TextStyleLargeFontSize}" Margin="0,0,0,25" TextAlignment="Center" FontWeight="Bold" Pivot.SlideInAnimationGroup="GroupTwo">
+							<TextBlock.Foreground>
+								<ImageBrush ImageSource="ms-appx:/Assets/Resources/btnBg.png" Stretch="Fill"/>
+							</TextBlock.Foreground>
+						</TextBlock>
+						<TextBlock FontFamily="Assets/Font/Siyam Rupali ANSI.ttf#Siyam Rupali ANSI" Text="বাংলা উচ্চারণ" TextWrapping="Wrap" FontSize="{StaticResource TextStyleLargeFontSize}" Margin="0,0,0,5"  HorizontalAlignment="Center" Pivot.SlideInAnimationGroup="GroupOne"/>
+						<TextBlock FontFamily="Assets/Font/Siyam Rupali ANSI.ttf#Siyam Rupali ANSI" Text="সুবহানা যিলমুলকি ওয়াল মালাকুতি সুবহানা যিলইজ্জাতি ওয়াল আ'জমাতি ওয়াল হাইবাতি ওয়াল কুদরাতি ওয়াল কিবরি ইয়া-ই ওয়াল জাবারুত । সুবহানাল মালিকিল হাইয়িল্লাযি লা ইয়ানামু ওয়ালা ইয়ামুতু আবাদান আবাদা । সুব্বুহুন কুদ্দুসুন রাব্বুনা ওয়া রাব্বুল মালা ইকাতি ওয়াররুহ ইয়া মুজিরু ইয়া মুজিরু ইয়া মুজিরু" TextWrapping="Wrap" FontSize="{StaticResource TextStyleLargeFontSize}" Margin="0,0,0,25" TextAlignment="Center" Pivot.SlideInAnimationGroup="GroupTwo"/>
+						<TextBlock FontFamily="Assets/Font/Siyam Rupali ANSI.ttf#Siyam Rupali ANSI" Text="বাংলা অনুবাদ" TextWrapping="Wrap" FontSize="{StaticResource TextStyleLargeFontSize}" Margin="0,0,0,5" HorizontalAlignment="Center" Pivot.SlideInAnimationGroup="GroupOne"/>
+						<TextBlock FontFamily="Assets/Font/Siyam Rupali ANSI.ttf#Siyam Rupali ANSI" Text="আমি পবিত্রতা বর্ণনা করছি, পৃথিবীর রাজত্বের ও উর্ধজগতের অধিপতির। আমি পবিত্রতা বর্ণনা করছি মর্যাদা, মহানত্ব, শক্তি, বুজর্গী ও আধিপত্যের মহান অধিপতির। অতি পবিত্র সেই মহান মালিক যিনি চিরঞ্জীব, যিনি ঘুমান না আর মৃত্যূবরণ করেন না, কখনো, কোনকালেই, পরম পবিত্র তিনি। তিনি আমাদের, ফেরেশতাদের ও রূহের (জিব্রাঈলের) প্রভু।" TextWrapping="Wrap" FontSize="{StaticResource TextStyleLargeFontSize}" TextAlignment="Center" Pivot.SlideInAnimationGroup="GroupTwo"/>
+					</StackPanel>
 				</ScrollViewer>
-				
+
 			</PivotItem>
 		</Pivot>
 

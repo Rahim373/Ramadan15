@@ -65,7 +65,8 @@ namespace Ramadan2015
 				using (HttpClient client = new HttpClient())
 				{
 					_state.Text = "Downloading updated file";
-					Uri link = new Uri(@"http://rahim373-001-site1.myasp.net/api/values", UriKind.Absolute);
+					//Uri link = new Uri(@"http://rahim373-001-site1.myasp.net/api/values", UriKind.Absolute);
+					Uri link = new Uri(@"http://ramadan15.azurewebsites.net/API/values", UriKind.Absolute);
 					var Content = await client.GetStringAsync(link);
 					DataToPass = JsonConvert.DeserializeObject<List<RozaModel>>(Content);
 					_state.Text = "Saving update";

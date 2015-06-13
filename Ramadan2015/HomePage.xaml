@@ -5,28 +5,40 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:UI="using:Microsoft.Advertising.Mobile.UI"
+	DataContext="{Binding Main, Source={StaticResource Locator}}"
     x:Class="Ramadan2015.HomePage"
     mc:Ignorable="d"
 	RequestedTheme="Dark">
-	<Page.Background>
-		<ImageBrush ImageSource="Assets/Resources/BG.jpg" Stretch="Fill"/>
-	</Page.Background>
 	<Page.Resources>
 		<local:DateFormatConverter x:Key="ConverteDate"/>
 		<local:TimeFormatConverter x:Key="ConverteTime"/>
+		<DataTemplate x:Key="ListItemTemplate">
+			<Grid>
+				<TextBlock Text="{Binding LocationAndTime[0].Name}" />
+			</Grid>
+		</DataTemplate>
+		<DataTemplate x:Key="DropDownListTemplate">
+			<Grid Width="{StaticResource ContentDialogContentLandscapeWidth}">
+				<TextBlock x:Name="Location" Text="{Binding Name}" HorizontalAlignment="Left" />
+				<TextBlock x:Name="Minutes" Text="{Binding minutes}" HorizontalAlignment="Right" Margin="0 0 15 0"/>
+			</Grid>
+		</DataTemplate>
 	</Page.Resources>
-	<Page.DataContext>
-		<Binding Path="Main" Source="{StaticResource Locator}"/>
-	</Page.DataContext>
+	<Page.Background>
+		<ImageBrush ImageSource="ms-appx:/Assets/Resources/BG.jpg" Stretch="Fill"/>
+	</Page.Background>
+
 	<Page.BottomAppBar>
-		<CommandBar Foreground="Black" Background="White" ClosedDisplayMode="Minimal">
-			<AppBarButton x:Name="about" Label="About" Icon="Page2" Click="about_Click"/>
-			<AppBarButton x:Name="rate" Label="Rate" Icon="Favorite" Click="rate_Click"/>
+		<CommandBar x:Name="cmndbar" Foreground="Black" Background="White" ClosedDisplayMode="Compact">
+			<AppBarButton x:Name="about" Label="সম্পর্কে" Icon="Page2" Click="about_Click"/>
+			<AppBarButton x:Name="rate" Label="রেটিং" Icon="Favorite" Click="rate_Click"/>
+			<AppBarButton x:Name="save" Label="সংরক্ষন" Icon="Save" Visibility="Collapsed" Command="{Binding UpdateTime}" Click="save_Click"/>
+			<AppBarButton x:Name="cancel" Label="বাতিল" Icon="Cancel" Visibility="Collapsed" Click="cancel_Click"/>
 		</CommandBar>
 	</Page.BottomAppBar>
 	<!--Main Grid-->
 	<Grid >
-		
+
 		<Grid Margin="10">
 
 			<Grid.RowDefinitions>
@@ -36,7 +48,7 @@
 			<!--Heading Grid-->
 			<Grid x:Name="_headingGrid" Grid.Row="0">
 				<StackPanel>
-					<TextBlock x:Uid="AppName" FontSize="{StaticResource TextStyleExtraExtraLargeFontSize}"/>
+					<TextBlock Text="রমজান ২০১৫" FontSize="{StaticResource TextStyleExtraExtraLargeFontSize}"/>
 				</StackPanel>
 			</Grid>
 			<!--Content Grid-->
@@ -60,44 +72,50 @@
 
 					<Grid HorizontalAlignment="Left" VerticalAlignment="Top">
 						<StackPanel VerticalAlignment="Top" HorizontalAlignment="Left">
-							<TextBlock x:Uid="todayHeading" FontSize="{StaticResource TextStyleMediumFontSize}"/>
-							<TextBlock  x:Uid="dayNo" x:Name="Date" FontSize="{StaticResource TextStyleLargeFontSize}" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" FontWeight="Light" />
+							<TextBlock Text="আজকের দিন তারিখ" FontSize="{StaticResource TextStyleMediumFontSize}"/>
+							<TextBlock  FontFamily="Assets/Font/Siyam Rupali ANSI.ttf#Siyam Rupali ANSI" x:Name="Date" FontSize="{StaticResource TextStyleLargeFontSize}" FontWeight="Light" />
 						</StackPanel>
 					</Grid>
 
 					<Grid HorizontalAlignment="Left" Grid.Column="0" Grid.Row="1" VerticalAlignment="Bottom">
 						<StackPanel HorizontalAlignment="Left" VerticalAlignment="Bottom">
-							<TextBlock x:Uid="todayDayHeading" FontSize="{StaticResource TextStyleMediumFontSize}"/>
-							<TextBlock x:Uid="dayNo" x:Name="Day" FontSize="{StaticResource TextStyleLargeFontSize}" FontWeight="Light" />
+							<TextBlock Text="দিন" FontSize="{StaticResource TextStyleMediumFontSize}"/>
+							<TextBlock FontFamily="Assets/Font/Siyam Rupali ANSI.ttf#Siyam Rupali ANSI" x:Name="Day" FontSize="{StaticResource TextStyleLargeFontSize}" FontWeight="Light" />
 						</StackPanel>
 					</Grid>
 
 					<Grid HorizontalAlignment="Right" Grid.Column="1" Grid.Row="0" VerticalAlignment="Top">
 						<StackPanel HorizontalAlignment="Right" VerticalAlignment="Top">
-							<TextBlock x:Uid="todaySahri" FontSize="{StaticResource TextStyleMediumFontSize}"/>
-							<TextBlock x:Uid="dayNo" x:Name="Sehri" Text="3:40 AM" FontSize="{StaticResource TextStyleLargeFontSize}" FontWeight="Light"  HorizontalAlignment="Right"/>
+							<TextBlock Text="আজকের সেহরি" FontSize="{StaticResource TextStyleMediumFontSize}"/>
+							<TextBlock x:Name="Sehri"  FontSize="{StaticResource TextStyleLargeFontSize}" FontWeight="Light"  HorizontalAlignment="Right" FontFamily="Assets/Font/Siyam Rupali ANSI.ttf#Siyam Rupali ANSI"/>
 						</StackPanel>
 					</Grid>
 
 					<Grid HorizontalAlignment="Right" Grid.Column="1" Grid.Row="1" VerticalAlignment="Bottom">
 						<StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Right">
-							<TextBlock x:Uid="todayIftar" FontSize="{StaticResource TextStyleMediumFontSize}"/>
-							<TextBlock x:Uid="dayNo" x:Name="Iftar" Text="6:40 PM"  FontSize="{StaticResource TextStyleLargeFontSize}"  FontWeight="Light"  HorizontalAlignment="Right"/>
+							<TextBlock Text="আজকের ইফতার" FontSize="{StaticResource TextStyleMediumFontSize}"/>
+							<TextBlock x:Name="Iftar" FontFamily="Assets/Font/Siyam Rupali ANSI.ttf#Siyam Rupali ANSI"  FontSize="{StaticResource TextStyleLargeFontSize}"  FontWeight="Light"  HorizontalAlignment="Right"/>
 						</StackPanel>
 					</Grid>
 				</Grid>
 
-				<Grid Grid.Row="1" Background="#26FFFFFF">
-					<StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
-						<TextBlock x:Uid="locationHeading" FontSize="{StaticResource TextStyleExtraLargeFontSize}" VerticalAlignment="Center"/>
-						<TextBlock Text=":" Margin="10 0" FontSize="{StaticResource TextStyleExtraLargeFontSize}" VerticalAlignment="Center"/>
-						<TextBlock x:Uid="location" x:Name="_Location" FontSize="{StaticResource TextStyleExtraLargeFontSize}" VerticalAlignment="Center"/>
-						
-					</StackPanel>
-					
+				<Grid x:Name="loc" Grid.Row="1" Background="#26FFFFFF">
+
+					<Button x:Name="changeLocation" BorderThickness="0" Padding="0" HorizontalContentAlignment="Stretch" Width="{Binding ActualWidth, ElementName=loc, Mode=OneWay}" Height="{Binding ActualWidth, ElementName=loc, Mode=OneWay}" Command="{Binding UpdateTime}" RequestedTheme="Dark">
+						<Button.Flyout >
+							<ListPickerFlyout x:Name="listItemFlyout" ItemsSource="{Binding LocationAndTime}" ItemTemplate="{StaticResource DropDownListTemplate}" Closed="listItemFlyout_Closed" Placement="Full"/>
+						</Button.Flyout>
+						<StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+							<TextBlock Text="স্থান" FontSize="{StaticResource TextStyleExtraLargeFontSize}" FontFamily="Assets/Font/Siyam Rupali ANSI.ttf#Siyam Rupali ANSI" VerticalAlignment="Center" FontWeight="Light"/>
+							<TextBlock Text=":" Margin="10 0" FontSize="{StaticResource TextStyleExtraLargeFontSize}" VerticalAlignment="Center"  FontWeight="Light" FontFamily="Assets/Font/Siyam Rupali ANSI.ttf#Siyam Rupali ANSI"/>
+							<TextBlock x:Name="_Location" FontSize="{StaticResource TextStyleExtraLargeFontSize}" VerticalAlignment="Center" FontFamily="Assets/Font/Siyam Rupali ANSI.ttf#Siyam Rupali ANSI" FontWeight="Light"/>
+						</StackPanel>
+					</Button>
+
+
 				</Grid>
-				
-				
+
+
 				<!--For Buttons-->
 				<Grid Grid.Row="2">
 					<Grid.RowDefinitions>
@@ -117,7 +135,7 @@
 							<Grid HorizontalAlignment="Center" VerticalAlignment="Center">
 								<StackPanel>
 									<Image Height="80" RenderTransformOrigin="0.5,0.5" Source="Assets/Resources/time-calender.png"/>
-									<TextBlock x:Uid="menu_Time" Foreground="Black" Margin="0,15,0,0" HorizontalAlignment="Center" FontSize="{StaticResource TextStyleLargeFontSize}" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" FontWeight="Light" />
+									<TextBlock Text="সময়সূচী" Foreground="Black" Margin="0,15,0,0" HorizontalAlignment="Center" FontSize="{StaticResource TextStyleLargeFontSize}" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" FontWeight="Light" />
 								</StackPanel>
 							</Grid>
 						</Button>
@@ -131,7 +149,7 @@
 							<Grid HorizontalAlignment="Center" VerticalAlignment="Center">
 								<StackPanel>
 									<Image Height="80" RenderTransformOrigin="0.5,0.5" Source="Assets/Resources/Book.png"/>
-									<TextBlock x:Uid="menu_Doah" Foreground="Black" Margin="0,15,0,0" HorizontalAlignment="Center" FontSize="{StaticResource TextStyleLargeFontSize}" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" FontWeight="Light"/>
+									<TextBlock Text="দোয়া" Foreground="Black" Margin="0,15,0,0" HorizontalAlignment="Center" FontSize="{StaticResource TextStyleLargeFontSize}" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" FontWeight="Light"/>
 								</StackPanel>
 							</Grid>
 						</Button>
@@ -145,21 +163,21 @@
 							<Grid HorizontalAlignment="Center" VerticalAlignment="Center">
 								<StackPanel>
 									<Image Height="80" RenderTransformOrigin="0.5,0.5" Source="Assets/Resources/Rules.png"/>
-									<TextBlock x:Uid="menu_Rules" Foreground="Black" Margin="0,15,0,0" HorizontalAlignment="Center" FontSize="{StaticResource TextStyleLargeFontSize}" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" FontWeight="Light"/>
+									<TextBlock Text="নিয়মাবলী" Foreground="Black" Margin="0,15,0,0" HorizontalAlignment="Center" FontSize="{StaticResource TextStyleLargeFontSize}" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" FontWeight="Light"/>
 								</StackPanel>
 							</Grid>
 						</Button>
 					</Grid>
 
 					<Grid x:Name="_btn4" Grid.Column="1" Grid.Row="1" Margin="5 5 0 0">
-						<Button x:Name="_setting" BorderThickness="0" Padding="0" HorizontalContentAlignment="Stretch" Width="{Binding ActualWidth, ElementName=_btn4, Mode=OneWay}" Height="{Binding ActualWidth, ElementName=_btn1, Mode=OneWay}" Click="_setting_Click" Command="{Binding LoadLocationClearly}">
+						<Button x:Name="_importance" BorderThickness="0" Padding="0" HorizontalContentAlignment="Stretch" Width="{Binding ActualWidth, ElementName=_btn4, Mode=OneWay}" Height="{Binding ActualWidth, ElementName=_btn1, Mode=OneWay}" Click="_importance_Click" >
 							<Button.Background>
 								<ImageBrush Stretch="UniformToFill" ImageSource="Assets/Resources/btnBg.png"/>
 							</Button.Background>
 							<Grid HorizontalAlignment="Center" VerticalAlignment="Center">
 								<StackPanel>
-									<Image Height="80" RenderTransformOrigin="0.5,0.5" Source="Assets/Resources/setting.png"/>
-									<TextBlock x:Uid="menu_Setting" Foreground="Black" Margin="0,15,0,0" HorizontalAlignment="Center" FontSize="{StaticResource TextStyleLargeFontSize}" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" FontWeight="Light"/>
+									<Image Height="80" RenderTransformOrigin="0.5,0.5" Source="Assets/Resources/importants.png"/>
+									<TextBlock Text="গুরুত্ব ও ফযিলত" Foreground="Black" Margin="0,15,0,0" HorizontalAlignment="Center" FontSize="{StaticResource TextStyleLargeFontSize}" FontFamily="Assets/Font/Barkentina 1.otf#Barkentina Test" FontWeight="Light"/>
 								</StackPanel>
 							</Grid>
 						</Button>
