@@ -5,7 +5,10 @@
     xmlns:local="using:Ramadan2015"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d" Background="DarkSlateGray" RequestedTheme="Dark">
+    mc:Ignorable="d" RequestedTheme="Dark">
+	<Page.Background>
+		<ImageBrush Stretch="UniformToFill" ImageSource="Assets/Resources/BG.jpg"/>
+	</Page.Background>
 
 	<Grid>
 		<Grid.Background>

@@ -31,7 +31,7 @@
 				</DataTemplate>
 			</Pivot.HeaderTemplate>
 
-			<PivotItem Header="সেহরির দোয়া" Background="#4C000000">
+			<PivotItem Header="সেহরির দোয়া">
 				<StackPanel Margin="10">
 					<TextBlock FontFamily="Assets/Font/Siyam Rupali ANSI.ttf#Siyam Rupali ANSI" Text="আরবি উচ্চারণ" TextWrapping="Wrap" FontSize="{StaticResource TextStyleLargeFontSize}" Margin="0,0,0,5"  TextAlignment="Center" Pivot.SlideInAnimationGroup="GroupOne"/>
 					<TextBlock Text="وَبِصَوْمِ غَدٍ نَّوَيْتَ مِنْ شَهْرِ رَمَضَانَ"  TextWrapping="Wrap" FontSize="{StaticResource TextStyleLargeFontSize}" Margin="0,0,0,25" TextAlignment="Center" FontWeight="Bold" Pivot.SlideInAnimationGroup="GroupTwo">
@@ -46,7 +46,7 @@
 				</StackPanel>
 			</PivotItem>
 
-			<PivotItem Header="ইফতারের দোয়া" Background="#59000000">
+			<PivotItem Header="ইফতারের দোয়া">
 				<StackPanel Margin="10">
 					<TextBlock FontFamily="Assets/Font/Siyam Rupali ANSI.ttf#Siyam Rupali ANSI" Text="আরবি উচ্চারণ" TextWrapping="Wrap" FontSize="{StaticResource TextStyleLargeFontSize}" Margin="0,0,0,5" TextAlignment="Center" Pivot.SlideInAnimationGroup="GroupOne"/>
 					<TextBlock Text="اللَّهُمَّ اِنِّى لَكَ صُمْتُ وَبِكَ امنْتُ وَعَلَيْكَ تَوَكَّلْتُ وَعَلَى رِزْقِكَ اَفْطَرْتُ" TextWrapping="Wrap" FontSize="{StaticResource TextStyleLargeFontSize}" Margin="0,0,0,25" TextAlignment="Center" FontWeight="Bold" Pivot.SlideInAnimationGroup="GroupTwo">
@@ -62,7 +62,7 @@
 			</PivotItem>
 
 
-			<PivotItem Header="তারাবীর দোয়া" Background="#59000000">
+			<PivotItem Header="তারাবীর দোয়া">
 				<ScrollViewer>
 					<StackPanel Margin="10" Height="Auto">
 						<TextBlock FontFamily="Assets/Font/Siyam Rupali ANSI.ttf#Siyam Rupali ANSI" Text="আরবি উচ্চারণ" TextWrapping="Wrap" FontSize="{StaticResource TextStyleLargeFontSize}" Margin="0,0,0,5" TextAlignment="Center" Pivot.SlideInAnimationGroup="GroupOne"/>

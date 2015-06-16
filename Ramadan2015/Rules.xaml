@@ -35,7 +35,7 @@
 				</Pivot.HeaderTemplate>
 
 				<PivotItem Header="রোজা ভঙ্গের কারণ সমুহ">
-					<Grid Background="#4C000000">
+					<Grid>
 						<ScrollViewer VerticalScrollBarVisibility="Auto">
 							<StackPanel Margin="5 10 5 10">
 								<TextBlock Text="১. ইচ্ছাকৃত পানাহার করলে" FontSize="{StaticResource TextStyleLargeFontSize}" TextWrapping="Wrap" Margin="0 0 0 10" Pivot.SlideInAnimationGroup="GroupOne" FontFamily="Assets/Font/Siyam Rupali ANSI.ttf#Siyam Rupali ANSI"/>
@@ -60,7 +60,7 @@
 				</PivotItem>
 
 				<PivotItem Header="রোজার মাকরুহ সমূহ">
-					<Grid Background="#4C000000">
+					<Grid>
 						<ScrollViewer VerticalScrollBarVisibility="Auto">
 							<StackPanel Margin="5 10 5 10">
 								<TextBlock FontFamily="Assets/Font/Siyam Rupali ANSI.ttf#Siyam Rupali ANSI" Text="১. অনাবশ্যক কোনো জিনিস চিবানো বা চাখা" FontSize="{StaticResource TextStyleLargeFontSize}" TextWrapping="Wrap" Margin="0 0 0 10" Pivot.SlideInAnimationGroup="GroupOne"/>
@@ -77,7 +77,7 @@
 				</PivotItem>
 
 				<PivotItem Header="যে কারণে রোজা বাদ দেয়া যাবে">
-					<Grid Background="#4C000000">
+					<Grid>
 						<ScrollViewer VerticalScrollBarVisibility="Auto">
 							<StackPanel Margin="5 10 5 10">
 								<TextBlock FontFamily="Assets/Font/Siyam Rupali ANSI.ttf#Siyam Rupali ANSI" Text="১. কোনো অসুখের কারণে রোযা রাখার শক্তি হারিয়ে ফেললে অথবা অসুখ বৃদ্ধির ভয় হলে। তবে পরে তা কাযা করতে হবে। " FontSize="{StaticResource TextStyleLargeFontSize}" TextWrapping="Wrap" Margin="0 0 0 10" Pivot.SlideInAnimationGroup="GroupOne"/>

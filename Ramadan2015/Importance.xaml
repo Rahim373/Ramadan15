@@ -31,7 +31,7 @@
 				</DataTemplate>
 			</Pivot.HeaderTemplate>
 
-			<PivotItem Header="রমজানের গুরুত্ব" Background="#4C000000">
+			<PivotItem Header="রমজানের গুরুত্ব">
 				<ScrollViewer>
 					<StackPanel Margin="10">
 						<TextBlock Margin="0 0 0 20" Text="রমজানুল মুবারক প্রতি বছর আসে উম্মতে মুহাম্মাদির জন্য রহমত, মাগফেরাত ও কবর আজাব মুক্তির সুমহান বার্তা নিয়ে। এ মাসে আল্লাহ রাব্বুল আলামিন তার প্রিয় বান্দাদের জন্য খুলে দেন ফজিলতের অগণিত দ্বার। এ জন্য আমাদের সবার উচিত মহিমান্বিত এ মাসের প্রতিটি মুহূর্তকে যথাযথভাবে মূল্যায়ন করা।" TextWrapping="Wrap" FontSize="{StaticResource TextStyleLargeFontSize}" FontFamily="Assets/Font/Siyam Rupali ANSI.ttf#Siyam Rupali ANSI" TextAlignment="Justify" Pivot.SlideInAnimationGroup="GroupOne"/>
@@ -46,7 +46,7 @@
 				</ScrollViewer>
 			</PivotItem>
 
-			<PivotItem Header="রমজানের ফজিলত" Background="#4C000000">
+			<PivotItem Header="রমজানের ফজিলত">
 				<ScrollViewer>
 					<StackPanel Margin="10">
 						<TextBlock Margin="0 0 0 20" Text="এক. এ মাসের সাথে ইসলামের একটি গুরুত্বপূর্ণ রুকনের সম্পর্ক রয়েছে ; আর তা হলে সিয়াম পালন। হজ যেমন জিলহজ মাসের সাথে সম্পর্কিত হওয়ার কারণে সে মাসের মর্যাদা বৃদ্ধি করেছে এমনি সিয়াম রমজান মাসে হওয়ার কারণে এ মাসের মর্যাদা বেড়ে গেছে। আল্লাহ রাব্বুল আলামিন বলেন :— হে মোমিনগণ! তোমাদের উপর সিয়াম ফরজ করা হয়েছে, যেমনি ফরজ করা হয়েছে তোমাদের পূর্ববর্তীদের উপর-যাতে তোমরা মুত্তাকি হতে পার। সূরা বাকারা : ১৮৩

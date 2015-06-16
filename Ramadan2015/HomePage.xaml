@@ -25,7 +25,7 @@
 		</DataTemplate>
 	</Page.Resources>
 	<Page.Background>
-		<ImageBrush ImageSource="ms-appx:/Assets/Resources/BG.jpg" Stretch="Fill"/>
+		<ImageBrush ImageSource="Assets/Resources/BG.jpg" Stretch="Fill"/>
 	</Page.Background>
 
 	<Page.BottomAppBar>
@@ -99,7 +99,7 @@
 					</Grid>
 				</Grid>
 
-				<Grid x:Name="loc" Grid.Row="1" Background="#26FFFFFF">
+				<Grid x:Name="loc" Grid.Row="1" Background="#0CFFFFFF">
 
 					<Button x:Name="changeLocation" BorderThickness="0" Padding="0" HorizontalContentAlignment="Stretch" Width="{Binding ActualWidth, ElementName=loc, Mode=OneWay}" Height="{Binding ActualWidth, ElementName=loc, Mode=OneWay}" Command="{Binding UpdateTime}" RequestedTheme="Dark">
 						<Button.Flyout >
@@ -130,7 +130,7 @@
 					<Grid x:Name="_btn1" Grid.Column="0" Grid.Row="0" Margin="0 10 5 5">
 						<Button x:Name="_calender" BorderThickness="0" Padding="0" HorizontalContentAlignment="Stretch" Width="{Binding ActualWidth, ElementName=_btn1, Mode=OneWay}" Height="{Binding ActualWidth, ElementName=_btn1, Mode=OneWay}" Tapped="_calender_Tapped">
 							<Button.Background>
-								<ImageBrush ImageSource="ms-appx:/Assets/Resources/btnBg.png" Stretch="UniformToFill"/>
+								<ImageBrush ImageSource="ms-appx:/Assets/Resources/btnBg.png" Stretch="UniformToFill" Opacity="0.75"/>
 							</Button.Background>
 							<Grid HorizontalAlignment="Center" VerticalAlignment="Center">
 								<StackPanel>
@@ -144,7 +144,7 @@
 					<Grid x:Name="_btn2" Grid.Column="1" Grid.Row="0" Margin="5 10 0 5">
 						<Button x:Name="_doa" BorderThickness="0" Padding="0" HorizontalContentAlignment="Stretch" Width="{Binding ActualWidth, ElementName=_btn2, Mode=OneWay}" Height="{Binding ActualWidth, ElementName=_btn1, Mode=OneWay}" Click="_doa_Click">
 							<Button.Background>
-								<ImageBrush Stretch="UniformToFill" ImageSource="Assets/Resources/btnBg.png"/>
+								<ImageBrush Stretch="UniformToFill" ImageSource="Assets/Resources/btnBg.png" Opacity="0.75"/>
 							</Button.Background>
 							<Grid HorizontalAlignment="Center" VerticalAlignment="Center">
 								<StackPanel>
@@ -158,7 +158,7 @@
 					<Grid x:Name="_btn3" Grid.Column="0" Grid.Row="1" Margin="0 5 5 0">
 						<Button x:Name="_others" BorderThickness="0" Padding="0" HorizontalContentAlignment="Stretch" Width="{Binding ActualWidth, ElementName=_btn3, Mode=OneWay}" Height="{Binding ActualWidth, ElementName=_btn1, Mode=OneWay}" Click="_others_Click">
 							<Button.Background>
-								<ImageBrush Stretch="UniformToFill" ImageSource="Assets/Resources/btnBg.png"/>
+								<ImageBrush Stretch="UniformToFill" ImageSource="Assets/Resources/btnBg.png" Opacity="0.75"/>
 							</Button.Background>
 							<Grid HorizontalAlignment="Center" VerticalAlignment="Center">
 								<StackPanel>
@@ -172,7 +172,11 @@
 					<Grid x:Name="_btn4" Grid.Column="1" Grid.Row="1" Margin="5 5 0 0">
 						<Button x:Name="_importance" BorderThickness="0" Padding="0" HorizontalContentAlignment="Stretch" Width="{Binding ActualWidth, ElementName=_btn4, Mode=OneWay}" Height="{Binding ActualWidth, ElementName=_btn1, Mode=OneWay}" Click="_importance_Click" >
 							<Button.Background>
-								<ImageBrush Stretch="UniformToFill" ImageSource="Assets/Resources/btnBg.png"/>
+								<ImageBrush Stretch="UniformToFill" ImageSource="Assets/Resources/btnBg.png" Opacity="0.75">
+									<ImageBrush.RelativeTransform>
+										<CompositeTransform CenterY="0.5" CenterX="0.5"/>
+									</ImageBrush.RelativeTransform>
+								</ImageBrush>
 							</Button.Background>
 							<Grid HorizontalAlignment="Center" VerticalAlignment="Center">
 								<StackPanel>

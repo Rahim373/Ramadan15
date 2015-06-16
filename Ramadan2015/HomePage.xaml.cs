@@ -85,9 +85,6 @@ namespace Ramadan2015
 		}
 
 
-
-
-
 		private void _calender_Tapped(object sender, TappedRoutedEventArgs e)
 		{
 			Frame.Navigate(typeof(Calender));
@@ -218,7 +215,5 @@ namespace Ramadan2015
 			throw new NotImplementedException();
 		}
 	}
-
-
 
 }
