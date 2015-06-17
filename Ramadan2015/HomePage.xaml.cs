@@ -20,6 +20,7 @@ using Windows.Phone.UI.Input;
 using Windows.UI.Xaml.Media.Animation;
 using Windows.System;
 using Windows.ApplicationModel.Store;
+using Windows.UI.Popups;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkID=390556
 
@@ -44,7 +45,7 @@ namespace Ramadan2015
 		void HomePage_Loaded(object sender, RoutedEventArgs e)
 		{
 
-			cheacktwice();	
+			cheacktwice();
 		}
 
 		private void cheacktwice()
@@ -117,24 +118,6 @@ namespace Ramadan2015
 			data = e.Parameter as List<RozaModel>;
 		}
 
-
-		private void listItemFlyout_Closed(object sender, object e)
-		{
-			var location = (LocationNameAndTime)listItemFlyout.SelectedItem;
-			if (location != null)
-			{
-				locationId = location.Id.ToString();
-				name = location.Name.ToString();
-				minute = location.minutes.ToString();
-				_Location.Text = name.ToString();
-
-				save.Visibility = Visibility.Visible;
-				cancel.Visibility = Visibility.Visible;
-				about.Visibility = Visibility.Collapsed;
-				rate.Visibility = Visibility.Collapsed;
-			}
-		}
-
 		private void save_Click(object sender, RoutedEventArgs e)
 		{
 			localSetting.Values["LocationID"] = locationId.ToString();
@@ -161,6 +144,29 @@ namespace Ramadan2015
 		private void _importance_Click(object sender, RoutedEventArgs e)
 		{
 			Frame.Navigate(typeof(Importance));
+		}
+
+		private void listItemFlyout_Closed(object sender, object e)
+		{
+			var location = (LocationNameAndTime)listItemFlyout.SelectedItem;
+			if (location != null)
+			{
+				locationId = location.Id.ToString();
+				name = location.Name.ToString();
+				minute = location.minutes.ToString();
+				_Location.Text = name.ToString();
+
+				save.Visibility = Visibility.Visible;
+				cancel.Visibility = Visibility.Visible;
+				about.Visibility = Visibility.Collapsed;
+				rate.Visibility = Visibility.Collapsed;
+			}
+		}
+		
+		async void showMsg(string e)
+		{
+			MessageDialog msg = new MessageDialog(e.ToString(), "Error");
+			await msg.ShowAsync();
 		}
 	}
 

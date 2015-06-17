@@ -1,5 +1,4 @@
-﻿using Ramadan2015.Common;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
@@ -27,25 +26,33 @@ using Windows.UI.Xaml.Navigation;
 
 namespace Ramadan2015
 {
-    /// <summary>
-    /// Provides application-specific behavior to supplement the default Application class.
-    /// </summary>
+
     public sealed partial class App : Application
     {
         private TransitionCollection transitions;
 		Windows.Storage.ApplicationDataContainer localSetting = Windows.Storage.ApplicationData.Current.LocalSettings;
-        /// <summary>
-        /// Initializes the singleton application object.  This is the first line of authored code
-        /// executed, and as such is the logical equivalent of main() or WinMain().
-        /// </summary>
+
+     
         public App()
         {
             this.InitializeComponent();
             this.Suspending += this.OnSuspending;
 			HardwareButtons.BackPressed += HardwareButtons_BackPressed;
+			this.UnhandledException += App_UnhandledException;
 			setSetting();
 			LiveTile();
         }
+
+		void App_UnhandledException(object sender, UnhandledExceptionEventArgs e)
+		{
+			showMsg(e.ToString());
+		}
+
+		async void showMsg(string e)
+		{
+			MessageDialog msg = new MessageDialog(e.ToString(), "Error");
+			await msg.ShowAsync();
+		}
 
 		private void LiveTile()
 		{
@@ -97,7 +104,7 @@ namespace Ramadan2015
 			}
 		}
 
-        protected async override void OnLaunched(LaunchActivatedEventArgs e)
+        protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
 #if DEBUG
             if (System.Diagnostics.Debugger.IsAttached)
@@ -114,8 +121,7 @@ namespace Ramadan2015
             {
                 // Create a Frame to act as the navigation context and navigate to the first page
                 rootFrame = new Frame();
-				//Added by Rahim
-				SuspensionManager.RegisterFrame(rootFrame, "rootFrameKey");
+			
 
                 // TODO: change this value to a cache size that is appropriate for your application
                 rootFrame.CacheSize = 1;
@@ -123,7 +129,6 @@ namespace Ramadan2015
                 if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
                 {
                     // TODO: Load state from previously suspended application
-					await SuspensionManager.RestoreAsync();
                 }
 
                 // Place the frame in the current Window
@@ -165,12 +170,9 @@ namespace Ramadan2015
             rootFrame.Navigated -= this.RootFrame_FirstNavigated;
         }
 
-        private async void OnSuspending(object sender, SuspendingEventArgs e)
+        private void OnSuspending(object sender, SuspendingEventArgs e)
         {
             var deferral = e.SuspendingOperation.GetDeferral();
-
-			await SuspensionManager.SaveAsync();
-            // TODO: Save application state and stop any background activity
             deferral.Complete();
         }
     }

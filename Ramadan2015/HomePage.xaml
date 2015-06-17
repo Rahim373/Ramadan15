@@ -5,7 +5,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:UI="using:Microsoft.Advertising.Mobile.UI"
-	DataContext="{Binding Main, Source={StaticResource Locator}}"
+	xmlns:Interactivity="using:Microsoft.Xaml.Interactivity" xmlns:Core="using:Microsoft.Xaml.Interactions.Core"
     x:Class="Ramadan2015.HomePage"
     mc:Ignorable="d"
 	RequestedTheme="Dark">
@@ -24,6 +24,9 @@
 			</Grid>
 		</DataTemplate>
 	</Page.Resources>
+	<Page.DataContext>
+		<Binding Path="Main" Source="{StaticResource Locator}"/>
+	</Page.DataContext>
 	<Page.Background>
 		<ImageBrush ImageSource="Assets/Resources/BG.jpg" Stretch="Fill"/>
 	</Page.Background>
